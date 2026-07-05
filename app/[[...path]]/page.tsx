@@ -10,16 +10,15 @@ import {
   Check,
   ChevronDown,
   ChevronRight,
-  CircleDollarSign,
   MonitorPlay,
   PlayCircle,
   ShieldCheck,
-  Signal,
   Sparkles,
   UsersRound,
   Zap
 } from "lucide-react";
 import { MagneticCard, Reveal } from "../../components/reveal";
+import { EdgeCockpit } from "../../components/edge-cockpit";
 
 type PageProps = {
   params: Promise<{ path?: string[] }>;
@@ -32,21 +31,21 @@ const learningMenu = [
 ];
 
 const marketTape = [
-  "NQ prep",
-  "Liquidity sweep",
-  "Risk first",
-  "ES context",
-  "Session bias",
-  "Journal review",
-  "Discipline",
-  "Repeatable edge"
+  "Futures trading course",
+  "Live trading room",
+  "NQ session prep",
+  "Trading psychology",
+  "Risk management",
+  "Futures indicators",
+  "Trade review",
+  "Repeatable process"
 ];
 
 const proofStats = [
-  { value: "4", label: "learning lanes: live room, courses, indicators, coaching" },
-  { value: "24/7", label: "member library for replay, review, and prep" },
-  { value: "1", label: "operating system for futures traders" },
-  { value: "0", label: "signal-chasing shortcuts in the method" }
+  { value: "4", label: "ways to improve: live room, courses, indicators, coaching" },
+  { value: "24/7", label: "member library for replay, review, and preparation" },
+  { value: "1", label: "clear operating system for futures traders" },
+  { value: "0", label: "blind signal chasing or unrealistic performance claims" }
 ];
 
 const pillars = [
@@ -81,6 +80,36 @@ const playbook = [
   "Session bias with invalidation",
   "Entry checklist before risk",
   "Screenshot recap and journal notes"
+];
+
+const seoOffers = [
+  {
+    label: "Futures trading course",
+    title: "Learn the framework before the market speeds up.",
+    text: "Structured lessons for market structure, execution rules, risk management, journaling, and psychology."
+  },
+  {
+    label: "Live trading room",
+    title: "Prepare, observe, and review with a serious group.",
+    text: "A focused room for session prep, context, trade review, Q&A, and disciplined futures trading development."
+  },
+  {
+    label: "Futures indicators",
+    title: "Use tools as context, not as shortcuts.",
+    text: "Indicator-led market context for momentum, levels, confluence, and cleaner decision support."
+  },
+  {
+    label: "Trading psychology coaching",
+    title: "Build the habits that survive pressure.",
+    text: "Feedback loops for patience, rule-following, journaling, and post-session improvement."
+  }
+];
+
+const routineSteps = [
+  { title: "Map", text: "Mark liquidity, key levels, session context, and invalidation before the open." },
+  { title: "Wait", text: "Let the market confirm the plan instead of forcing a trade from boredom." },
+  { title: "Execute", text: "Risk is defined before entry, with a checklist that keeps decisions consistent." },
+  { title: "Review", text: "Screenshots, notes, and coaching loops turn one session into the next improvement." }
 ];
 
 const pricing = [
@@ -277,20 +306,13 @@ function HomePage() {
   return (
     <>
       <section className="myt-hero" id="home" aria-labelledby="hero-title">
-        <Image className="myt-hero-bg" src="/images/myt-precision-edge.png" alt="" fill priority sizes="100vw" />
-        <div className="myt-hero-noise" aria-hidden />
-        <div className="myt-market-orbits" aria-hidden>
-          <span />
-          <span />
-          <span />
-        </div>
         <div className="myt-hero-inner">
           <div className="myt-hero-copy">
-            <p className="myt-kicker">Futures trading room, course path, and indicator suite</p>
-            <h1 id="hero-title">Build a futures trading edge you can repeat under pressure.</h1>
+            <p className="myt-kicker">Futures trading course, live room, coaching, and indicators</p>
+            <h1 id="hero-title">A cleaner way to train your futures trading edge.</h1>
             <p className="myt-hero-text">
-              MYT turns market prep, execution review, live coaching, and chart tools into one premium
-              operating system for traders who are done chasing random signals.
+              Mind Your Trades gives serious futures traders a calm operating system for market prep,
+              execution rules, live review, indicators, and coaching. Less noise, more repeatable decisions.
             </p>
             <div className="myt-actions">
               <Link className="myt-button myt-button-primary" href="/pricing">
@@ -303,41 +325,21 @@ function HomePage() {
               </Link>
             </div>
             <div className="myt-proof-row">
-              <div className="myt-avatar-stack" aria-label="Trader proof avatars">
-                <Image src="/webflow/avatar-01.webp" alt="" width={50} height={50} />
-                <Image src="/webflow/avatar-02.webp" alt="" width={50} height={50} />
-                <Image src="/webflow/avatar-03.webp" alt="" width={50} height={50} />
-              </div>
-              <p>Built for serious futures traders who want prep, execution, review, and discipline in one place.</p>
+              <span>Built for NQ/ES traders</span>
+              <span>Process-first, not signal-first</span>
+              <span>Designed for review loops</span>
             </div>
           </div>
-
-          <aside className="myt-dashboard-stage" aria-label="MYT trading dashboard preview">
-            <div className="myt-dashboard-glow" aria-hidden />
-            <Image
-              className="myt-dashboard-main"
-              src="/webflow/hero-dashboard.webp"
-              alt="Trading platform dashboard preview with performance panels and market charts."
-              width={2880}
-              height={1970}
-              priority
-              sizes="(max-width: 900px) 100vw, 52vw"
-            />
-            <div className="myt-floating-card myt-floating-card-one">
-              <Signal size={18} aria-hidden />
-              <span>Bias locked before entry</span>
-            </div>
-            <div className="myt-floating-card myt-floating-card-two">
-              <CircleDollarSign size={18} aria-hidden />
-              <span>Risk defined first</span>
-            </div>
-          </aside>
+          <EdgeCockpit />
         </div>
       </section>
       <MarketTape />
       <Stats />
+      <SeoOfferGrid />
       <LearningOverview />
-      <BrandProof />
+      <RoutineSection />
+      <PricingSection />
+      <FaqSection />
       <FinalCta />
     </>
   );
@@ -487,10 +489,10 @@ function LearningOverview() {
     <Reveal className="myt-section myt-method" as="section">
       <div className="myt-section-heading">
         <p className="myt-kicker">The MYT learning system</p>
-        <h2>See the full path from market prep to post-session review.</h2>
+        <h2>Everything points back to one question: can you repeat the decision?</h2>
         <p>
-          Prepare the market, execute with rules, review the decision, then improve the playbook with
-          coaching, courses, and tools.
+          Education, live room, indicator context, and coaching support the same outcome: a cleaner
+          process before, during, and after the session.
         </p>
       </div>
       <div className="myt-pillar-grid">
@@ -513,25 +515,53 @@ function LearningOverview() {
   );
 }
 
-function BrandProof() {
+function SeoOfferGrid() {
   return (
-    <Reveal className="myt-split-proof" as="section">
-      <div>
-        <Image src="/webflow/trading-image-01.webp" alt="" width={566} height={622} />
-        <Image src="/webflow/trading-image-02.webp" alt="" width={566} height={622} />
-      </div>
-      <article>
-        <p className="myt-kicker">Premium trading brand posture</p>
-        <h2>Less casino energy. More desk-grade discipline.</h2>
+    <Reveal className="myt-section myt-seo-offers" as="section">
+      <div className="myt-section-heading myt-centered">
+        <p className="myt-kicker">What traders come here for</p>
+        <h2>Training paths for futures traders who want structure.</h2>
         <p>
-          Strong visuals, serious language, and direct page paths make the brand feel premium without
-          making unrealistic performance claims.
+          Courses, live review, indicators, and coaching are separated clearly so the right trader can
+          find the right next step fast.
         </p>
-        <Link className="myt-button myt-button-secondary" href="/pricing">
-          Compare access paths
-          <ArrowRight size={18} aria-hidden />
-        </Link>
-      </article>
+      </div>
+      <div className="myt-offer-grid">
+        {seoOffers.map((offer) => (
+          <article className="myt-offer-tile" key={offer.label}>
+            <span>{offer.label}</span>
+            <h3>{offer.title}</h3>
+            <p>{offer.text}</p>
+          </article>
+        ))}
+      </div>
+    </Reveal>
+  );
+}
+
+function RoutineSection() {
+  return (
+    <Reveal className="myt-routine" as="section">
+      <div className="myt-routine-visual">
+        <Image src="/images/myt-building-edge.png" alt="MYT trading education visual." width={1200} height={900} />
+      </div>
+      <div className="myt-routine-copy">
+        <p className="myt-kicker">The trader routine</p>
+        <h2>A minimal system for a high-pressure environment.</h2>
+        <p>
+          Futures trading moves quickly. MYT slows the decision down with a routine traders can follow
+          before the open, during execution, and after the closing bell.
+        </p>
+        <div className="myt-routine-steps">
+          {routineSteps.map((step, index) => (
+            <article key={step.title}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
     </Reveal>
   );
 }
