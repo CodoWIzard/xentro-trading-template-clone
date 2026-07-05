@@ -1,0 +1,6 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Trego mark</title>
+  <rect width="64" height="64" rx="16" fill="#0A1224"/>
+  <path d="M17 42L29.5 20L36 33L43.5 21.5L49 32" stroke="#4DA3FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 45H48" stroke="#C7E2FF" stroke-width="5" stroke-linecap="round"/>
+</svg>
