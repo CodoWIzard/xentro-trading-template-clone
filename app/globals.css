@@ -1028,7 +1028,6 @@ select {
   }
 
   .myt-hero-inner,
-  .myt-subhero,
   .myt-showcase,
   .myt-blueprint,
   .myt-split-proof,
@@ -1038,14 +1037,6 @@ select {
 
   .myt-dashboard-stage {
     min-height: 520px;
-  }
-
-  .myt-subhero {
-    min-height: auto;
-  }
-
-  .myt-subhero img {
-    width: 100%;
   }
 
   .myt-dashboard-main {
@@ -1094,24 +1085,20 @@ select {
     font-size: 12px;
   }
 
-  .myt-hero,
-  .myt-subhero {
+  .myt-hero {
     padding: 122px 16px 54px;
   }
 
-  .myt-hero-inner,
-  .myt-subhero {
+  .myt-hero-inner {
     gap: 28px;
   }
 
-  .myt-hero h1,
-  .myt-subhero h1 {
+  .myt-hero h1 {
     font-size: 42px;
     line-height: 1;
   }
 
   .myt-hero-text,
-  .myt-subhero p:not(.myt-kicker),
   .myt-section-heading p:not(.myt-kicker),
   .myt-showcase-copy p,
   .myt-blueprint-copy p,
@@ -1137,10 +1124,6 @@ select {
     top: 8%;
     right: -46%;
     width: 152%;
-  }
-
-  .myt-subhero img {
-    transform: rotateX(5deg) rotateY(-7deg);
   }
 
   .myt-floating-card {

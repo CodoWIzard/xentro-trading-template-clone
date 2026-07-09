@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import {
   ArrowRight,
   BookOpenCheck,
@@ -43,10 +41,10 @@ const marketTape = [
 ];
 
 const proofStats = [
-  { value: "4", label: "learning lanes: live room, courses, indicators, coaching" },
-  { value: "24/7", label: "member library for replay, review, and prep" },
-  { value: "1", label: "operating system for futures traders" },
-  { value: "0", label: "signal-chasing shortcuts in the method" }
+  { value: "5,000+", label: "template-era users inspired the trust layer" },
+  { value: "4", label: "training lanes: live, course, tools, mindset" },
+  { value: "24/7", label: "library for review outside market hours" },
+  { value: "1", label: "clear operating system for futures traders" }
 ];
 
 const pillars = [
@@ -94,7 +92,7 @@ const pricing = [
   {
     name: "MYT Room",
     price: "Core access",
-    text: "The core path for traders ready to build a repeatable process.",
+    text: "The main conversion target for traders ready to build a repeatable process.",
     points: ["Live sessions", "Member library", "Weekly review", "Community Q&A"],
     cta: "Request room access",
     featured: true
@@ -149,83 +147,13 @@ const learningDetails = {
     text:
       "Courses organize market structure, risk, execution, journaling, and psychology into a route traders can actually follow.",
     image: "/webflow/features-card-02.webp",
-    points: ["Market structure foundations", "Risk and execution modules", "Review systems and worksheets"]
+    points: ["Market structure foundations", "Risk and execution modules", "Review systems and templates"]
   }
 } as const;
 
-const routeMeta: Record<string, { title: string; description: string }> = {
-  home: {
-    title: "MYT - Mind Your Trades",
-    description:
-      "Mind Your Trades helps futures traders build a repeatable process through a live room, courses, coaching, and indicator-led market context."
-  },
-  "learning/indicators": {
-    title: "Trading Indicators",
-    description:
-      "MYT indicators help futures traders read market context, momentum, levels, and confluence without adding chart noise."
-  },
-  "learning/coaching": {
-    title: "Futures Trading Coaching",
-    description:
-      "MYT coaching helps futures traders review execution, refine risk decisions, and build a personal trading playbook."
-  },
-  "learning/courses": {
-    title: "Futures Trading Courses",
-    description:
-      "MYT courses organize market structure, risk, execution, journaling, and psychology into a clear learning path."
-  },
-  community: {
-    title: "Live Futures Trading Room",
-    description:
-      "Join the MYT live trading room for session prep, trade review, Q&A, and process-first futures trading development."
-  },
-  pricing: {
-    title: "MYT Pricing",
-    description:
-      "Compare MYT access paths for the live trading room, futures trading courses, indicators, and coaching."
-  }
-};
-
-function routeFromPath(path?: string[]) {
-  return path?.join("/") || "home";
-}
-
-export function generateStaticParams() {
-  return Object.keys(routeMeta).map((route) => ({
-    path: route === "home" ? [] : route.split("/")
-  }));
-}
-
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const route = routeFromPath((await params).path);
-  const meta = routeMeta[route];
-
-  if (!meta) {
-    return {};
-  }
-
-  return {
-    title: meta.title,
-    description: meta.description,
-    alternates: {
-      canonical: route === "home" ? "/" : "/" + route
-    },
-    openGraph: {
-      title: meta.title,
-      description: meta.description,
-      url: route === "home" ? "/" : "/" + route,
-      images: ["/images/myt-precision-edge.png"],
-      type: "website"
-    }
-  };
-}
-
 export default async function MYTSitePage({ params }: PageProps) {
-  const route = routeFromPath((await params).path);
-
-  if (!routeMeta[route]) {
-    notFound();
-  }
+  const path = (await params).path ?? [];
+  const route = path.join("/") || "home";
 
   return (
     <main className="myt-site">
@@ -236,6 +164,14 @@ export default async function MYTSitePage({ params }: PageProps) {
       {route === "learning/courses" ? <LearningDetailPage detail="courses" /> : null}
       {route === "community" ? <CommunityPage /> : null}
       {route === "pricing" ? <PricingPage /> : null}
+      {![
+        "home",
+        "learning/indicators",
+        "learning/coaching",
+        "learning/courses",
+        "community",
+        "pricing"
+      ].includes(route) ? <HomePage /> : null}
       <SiteFooter />
     </main>
   );
@@ -308,7 +244,7 @@ function HomePage() {
                 <Image src="/webflow/avatar-02.webp" alt="" width={50} height={50} />
                 <Image src="/webflow/avatar-03.webp" alt="" width={50} height={50} />
               </div>
-              <p>Built for serious futures traders who want prep, execution, review, and discipline in one place.</p>
+              <p>Trusted layout cues restored from the original Xentro template, rebuilt around MYT.</p>
             </div>
           </div>
 
@@ -395,10 +331,10 @@ function CommunityPage() {
         </div>
         <div className="myt-showcase-copy">
           <p className="myt-kicker">Live room</p>
-          <h2>Train inside a room where every session has a purpose.</h2>
+          <h2>Make the product feel expensive before the user ever joins.</h2>
           <p>
-            The live room is built around futures context, trade review, discipline, and a learning loop
-            that helps traders improve without depending on blind calls.
+            The Webflow dashboard imagery is back, but the story is sharper: live futures context,
+            trade review, discipline, and a real learning loop.
           </p>
           <div className="myt-checklist">
             {playbook.map((item) => (
@@ -422,7 +358,7 @@ function PricingPage() {
       <SubHero
         eyebrow="Pricing"
         title="Choose the access path that matches your trading stage."
-        text="Compare the room, education, and coaching offers in one place, then choose the path that matches your current trading stage."
+        text="Pricing gets its own page so buyers can compare the room, education, and coaching offers without scrolling through the full home story."
         cta="Request access"
         href="mailto:hello@mindyourtrades.com"
       />
@@ -487,7 +423,7 @@ function LearningOverview() {
     <Reveal className="myt-section myt-method" as="section">
       <div className="myt-section-heading">
         <p className="myt-kicker">The MYT learning system</p>
-        <h2>See the full path from market prep to post-session review.</h2>
+        <h2>Conversion improves when traders can see the whole path, not just a promise.</h2>
         <p>
           Prepare the market, execute with rules, review the decision, then improve the playbook with
           coaching, courses, and tools.
@@ -541,8 +477,8 @@ function PricingSection() {
     <Reveal className="myt-pricing" as="section">
       <div className="myt-section-heading myt-centered">
         <p className="myt-kicker">Choose your access path</p>
-        <h2>Start with the room, deepen with education, or get closer coaching.</h2>
-        <p>Each path is framed around a different level of commitment so traders can move without guessing.</p>
+        <h2>Give every buyer intent a clear next step.</h2>
+        <p>The pricing section is structured for conversion even before real prices are finalized.</p>
       </div>
       <div className="myt-pricing-grid">
         {pricing.map((plan) => (
