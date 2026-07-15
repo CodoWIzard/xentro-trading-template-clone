@@ -2299,6 +2299,8 @@ select {
   overflow: hidden;
   width: 100%;
   height: clamp(132px, 14vw, 210px);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 9%, #000 91%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 9%, #000 91%, transparent 100%);
 }
 
 .h-marquee_track {
