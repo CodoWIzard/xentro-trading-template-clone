@@ -2299,14 +2299,14 @@ select {
 
 .text-block__text {
   display: grid;
-  gap: clamp(20px, 2.7vw, 42px);
+  gap: clamp(18px, 2.3vw, 34px);
   text-align: center;
 }
 
 .large-text {
   margin: 0;
   color: rgba(248, 244, 235, 0.84);
-  font-size: clamp(28px, 3vw, 48px);
+  font-size: clamp(24px, 2.45vw, 38px);
   font-weight: 500;
   line-height: 1.16;
   letter-spacing: 0;
@@ -3029,11 +3029,11 @@ select {
   }
 
   .text-block__text {
-    gap: 22px;
+    gap: 18px;
   }
 
   .large-text {
-    font-size: clamp(24px, 7vw, 34px);
+    font-size: clamp(21px, 6vw, 29px);
     line-height: 1.16;
   }
 
