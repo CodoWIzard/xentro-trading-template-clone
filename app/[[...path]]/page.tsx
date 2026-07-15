@@ -217,33 +217,33 @@ function HomePage() {
         <div className="myt-hero-inner">
           <div className="myt-hero-copy">
             <p className="myt-trust-line">Globally trusted by serious futures traders</p>
-            <p className="myt-kicker">MYT command center</p>
+            <p className="myt-kicker">Courses, indicators, coaching, and live room access</p>
             <h1 id="hero-title">
-              Trade from a process, <span>not pressure.</span>
+              Learn the process. <span>Trade with better tools.</span>
             </h1>
             <p className="myt-hero-text">
-              MYT turns pre-market prep, risk rules, live coaching, and trade review into one sharp
-              operating system for futures traders who want repeatable execution.
+              MYT packages futures trading education, indicator tools, live market context, and coaching
+              into one premium learning ecosystem for traders building a repeatable edge.
             </p>
             <div className="myt-hero-badges" aria-label="MYT platform benefits">
               <span>
-                <Zap size={15} aria-hidden />
-                Pre-market plan
+                <BookOpenCheck size={15} aria-hidden />
+                Course library
               </span>
               <span>
-                <ShieldCheck size={15} aria-hidden />
-                Risk locked first
+                <CandlestickChart size={15} aria-hidden />
+                Indicator suite
               </span>
             </div>
-            <div className="myt-process-strip" aria-label="MYT trading process">
-              <span>Plan</span>
-              <span>Wait</span>
-              <span>Execute</span>
-              <span>Review</span>
+            <div className="myt-process-strip" aria-label="MYT offer paths">
+              <span>Courses</span>
+              <span>Tools</span>
+              <span>Live room</span>
+              <span>Coaching</span>
             </div>
             <div className="myt-actions">
               <Link className="myt-button myt-button-primary" href="/pricing">
-                Request access
+                View access options
                 <ChevronRight size={18} aria-hidden />
               </Link>
               <Link className="myt-button myt-button-secondary" href="/learning/courses">
@@ -257,9 +257,7 @@ function HomePage() {
                 <Image src="/webflow/avatar-02.webp" alt="" width={50} height={50} />
                 <Image src="/webflow/avatar-03.webp" alt="" width={50} height={50} />
               </div>
-              <p>
-                Trustpilot style social proof, a clean education path, and trader-first review systems.
-              </p>
+              <p>Built for the trader who wants to sell a serious method, not just another signal room.</p>
             </div>
           </div>
 
@@ -282,21 +280,21 @@ function HomePage() {
               </div>
               <div className="myt-liquidity-line" aria-hidden />
               <div className="myt-risk-band" aria-hidden>
-                <span>Risk boundary</span>
+                <span>Tools + education stack</span>
               </div>
               <div className="myt-dashboard-label" aria-hidden>
-                <span>PROCESS FIRST</span>
+                <span>MYT LEARNING HUB</span>
               </div>
             </div>
             <div className="myt-session-card" aria-hidden>
-              <span>NY AM session</span>
-              <strong>Bias confirmed</strong>
-              <small>Invalidation: 16 pts</small>
+              <span>Featured course</span>
+              <strong>Futures Framework</strong>
+              <small>Structure, risk, execution</small>
             </div>
             <div className="myt-discipline-card" aria-hidden>
-              <span>Execution checklist</span>
-              <strong>3 / 4 locked</strong>
-              <small>Plan → Wait → Execute → Review</small>
+              <span>Tool access</span>
+              <strong>Indicator Suite</strong>
+              <small>Levels, momentum, confluence</small>
             </div>
           </aside>
         </div>

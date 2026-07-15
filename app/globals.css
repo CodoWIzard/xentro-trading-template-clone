@@ -201,7 +201,7 @@ select {
   z-index: -3;
   background:
     linear-gradient(90deg, rgba(2, 12, 13, 0.98), rgba(2, 12, 13, 0.72) 43%, rgba(2, 12, 13, 0.3) 74%, rgba(2, 12, 13, 0.82)),
-    radial-gradient(ellipse at 82% 42%, rgba(255, 216, 77, 0.14), transparent 22rem),
+    radial-gradient(ellipse at 82% 42%, rgba(255, 216, 77, 0.18), transparent 22rem),
     radial-gradient(ellipse at 16% 46%, rgba(22, 223, 241, 0.16), transparent 22rem),
     radial-gradient(ellipse at 68% 78%, rgba(22, 223, 241, 0.18), transparent 18rem),
     linear-gradient(180deg, rgba(1, 7, 9, 0.62), rgba(2, 5, 10, 0.96) 100%);
@@ -341,7 +341,7 @@ select {
 
 .myt-hero h1 {
   max-width: 760px;
-  font-size: clamp(52px, 6vw, 84px);
+  font-size: clamp(50px, 5.6vw, 80px);
   line-height: 0.94;
 }
 
@@ -386,7 +386,7 @@ select {
 .myt-process-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  width: min(560px, 100%);
+  width: min(620px, 100%);
   overflow: hidden;
   border: 1px solid rgba(22, 223, 241, 0.22);
   border-radius: 8px;
@@ -405,7 +405,7 @@ select {
   border-right: 1px solid rgba(247, 251, 255, 0.08);
   color: rgba(247, 251, 255, 0.86);
   font-family: "Fira Code", monospace;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -612,20 +612,20 @@ select {
 
 .myt-risk-band {
   position: absolute;
-  right: 12%;
-  bottom: 18%;
-  width: 42%;
-  height: 54px;
+  right: 9%;
+  bottom: 15%;
+  width: 48%;
+  height: 70px;
   pointer-events: none;
-  border-top: 1px solid rgba(255, 96, 118, 0.72);
-  background: linear-gradient(180deg, rgba(255, 96, 118, 0.12), transparent);
+  border-top: 1px solid rgba(255, 216, 77, 0.72);
+  background: linear-gradient(180deg, rgba(255, 216, 77, 0.13), transparent);
 }
 
 .myt-risk-band span {
   position: absolute;
   top: -22px;
   right: 0;
-  color: rgba(255, 180, 190, 0.86);
+  color: rgba(255, 236, 166, 0.9);
   font-family: "Fira Code", monospace;
   font-size: 10px;
   font-weight: 800;
@@ -661,8 +661,8 @@ select {
   z-index: 4;
   display: grid;
   gap: 4px;
-  min-width: 178px;
-  padding: 13px 14px;
+  min-width: 196px;
+  padding: 14px 15px;
   border: 1px solid rgba(22, 223, 241, 0.2);
   border-radius: 8px;
   background: rgba(2, 10, 14, 0.74);
@@ -671,13 +671,13 @@ select {
 }
 
 .myt-session-card {
-  top: 10%;
-  right: 3%;
+  top: 8%;
+  right: 1%;
 }
 
 .myt-discipline-card {
-  bottom: 7%;
-  left: 0;
+  bottom: 5%;
+  left: -2%;
 }
 
 .myt-session-card span,
@@ -693,7 +693,7 @@ select {
 .myt-session-card strong,
 .myt-discipline-card strong {
   color: var(--white);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.1;
 }
 
