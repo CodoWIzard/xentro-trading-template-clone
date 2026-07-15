@@ -2782,10 +2782,7 @@ select {
   padding: 0;
   overflow: hidden;
   color: #f8f4eb;
-  background:
-    radial-gradient(circle at 16% 10%, rgba(44, 255, 154, 0.1), transparent 28rem),
-    radial-gradient(circle at 86% 24%, rgba(141, 223, 255, 0.12), transparent 30rem),
-    linear-gradient(180deg, #050706 0%, #0a100d 100%);
+  background: linear-gradient(180deg, #050706 0%, #0a100d 100%);
 }
 
 .footer_component .footer_pattern {
@@ -2794,6 +2791,10 @@ select {
 
 .footer_section-border {
   height: 7px;
+}
+
+.footer_section-border .section-border_square {
+  display: none;
 }
 
 .footer_marquee_wrap {
@@ -2809,7 +2810,7 @@ select {
 .footer_marquee_inner {
   display: flex;
   width: max-content;
-  animation: footerMarqueeMove 34s linear infinite;
+  animation: footerMarqueeMove 102s linear infinite;
 }
 
 .footer_marquee_item {
@@ -2825,13 +2826,6 @@ select {
   letter-spacing: 0;
   text-transform: uppercase;
   white-space: nowrap;
-}
-
-.footer_marquee_item img {
-  width: clamp(42px, 7vw, 96px);
-  height: clamp(42px, 7vw, 96px);
-  object-fit: contain;
-  filter: drop-shadow(0 0 30px rgba(44, 255, 154, 0.28));
 }
 
 .myt-footer-container {

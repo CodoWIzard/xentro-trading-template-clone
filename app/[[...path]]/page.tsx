@@ -544,7 +544,6 @@ function SiteFooter() {
           {Array.from({ length: 6 }).map((_, index) => (
             <div className="footer_marquee_item" key={index}>
               <span>Mind Your Trades</span>
-              <Image src="/brand/myt-mark.png" alt="" width={96} height={96} />
             </div>
           ))}
         </div>
