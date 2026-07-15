@@ -2067,7 +2067,7 @@ select {
 
 .pattern_component {
   display: grid;
-  gap: 14px;
+  gap: 28px;
   overflow: hidden;
   padding: 18px 0 24px;
   background: #050706;
