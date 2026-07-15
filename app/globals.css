@@ -1672,7 +1672,7 @@ select {
 /* 2026 renovation: Bipsync x Primora inspired system */
 .myt-site {
   background:
-    linear-gradient(180deg, #050706 0%, #0b0f0d 42%, #f2efe6 42%, #f2efe6 100%);
+    linear-gradient(180deg, #050706 0%, #0b0f0d 42%, #050706 42%, #050706 100%);
   color: #f8f4eb;
 }
 
@@ -2433,8 +2433,8 @@ select {
 .section-border_inner {
   position: relative;
   height: 100%;
-  border-right: 1px solid rgba(7, 16, 13, 0.13);
-  border-left: 1px solid rgba(7, 16, 13, 0.13);
+  border-right: 1px solid rgba(248, 244, 235, 0.12);
+  border-left: 1px solid rgba(248, 244, 235, 0.12);
 }
 
 .section-border_square {
@@ -2443,8 +2443,8 @@ select {
   left: -3px;
   width: 6px;
   height: 6px;
-  border: 1px solid rgba(7, 16, 13, 0.34);
-  background: #f2efe6;
+  border: 1px solid rgba(248, 244, 235, 0.18);
+  background: #050706;
 }
 
 .section-border_square.is-right {
@@ -2828,12 +2828,12 @@ select {
 }
 
 .myt-stats {
-  background: #f2efe6;
+  background: #050706;
 }
 
 .myt-stats div {
-  border-color: rgba(8, 12, 10, 0.11);
-  background: transparent;
+  border-color: rgba(248, 244, 235, 0.12);
+  background: rgba(248, 244, 235, 0.045);
 }
 
 .myt-stats strong,
@@ -2844,7 +2844,7 @@ select {
 .myt-plan h3,
 .myt-faq-list h3,
 .myt-pillar h3 {
-  color: #07100d;
+  color: #f8f4eb;
 }
 
 .myt-stats span,
@@ -2854,7 +2854,7 @@ select {
 .myt-plan p,
 .myt-faq-list p,
 .myt-pillar p {
-  color: rgba(7, 16, 13, 0.66);
+  color: rgba(248, 244, 235, 0.62);
 }
 
 .myt-section,
@@ -2862,7 +2862,7 @@ select {
 .myt-split-proof,
 .myt-pricing,
 .myt-faq {
-  background: #f2efe6;
+  background: #050706;
 }
 
 .myt-section-heading .myt-kicker,
@@ -2870,29 +2870,29 @@ select {
 .myt-split-proof .myt-kicker,
 .myt-pricing .myt-kicker,
 .myt-faq .myt-kicker {
-  border-color: rgba(7, 16, 13, 0.13);
-  color: rgba(7, 16, 13, 0.6);
-  background: rgba(7, 16, 13, 0.035);
+  border-color: rgba(248, 244, 235, 0.16);
+  color: rgba(248, 244, 235, 0.7);
+  background: rgba(248, 244, 235, 0.055);
 }
 
 .myt-pillar,
 .myt-plan,
 .myt-faq-list article {
-  border-color: rgba(7, 16, 13, 0.11);
-  background: rgba(255, 255, 255, 0.32);
+  border-color: rgba(248, 244, 235, 0.12);
+  background: rgba(248, 244, 235, 0.045);
   box-shadow: none;
 }
 
 .myt-pillar svg,
 .myt-image-card svg,
 .myt-text-link {
-  color: #126f89;
+  color: #8ddfff;
 }
 
 .myt-screen-frame {
-  border-color: rgba(7, 16, 13, 0.12);
+  border-color: rgba(248, 244, 235, 0.12);
   border-radius: 12px;
-  box-shadow: 0 34px 90px rgba(7, 16, 13, 0.16);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.28);
 }
 
 .myt-renovation-showcase {
@@ -2900,8 +2900,8 @@ select {
 }
 
 .myt-split-proof > div img {
-  border-color: rgba(7, 16, 13, 0.12);
-  box-shadow: 0 30px 80px rgba(7, 16, 13, 0.16);
+  border-color: rgba(248, 244, 235, 0.12);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.26);
 }
 
 .myt-apply {
@@ -2923,7 +2923,7 @@ select {
 }
 
 .myt-footer {
-  color: rgba(7, 16, 13, 0.58);
+  color: rgba(248, 244, 235, 0.58);
 }
 
 .myt-footer a {
