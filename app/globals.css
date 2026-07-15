@@ -2067,7 +2067,7 @@ select {
 
 .pattern_component {
   display: grid;
-  gap: 8px;
+  gap: 14px;
   overflow: hidden;
   padding: 18px 0 24px;
   background: #050706;
@@ -2095,9 +2095,9 @@ select {
 .pattern_inner {
   display: flex;
   flex: 0 0 auto;
-  gap: 10px;
+  gap: 18px;
   align-items: center;
-  padding-right: 10px;
+  padding-right: 18px;
 }
 
 .pattern_line {
