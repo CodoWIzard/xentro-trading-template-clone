@@ -2340,8 +2340,8 @@ select {
   position: relative;
   overflow: hidden;
   padding: 0;
-  background: transparent;
-  box-shadow: none;
+  background: #050706;
+  box-shadow: 0 0 0 100vmax #050706;
   clip-path: inset(0 -100vmax);
 }
 
@@ -2350,8 +2350,18 @@ select {
   overflow: hidden;
   width: 100%;
   height: clamp(148px, 15.5vw, 238px);
+  background: #050706;
   mask-image: linear-gradient(90deg, transparent 0%, #000 9%, #000 91%, transparent 100%);
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 9%, #000 91%, transparent 100%);
+}
+
+.section_h-marquee .section-border_inner {
+  border-color: rgba(248, 244, 235, 0.12);
+}
+
+.section_h-marquee .section-border_square {
+  border-color: rgba(248, 244, 235, 0.18);
+  background: #050706;
 }
 
 .h-marquee_track {
