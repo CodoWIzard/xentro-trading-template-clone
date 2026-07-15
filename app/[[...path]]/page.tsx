@@ -28,21 +28,21 @@ const learningMenu = [
 ];
 
 const marketTape = [
-  "NQ prep",
-  "Liquidity sweep",
-  "Risk first",
-  "ES context",
-  "Session bias",
-  "Journal review",
-  "Discipline",
-  "Repeatable edge"
+  "Session prep",
+  "Context first",
+  "Risk rules",
+  "Execution review",
+  "Course library",
+  "Indicator suite",
+  "Live room",
+  "Trader discipline"
 ];
 
 const proofStats = [
-  { value: "5,000+", label: "template-era users inspired the trust layer" },
-  { value: "4", label: "training lanes: live, course, tools, mindset" },
-  { value: "24/7", label: "library for review outside market hours" },
-  { value: "1", label: "clear operating system for futures traders" }
+  { value: "4", label: "commercial paths: courses, tools, room, coaching" },
+  { value: "24/7", label: "course library for review outside market hours" },
+  { value: "1", label: "clear operating system around futures execution" },
+  { value: "0", label: "signal-room positioning or unrealistic performance claims" }
 ];
 
 const pillars = [
@@ -214,6 +214,7 @@ function HomePage() {
       <MarketTape />
       <Stats />
       <LearningOverview />
+      <ProductStory />
       <BrandProof />
       <FinalCta />
     </>
@@ -390,6 +391,40 @@ function LearningOverview() {
   );
 }
 
+function ProductStory() {
+  return (
+    <Reveal className="myt-showcase myt-showcase-first myt-renovation-showcase" as="section">
+      <div className="myt-showcase-media myt-screen-frame">
+        <Image
+          src="/webflow/usecase-dashboard.webp"
+          alt="Trading education dashboard with analytics and market context."
+          width={1764}
+          height={1454}
+          sizes="(max-width: 900px) 100vw, 56vw"
+        />
+        <div className="myt-light-border" aria-hidden />
+      </div>
+      <div className="myt-showcase-copy">
+        <p className="myt-kicker">The commercial core</p>
+        <h2>A premium product story, not a decorated landing page.</h2>
+        <p>
+          The site should make the owner look like the operator of a serious trading education desk:
+          structured curriculum, decision-support tools, live context, and coaching routes that feel
+          worth paying for.
+        </p>
+        <div className="myt-checklist">
+          {["Course path before claims", "Tools as decision support", "Live room as context, not signals"].map((item) => (
+            <span key={item}>
+              <ShieldCheck size={18} aria-hidden />
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+    </Reveal>
+  );
+}
+
 function BrandProof() {
   return (
     <Reveal className="myt-split-proof" as="section">
@@ -399,10 +434,10 @@ function BrandProof() {
       </div>
       <article>
         <p className="myt-kicker">Premium trading brand posture</p>
-        <h2>Less casino energy. More desk-grade discipline.</h2>
+        <h2>Institutional enough to trust. Human enough to buy from.</h2>
         <p>
-          Strong visuals, serious language, and direct page paths make the brand feel premium without
-          making unrealistic performance claims.
+          The direction borrows from finance software and founder-led growth sites: calm confidence,
+          sharp hierarchy, meaningful visuals, and a sales path that never needs hype to feel valuable.
         </p>
         <Link className="myt-button myt-button-secondary" href="/pricing">
           Compare access paths
@@ -475,8 +510,8 @@ function FinalCta() {
     <section className="myt-apply" id="contact">
       <div>
         <Image src="/brand/myt-logo.png" alt="MYT" width={280} height={118} />
-        <p className="myt-kicker">Precision. Discipline. Edge.</p>
-        <h2>For futures traders ready to stop collecting noise and start building a process.</h2>
+        <p className="myt-kicker">Precision. Discipline. Operating system.</p>
+        <h2>For futures traders ready to learn the method, use the tools, and review the work.</h2>
       </div>
       <Link className="myt-button myt-button-primary" href="mailto:hello@mindyourtrades.com">
         Request access
