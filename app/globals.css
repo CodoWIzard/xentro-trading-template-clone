@@ -2174,14 +2174,14 @@ select {
 
 .myt-bipsync-background::before {
   background:
-    linear-gradient(90deg, rgba(5, 7, 6, 0.92), rgba(5, 7, 6, 0.5) 48%, rgba(5, 7, 6, 0.86)),
-    linear-gradient(180deg, rgba(5, 7, 6, 0.7), rgba(5, 7, 6, 0.3) 45%, #050706 100%);
+    linear-gradient(90deg, rgba(5, 7, 6, 0.78), rgba(5, 7, 6, 0.28) 48%, rgba(5, 7, 6, 0.72)),
+    linear-gradient(180deg, rgba(5, 7, 6, 0.58), rgba(5, 7, 6, 0.18) 45%, #050706 100%);
 }
 
 .myt-bipsync-background::after {
   background:
-    radial-gradient(circle at 50% 36%, rgba(44, 255, 154, 0.16), transparent 28rem),
-    radial-gradient(circle at 72% 34%, rgba(141, 223, 255, 0.16), transparent 26rem);
+    radial-gradient(circle at 50% 36%, rgba(44, 255, 154, 0.06), transparent 28rem),
+    radial-gradient(circle at 72% 34%, rgba(141, 223, 255, 0.08), transparent 26rem);
   mix-blend-mode: screen;
 }
 
@@ -2193,8 +2193,8 @@ select {
   height: calc(100% + 56px);
   object-fit: cover;
   object-position: center;
-  opacity: 0.34;
-  filter: blur(13px) saturate(0.86) contrast(1.08);
+  opacity: 0.62;
+  filter: blur(9px) saturate(0.92) contrast(1.12);
   transform: scale(1.03);
 }
 
@@ -2840,8 +2840,8 @@ select {
   }
 
   .myt-bipsync-video {
-    opacity: 0.24;
-    filter: blur(16px) saturate(0.78) contrast(1.05);
+    opacity: 0.42;
+    filter: blur(12px) saturate(0.86) contrast(1.08);
   }
 
   .myt-bipsync-canvas {

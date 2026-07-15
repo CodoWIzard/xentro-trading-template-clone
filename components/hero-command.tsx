@@ -28,11 +28,6 @@ export function HeroCommand() {
         { y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: "power3.out", delay: 0.08 }
       );
 
-      gsap.fromTo(
-        ".myt-bipsync-canvas",
-        { scale: 0.94, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 1.35, ease: "expo.out", delay: 0.2 }
-      );
     }, hero);
 
     const onMove = (event: PointerEvent) => {
@@ -126,17 +121,6 @@ export function HeroCommand() {
             preload="metadata"
           />
         )}
-        <div className="myt-bipsync-canvas">
-          <span className="myt-bipsync-orbit is-one" />
-          <span className="myt-bipsync-orbit is-two" />
-          <span className="myt-bipsync-orbit is-three" />
-          <span className="myt-bipsync-path is-a" />
-          <span className="myt-bipsync-path is-b" />
-          <span className="myt-bipsync-core" />
-          <span className="myt-bipsync-node is-first" />
-          <span className="myt-bipsync-node is-second" />
-          <span className="myt-bipsync-node is-third" />
-        </div>
       </div>
     </section>
   );
