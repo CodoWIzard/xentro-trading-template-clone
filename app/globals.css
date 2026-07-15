@@ -2273,7 +2273,7 @@ select {
 .text-block.myt-text-block {
   position: relative;
   overflow: hidden;
-  padding: clamp(34px, 5vw, 72px) 24px clamp(58px, 8vw, 118px);
+  padding: clamp(28px, 4vw, 54px) 24px clamp(48px, 6vw, 86px);
   background: #050706;
   isolation: isolate;
 }
@@ -2293,22 +2293,22 @@ select {
 }
 
 .text-block__container {
-  max-width: 1120px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
 .text-block__text {
   display: grid;
-  gap: clamp(16px, 2.2vw, 28px);
+  gap: clamp(20px, 2.7vw, 42px);
   text-align: center;
 }
 
 .large-text {
   margin: 0;
   color: rgba(248, 244, 235, 0.84);
-  font-size: clamp(28px, 4.6vw, 72px);
-  font-weight: 700;
-  line-height: 1.04;
+  font-size: clamp(28px, 3vw, 48px);
+  font-weight: 500;
+  line-height: 1.16;
   letter-spacing: 0;
   text-wrap: balance;
 }
@@ -3025,16 +3025,16 @@ select {
   }
 
   .text-block.myt-text-block {
-    padding: 36px 16px 64px;
+    padding: 34px 16px 56px;
   }
 
   .text-block__text {
-    gap: 16px;
+    gap: 22px;
   }
 
   .large-text {
-    font-size: clamp(28px, 9vw, 44px);
-    line-height: 1.08;
+    font-size: clamp(24px, 7vw, 34px);
+    line-height: 1.16;
   }
 
   .myt-bipsync-canvas {
