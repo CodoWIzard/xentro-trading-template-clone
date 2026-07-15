@@ -114,6 +114,18 @@ export function HeroCommand() {
       </div>
 
       <div className="hero__background myt-bipsync-background" aria-hidden>
+        {!reduceMotion && (
+          <video
+            className="myt-bipsync-video"
+            src="/videos/hero-trading-chart.mp4"
+            poster="/images/myt-precision-edge.png"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
+        )}
         <div className="myt-bipsync-canvas">
           <span className="myt-bipsync-orbit is-one" />
           <span className="myt-bipsync-orbit is-two" />

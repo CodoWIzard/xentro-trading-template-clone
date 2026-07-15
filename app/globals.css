@@ -2163,13 +2163,49 @@ select {
   pointer-events: none;
 }
 
+.myt-bipsync-background::before,
+.myt-bipsync-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.myt-bipsync-background::before {
+  background:
+    linear-gradient(90deg, rgba(5, 7, 6, 0.92), rgba(5, 7, 6, 0.5) 48%, rgba(5, 7, 6, 0.86)),
+    linear-gradient(180deg, rgba(5, 7, 6, 0.7), rgba(5, 7, 6, 0.3) 45%, #050706 100%);
+}
+
+.myt-bipsync-background::after {
+  background:
+    radial-gradient(circle at 50% 36%, rgba(44, 255, 154, 0.16), transparent 28rem),
+    radial-gradient(circle at 72% 34%, rgba(141, 223, 255, 0.16), transparent 26rem);
+  mix-blend-mode: screen;
+}
+
+.myt-bipsync-video {
+  position: absolute;
+  inset: -28px;
+  z-index: 0;
+  width: calc(100% + 56px);
+  height: calc(100% + 56px);
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.34;
+  filter: blur(13px) saturate(0.86) contrast(1.08);
+  transform: scale(1.03);
+}
+
 .myt-bipsync-canvas {
   position: absolute;
+  z-index: 2;
   top: 50%;
   left: 50%;
   width: min(1160px, 92vw);
   aspect-ratio: 1.55;
-  opacity: 0.78;
+  opacity: 0.56;
   transform:
     translate(-50%, -44%)
     translate3d(calc(var(--hero-x) * 26px), calc(var(--hero-y) * 18px), 0);
@@ -2803,11 +2839,16 @@ select {
     font-size: 10px;
   }
 
+  .myt-bipsync-video {
+    opacity: 0.24;
+    filter: blur(16px) saturate(0.78) contrast(1.05);
+  }
+
   .myt-bipsync-canvas {
     top: 58%;
     left: 62%;
     width: 150vw;
-    opacity: 0.72;
+    opacity: 0.42;
   }
 
   .myt-atelier-hero {
