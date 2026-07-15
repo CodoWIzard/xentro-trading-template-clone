@@ -216,22 +216,22 @@ function HomePage() {
         <div className="myt-hero-inner">
           <div className="myt-hero-copy">
             <p className="myt-trust-line">Globally trusted by serious futures traders</p>
-            <p className="myt-kicker">35% off founding room access until launch</p>
+            <p className="myt-kicker">Live room, course path, and execution review</p>
             <h1 id="hero-title">
-              Trade, review, and grow with <span>Mind Your Trades.</span>
+              Trade from a process, <span>not pressure.</span>
             </h1>
             <p className="myt-hero-text">
-              MYT turns market prep, execution review, live coaching, and chart tools into one premium
-              operating system for traders who are done chasing random signals.
+              MYT turns pre-market prep, risk rules, live coaching, and trade review into one sharp
+              operating system for futures traders who want repeatable execution.
             </p>
             <div className="myt-hero-badges" aria-label="MYT platform benefits">
               <span>
                 <Zap size={15} aria-hidden />
-                Live room prep
+                Pre-market plan
               </span>
               <span>
                 <ShieldCheck size={15} aria-hidden />
-                Risk-first playbook
+                Risk locked first
               </span>
             </div>
             <div className="myt-actions">
@@ -268,6 +268,25 @@ function HomePage() {
                 priority
                 sizes="(max-width: 900px) 96vw, 1120px"
               />
+              <div className="myt-command-grid" aria-hidden>
+                <span />
+                <span />
+                <span />
+              </div>
+              <div className="myt-liquidity-line" aria-hidden />
+              <div className="myt-risk-band" aria-hidden>
+                <span>Risk boundary</span>
+              </div>
+            </div>
+            <div className="myt-session-card" aria-hidden>
+              <span>NY AM session</span>
+              <strong>Bias confirmed</strong>
+              <small>Invalidation: 16 pts</small>
+            </div>
+            <div className="myt-discipline-card" aria-hidden>
+              <span>Execution checklist</span>
+              <strong>3 / 4 locked</strong>
+              <small>Plan → Wait → Execute → Review</small>
             </div>
           </aside>
         </div>

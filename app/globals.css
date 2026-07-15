@@ -200,9 +200,10 @@ select {
   inset: 0;
   z-index: -3;
   background:
-    linear-gradient(90deg, rgba(2, 12, 13, 0.96), rgba(2, 12, 13, 0.7) 46%, rgba(2, 12, 13, 0.36) 72%, rgba(2, 12, 13, 0.76)),
-    radial-gradient(ellipse at 78% 46%, rgba(255, 216, 77, 0.18), transparent 24rem),
+    linear-gradient(90deg, rgba(2, 12, 13, 0.98), rgba(2, 12, 13, 0.72) 43%, rgba(2, 12, 13, 0.3) 74%, rgba(2, 12, 13, 0.82)),
+    radial-gradient(ellipse at 82% 42%, rgba(255, 216, 77, 0.14), transparent 22rem),
     radial-gradient(ellipse at 16% 46%, rgba(22, 223, 241, 0.16), transparent 22rem),
+    radial-gradient(ellipse at 68% 78%, rgba(22, 223, 241, 0.18), transparent 18rem),
     linear-gradient(180deg, rgba(1, 7, 9, 0.62), rgba(2, 5, 10, 0.96) 100%);
 }
 
@@ -233,9 +234,9 @@ select {
 
 .myt-hero-copy {
   display: grid;
-  gap: 17px;
+  gap: 18px;
   justify-items: start;
-  max-width: 680px;
+  max-width: 720px;
   text-align: left;
 }
 
@@ -324,9 +325,9 @@ select {
 }
 
 .myt-hero h1 {
-  max-width: 700px;
-  font-size: clamp(48px, 5.7vw, 78px);
-  line-height: 0.98;
+  max-width: 760px;
+  font-size: clamp(52px, 6vw, 84px);
+  line-height: 0.94;
 }
 
 .myt-hero h1 span {
@@ -335,11 +336,11 @@ select {
 }
 
 .myt-hero-text {
-  max-width: 620px;
+  max-width: 640px;
   margin: 0;
   color: var(--muted);
-  font-size: 16px;
-  line-height: 1.62;
+  font-size: 17px;
+  line-height: 1.66;
 }
 
 .myt-hero-badges {
@@ -357,7 +358,7 @@ select {
   border: 1px solid rgba(247, 251, 255, 0.1);
   border-radius: 999px;
   color: rgba(247, 251, 255, 0.86);
-  background: rgba(0, 0, 0, 0.44);
+  background: rgba(0, 15, 19, 0.62);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
   font-size: 12px;
   font-weight: 900;
@@ -442,8 +443,8 @@ select {
 .myt-dashboard-stage {
   position: relative;
   align-self: center;
-  min-height: 560px;
-  width: min(760px, 100%);
+  min-height: 590px;
+  width: min(790px, 100%);
   margin: 0 auto;
   perspective: 1400px;
 }
@@ -463,10 +464,10 @@ select {
 .myt-dashboard-frame {
   position: absolute;
   right: 0;
-  bottom: 4%;
+  bottom: 3%;
   left: 50%;
-  width: min(740px, 106%);
-  aspect-ratio: 1.5 / 1;
+  width: min(800px, 112%);
+  aspect-ratio: 1.48 / 1;
   overflow: hidden;
   border: 1px solid rgba(214, 251, 255, 0.22);
   border-radius: 22px;
@@ -490,8 +491,9 @@ select {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(2, 5, 10, 0.2), transparent 22%, rgba(2, 5, 10, 0.18)),
-    linear-gradient(90deg, rgba(22, 223, 241, 0.14), transparent 22%, transparent 78%, rgba(255, 216, 77, 0.1));
+    linear-gradient(180deg, rgba(2, 5, 10, 0.12), transparent 22%, rgba(2, 5, 10, 0.28)),
+    radial-gradient(circle at 38% 52%, rgba(22, 223, 241, 0.12), transparent 22rem),
+    linear-gradient(90deg, rgba(22, 223, 241, 0.15), transparent 22%, transparent 78%, rgba(255, 216, 77, 0.08));
 }
 
 .myt-dashboard-main {
@@ -499,9 +501,135 @@ select {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 62%;
-  transform: scale(1.22);
+  object-position: center 60%;
+  transform: scale(1.24);
   transform-origin: center 58%;
+}
+
+.myt-command-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(22, 223, 241, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 223, 241, 0.06) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mix-blend-mode: screen;
+  opacity: 0.42;
+}
+
+.myt-command-grid span {
+  position: absolute;
+  display: block;
+  border: 1px solid rgba(22, 223, 241, 0.22);
+  border-radius: 999px;
+  opacity: 0.42;
+}
+
+.myt-command-grid span:first-child {
+  top: 18%;
+  right: 15%;
+  width: 210px;
+  height: 210px;
+}
+
+.myt-command-grid span:nth-child(2) {
+  right: 38%;
+  bottom: 8%;
+  width: 128px;
+  height: 128px;
+  border-color: rgba(255, 216, 77, 0.2);
+}
+
+.myt-command-grid span:nth-child(3) {
+  top: 42%;
+  left: 8%;
+  width: 86px;
+  height: 86px;
+}
+
+.myt-liquidity-line {
+  position: absolute;
+  top: 36%;
+  left: -16%;
+  width: 132%;
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(22, 223, 241, 0.08), rgba(150, 247, 255, 0.96), rgba(22, 223, 241, 0.1), transparent);
+  box-shadow: 0 0 26px rgba(22, 223, 241, 0.5);
+  transform: rotate(-6deg);
+  animation: liquiditySweep 7s ease-in-out infinite;
+}
+
+.myt-risk-band {
+  position: absolute;
+  right: 12%;
+  bottom: 18%;
+  width: 42%;
+  height: 54px;
+  pointer-events: none;
+  border-top: 1px solid rgba(255, 96, 118, 0.72);
+  background: linear-gradient(180deg, rgba(255, 96, 118, 0.12), transparent);
+}
+
+.myt-risk-band span {
+  position: absolute;
+  top: -22px;
+  right: 0;
+  color: rgba(255, 180, 190, 0.86);
+  font-family: "Fira Code", monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.myt-session-card,
+.myt-discipline-card {
+  position: absolute;
+  z-index: 4;
+  display: grid;
+  gap: 4px;
+  min-width: 178px;
+  padding: 13px 14px;
+  border: 1px solid rgba(22, 223, 241, 0.2);
+  border-radius: 8px;
+  background: rgba(2, 10, 14, 0.74);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(18px);
+}
+
+.myt-session-card {
+  top: 10%;
+  right: 3%;
+}
+
+.myt-discipline-card {
+  bottom: 7%;
+  left: 0;
+}
+
+.myt-session-card span,
+.myt-discipline-card span {
+  color: rgba(22, 223, 241, 0.86);
+  font-family: "Fira Code", monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.myt-session-card strong,
+.myt-discipline-card strong {
+  color: var(--white);
+  font-size: 17px;
+  line-height: 1.1;
+}
+
+.myt-session-card small,
+.myt-discipline-card small {
+  color: rgba(227, 239, 255, 0.68);
+  font-size: 11px;
 }
 
 .myt-tape {
@@ -961,6 +1089,18 @@ select {
   }
 }
 
+@keyframes liquiditySweep {
+  0%,
+  100% {
+    opacity: 0.38;
+    transform: rotate(-6deg) translateX(-24px);
+  }
+  48% {
+    opacity: 0.9;
+    transform: rotate(-6deg) translateX(28px);
+  }
+}
+
 @keyframes borderScan {
   0% {
     top: 0;
@@ -1055,14 +1195,24 @@ select {
   }
 
   .myt-dashboard-stage {
-    min-height: min(42vh, 380px);
-    width: min(720px, 90vw);
+    min-height: min(46vh, 430px);
+    width: min(760px, 92vw);
   }
 
   .myt-dashboard-frame {
     bottom: 0;
     aspect-ratio: 1.62 / 1;
     transform: translateX(-50%);
+  }
+
+  .myt-session-card {
+    top: 4%;
+    right: 0;
+  }
+
+  .myt-discipline-card {
+    bottom: 2%;
+    left: 2%;
   }
 
   .myt-hero h1 {
@@ -1170,6 +1320,23 @@ select {
   .myt-dashboard-main {
     object-position: center 60%;
     transform: scale(1.2);
+  }
+
+  .myt-command-grid {
+    opacity: 0.26;
+  }
+
+  .myt-command-grid span,
+  .myt-session-card,
+  .myt-discipline-card,
+  .myt-risk-band {
+    display: none;
+  }
+
+  .myt-liquidity-line {
+    top: 34%;
+    width: 118%;
+    opacity: 0.54;
   }
 
   .myt-stats,
