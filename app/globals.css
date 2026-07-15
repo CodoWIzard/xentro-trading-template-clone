@@ -1974,7 +1974,7 @@ select {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: clamp(112px, 12vw, 176px);
+  height: clamp(132px, 14vw, 210px);
 }
 
 .h-marquee_track {
@@ -1985,7 +1985,7 @@ select {
   gap: clamp(18px, 2vw, 34px);
   width: max-content;
   will-change: transform;
-  animation: hMarqueeMove 56s linear infinite;
+  animation: hMarqueeMove 82s linear infinite;
 }
 
 .h-marquee_inner {
