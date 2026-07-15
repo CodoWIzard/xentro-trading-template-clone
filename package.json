@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "check": "pnpm typecheck && pnpm lint && pnpm build",
+    "verify:deploy": "bash scripts/verify-vercel-deploy.sh",
     "deploy:preview": "vercel",
     "deploy:prod": "vercel --prod"
   },
