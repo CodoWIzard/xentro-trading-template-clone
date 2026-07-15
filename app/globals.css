@@ -2774,6 +2774,174 @@ select {
   color: #126f89;
 }
 
+.footer_component.myt-footer {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #f8f4eb;
+  background:
+    radial-gradient(circle at 16% 10%, rgba(44, 255, 154, 0.1), transparent 28rem),
+    radial-gradient(circle at 86% 24%, rgba(141, 223, 255, 0.12), transparent 30rem),
+    linear-gradient(180deg, #050706 0%, #0a100d 100%);
+}
+
+.footer_component .footer_pattern {
+  background: transparent;
+}
+
+.footer_section-border {
+  height: 7px;
+}
+
+.footer_marquee_wrap {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(32px, 5vw, 72px) 0;
+  border-top: 1px solid rgba(248, 244, 235, 0.08);
+  border-bottom: 1px solid rgba(248, 244, 235, 0.08);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 9%, #000 91%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 9%, #000 91%, transparent 100%);
+}
+
+.footer_marquee_inner {
+  display: flex;
+  width: max-content;
+  animation: footerMarqueeMove 34s linear infinite;
+}
+
+.footer_marquee_item {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: clamp(22px, 3vw, 46px);
+  align-items: center;
+  padding-right: clamp(34px, 5vw, 86px);
+  color: rgba(248, 244, 235, 0.92);
+  font-size: clamp(58px, 12vw, 168px);
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.footer_marquee_item img {
+  width: clamp(42px, 7vw, 96px);
+  height: clamp(42px, 7vw, 96px);
+  object-fit: contain;
+  filter: drop-shadow(0 0 30px rgba(44, 255, 154, 0.28));
+}
+
+.myt-footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer_inner {
+  padding: clamp(42px, 7vw, 92px) 0 clamp(30px, 5vw, 58px);
+}
+
+.footer_body {
+  display: grid;
+  gap: clamp(38px, 6vw, 84px);
+}
+
+.footer_top,
+.footer_bottom,
+.footer_legal_wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.footer_main {
+  display: grid;
+  gap: 18px;
+  max-width: 440px;
+}
+
+.footer_logo-link {
+  display: inline-flex;
+  width: fit-content;
+}
+
+.footer_logo-link img {
+  width: 148px;
+  height: auto;
+  filter: drop-shadow(0 0 18px rgba(141, 223, 255, 0.2));
+}
+
+.footer_p {
+  margin: 0;
+  color: rgba(248, 244, 235, 0.58);
+  font-size: 15px;
+  line-height: 1.62;
+}
+
+.footer_nav_list,
+.footer_social_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer_nav_link,
+.footer_social_link,
+.footer_legal_text {
+  color: rgba(248, 244, 235, 0.58);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer_nav_link:hover {
+  color: #8ddfff;
+}
+
+.footer_social_link {
+  display: inline-flex;
+  padding: 8px 0;
+  color: rgba(248, 244, 235, 0.64);
+}
+
+.footer_cta {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 13px 16px;
+  border: 1px solid rgba(141, 223, 255, 0.3);
+  border-radius: 999px;
+  color: #06101b;
+  background: linear-gradient(135deg, #f7f0ce, #8ddfff);
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 18px 42px rgba(52, 173, 218, 0.16);
+}
+
+.footer_legal_wrap {
+  padding: 22px 0 30px;
+  align-items: center;
+}
+
+@keyframes footerMarqueeMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 1100px) {
   .myt-bipsync-hero {
     padding-top: 122px;
@@ -2799,6 +2967,18 @@ select {
 
   .myt-network-section {
     grid-template-columns: 1fr;
+  }
+
+  .footer_top,
+  .footer_bottom,
+  .footer_legal_wrap {
+    display: grid;
+    justify-content: stretch;
+  }
+
+  .footer_nav_list,
+  .footer_social_list {
+    justify-content: flex-start;
   }
 }
 
@@ -2849,6 +3029,38 @@ select {
     left: 62%;
     width: 150vw;
     opacity: 0.42;
+  }
+
+  .footer_marquee_wrap {
+    padding: 30px 0;
+  }
+
+  .footer_marquee_item {
+    gap: 18px;
+    padding-right: 34px;
+    font-size: clamp(46px, 18vw, 86px);
+  }
+
+  .myt-footer-container {
+    padding: 0 16px;
+  }
+
+  .footer_inner {
+    padding: 38px 0 28px;
+  }
+
+  .footer_logo-link img {
+    width: 126px;
+  }
+
+  .footer_nav_list,
+  .footer_social_list {
+    gap: 8px 14px;
+  }
+
+  .footer_cta {
+    width: 100%;
+    justify-content: center;
   }
 
   .myt-atelier-hero {

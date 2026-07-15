@@ -123,6 +123,16 @@ const faqs = [
   }
 ];
 
+const footerNav = [
+  { href: "/", label: "Home" },
+  { href: "/learning/courses", label: "Courses" },
+  { href: "/learning/indicators", label: "Indicators" },
+  { href: "/community", label: "Community" },
+  { href: "/pricing", label: "Pricing" }
+];
+
+const footerSocial = ["YouTube", "Instagram", "Discord", "X"];
+
 const learningDetails = {
   indicators: {
     eyebrow: "Indicators",
@@ -525,12 +535,165 @@ function FinalCta() {
 
 function SiteFooter() {
   return (
-    <footer className="myt-footer">
-      <span>MYT - Mind Your Trades</span>
-      <Link href="/pricing">
-        Join the next cohort
-        <Zap size={16} aria-hidden />
-      </Link>
+    <footer className="myt-footer footer_component">
+      <FooterPattern />
+      <FooterSectionBorder />
+
+      <div className="footer_marquee_wrap" aria-hidden>
+        <div className="footer_marquee_inner">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <div className="footer_marquee_item" key={index}>
+              <span>Mind Your Trades</span>
+              <Image src="/brand/myt-mark.png" alt="" width={96} height={96} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <FooterSectionBorder />
+      <FooterPattern variant="base" />
+      <FooterSectionBorder />
+
+      <div className="myt-footer-container">
+        <div className="footer_inner">
+          <div className="footer_body">
+            <div className="footer_top">
+              <div className="footer_main">
+                <Link aria-label="Mind Your Trades home" className="footer_logo-link" href="/">
+                  <Image src="/brand/myt-logo.png" alt="MYT" width={360} height={151} />
+                </Link>
+                <p className="footer_p">
+                  Courses, tools, live context, and coaching for futures traders building a
+                  repeatable process.
+                </p>
+              </div>
+
+              <nav aria-label="Footer navigation" className="footer_nav">
+                <ul className="footer_nav_list">
+                  {footerNav.map((item) => (
+                    <li className="footer_nav_item" key={item.href}>
+                      <Link className="footer_nav_link" href={item.href}>
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
+
+            <div className="footer_bottom">
+              <nav aria-label="Social links" className="footer_social">
+                <ul className="footer_social_list">
+                  {footerSocial.map((item) => (
+                    <li className="footer_social_item" key={item}>
+                      <span className="footer_social_link">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+
+              <Link className="footer_cta" href="/pricing">
+                Join the next cohort
+                <Zap size={16} aria-hidden />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <FooterSectionBorder />
+
+      <div className="myt-footer-container">
+        <div className="footer_legal_wrap">
+          <div className="footer_legal_text">© 2026 Mind Your Trades. All rights reserved.</div>
+          <nav aria-label="Legal navigation" className="footer_nav">
+            <ul className="footer_nav_list">
+              <li className="footer_nav_item">
+                <Link className="footer_nav_link" href="/privacy-policy">
+                  Privacy policy
+                </Link>
+              </li>
+              <li className="footer_nav_item">
+                <Link className="footer_nav_link" href="/terms-conditions">
+                  Terms &amp; Conditions
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </footer>
+  );
+}
+
+function FooterPattern({ variant = "inverse" }: { variant?: "inverse" | "base" }) {
+  return (
+    <div data-pattern-divider-variant={variant} className="pattern_component footer_pattern" aria-hidden>
+      <div className="pattern_wrap">
+        <div className="pattern_track">
+          <FooterPatternInner />
+          <FooterPatternInner />
+        </div>
+      </div>
+      <div className="pattern_wrap">
+        <div className="pattern_track is-reverse">
+          <FooterPatternInner variant="reverse" />
+          <FooterPatternInner variant="reverse" />
+        </div>
+      </div>
+      <div className="pattern_wrap">
+        <div className="pattern_track">
+          <FooterPatternInner variant="alternate" />
+          <FooterPatternInner variant="alternate" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function FooterPatternInner({ variant = "base" }: { variant?: "base" | "reverse" | "alternate" }) {
+  if (variant === "reverse") {
+    return (
+      <div className="pattern_inner">
+        <div className="pattern_line is-medium" />
+        <div className="pattern_line is-long is-green" />
+        <div className="pattern_line is-medium" />
+        <div className="pattern_line is-long is-red" />
+      </div>
+    );
+  }
+
+  if (variant === "alternate") {
+    return (
+      <div className="pattern_inner">
+        <div className="pattern_line is-red" />
+        <div className="pattern_line is-long" />
+        <div className="pattern_line is-green" />
+        <div className="pattern_line is-long" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="pattern_inner">
+      <div className="pattern_line is-green" />
+      <div className="pattern_line is-long" />
+      <div className="pattern_line is-red" />
+      <div className="pattern_line is-long" />
+    </div>
+  );
+}
+
+function FooterSectionBorder() {
+  return (
+    <div className="section-border_wrap footer_section-border" aria-hidden>
+      <div className="section-border_bg" />
+      <div className="section-border_container">
+        <div className="section-border_inner">
+          <div className="section-border_square" />
+          <div className="section-border_square is-right" />
+        </div>
+      </div>
+    </div>
   );
 }
