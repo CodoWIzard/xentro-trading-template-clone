@@ -1974,10 +1974,13 @@ select {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: clamp(160px, 20vw, 300px);
+  height: clamp(112px, 12vw, 176px);
 }
 
 .h-marquee_track {
+  position: absolute;
+  top: 50%;
+  left: 0;
   display: flex;
   gap: clamp(18px, 2vw, 34px);
   width: max-content;
@@ -2458,9 +2461,9 @@ select {
 
 @keyframes hMarqueeMove {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, -50%, 0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, -50%, 0);
   }
 }
