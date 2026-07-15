@@ -9,12 +9,12 @@ import {
   ChevronDown,
   ChevronRight,
   MonitorPlay,
-  PlayCircle,
   ShieldCheck,
   Sparkles,
   UsersRound,
   Zap
 } from "lucide-react";
+import { HeroCommand } from "../../components/hero-command";
 import { MagneticCard, Reveal } from "../../components/reveal";
 
 type PageProps = {
@@ -210,95 +210,7 @@ function Header() {
 function HomePage() {
   return (
     <>
-      <section className="myt-hero" id="home" aria-labelledby="hero-title">
-        <Image className="myt-hero-bg" src="/images/myt-precision-edge.png" alt="" fill priority sizes="100vw" />
-        <div className="myt-hero-noise" aria-hidden />
-        <div className="myt-hero-spotlight" aria-hidden />
-        <div className="myt-hero-inner">
-          <div className="myt-hero-copy">
-            <p className="myt-trust-line">Globally trusted by serious futures traders</p>
-            <p className="myt-kicker">Courses, indicators, coaching, and live room access</p>
-            <h1 id="hero-title">
-              Learn the process. <span>Trade with better tools.</span>
-            </h1>
-            <p className="myt-hero-text">
-              MYT packages futures trading education, indicator tools, live market context, and coaching
-              into one premium learning ecosystem for traders building a repeatable edge.
-            </p>
-            <div className="myt-hero-badges" aria-label="MYT platform benefits">
-              <span>
-                <BookOpenCheck size={15} aria-hidden />
-                Course library
-              </span>
-              <span>
-                <CandlestickChart size={15} aria-hidden />
-                Indicator suite
-              </span>
-            </div>
-            <div className="myt-process-strip" aria-label="MYT offer paths">
-              <span>Courses</span>
-              <span>Tools</span>
-              <span>Live room</span>
-              <span>Coaching</span>
-            </div>
-            <div className="myt-actions">
-              <Link className="myt-button myt-button-primary" href="/pricing">
-                View access options
-                <ChevronRight size={18} aria-hidden />
-              </Link>
-              <Link className="myt-button myt-button-secondary" href="/learning/courses">
-                Explore courses
-                <PlayCircle size={18} aria-hidden />
-              </Link>
-            </div>
-            <div className="myt-proof-row">
-              <div className="myt-avatar-stack" aria-label="Trader proof avatars">
-                <Image src="/webflow/avatar-01.webp" alt="" width={50} height={50} />
-                <Image src="/webflow/avatar-02.webp" alt="" width={50} height={50} />
-                <Image src="/webflow/avatar-03.webp" alt="" width={50} height={50} />
-              </div>
-              <p>Built for the trader who wants to sell a serious method, not just another signal room.</p>
-            </div>
-          </div>
-
-          <aside className="myt-dashboard-stage" aria-label="MYT trading dashboard preview">
-            <div className="myt-dashboard-glow" aria-hidden />
-            <div className="myt-dashboard-frame">
-              <Image
-                className="myt-dashboard-main"
-                src="/webflow/hero-dashboard.webp"
-                alt="Trading platform dashboard preview with performance panels and market charts."
-                width={2880}
-                height={1970}
-                priority
-                sizes="(max-width: 900px) 96vw, 1120px"
-              />
-              <div className="myt-command-grid" aria-hidden>
-                <span />
-                <span />
-                <span />
-              </div>
-              <div className="myt-liquidity-line" aria-hidden />
-              <div className="myt-risk-band" aria-hidden>
-                <span>Tools + education stack</span>
-              </div>
-              <div className="myt-dashboard-label" aria-hidden>
-                <span>MYT LEARNING HUB</span>
-              </div>
-            </div>
-            <div className="myt-session-card" aria-hidden>
-              <span>Featured course</span>
-              <strong>Futures Framework</strong>
-              <small>Structure, risk, execution</small>
-            </div>
-            <div className="myt-discipline-card" aria-hidden>
-              <span>Tool access</span>
-              <strong>Indicator Suite</strong>
-              <small>Levels, momentum, confluence</small>
-            </div>
-          </aside>
-        </div>
-      </section>
+      <HeroCommand />
       <MarketTape />
       <Stats />
       <LearningOverview />
