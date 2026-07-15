@@ -2298,7 +2298,7 @@ select {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: clamp(132px, 14vw, 210px);
+  height: clamp(148px, 15.5vw, 238px);
   mask-image: linear-gradient(90deg, transparent 0%, #000 9%, #000 91%, transparent 100%);
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 9%, #000 91%, transparent 100%);
 }
@@ -2324,7 +2324,7 @@ select {
 .h-marquee_item {
   display: block;
   flex: 0 0 auto;
-  width: clamp(620px, 72vw, 1120px);
+  width: clamp(700px, 80vw, 1260px);
   aspect-ratio: 1.72 / 1;
   background-repeat: no-repeat;
   background-position: center;
