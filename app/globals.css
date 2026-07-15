@@ -876,29 +876,6 @@ select {
   color: var(--gold);
 }
 
-.myt-tape {
-  overflow: hidden;
-  border-top: 1px solid rgba(22, 223, 241, 0.18);
-  border-bottom: 1px solid rgba(22, 223, 241, 0.18);
-  background: rgba(2, 5, 10, 0.88);
-}
-
-.myt-tape div {
-  display: flex;
-  width: max-content;
-  animation: tapeMove 28s linear infinite;
-}
-
-.myt-tape span {
-  padding: 18px 22px;
-  color: rgba(247, 251, 255, 0.78);
-  font-family: "Fira Code", monospace;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .myt-stats,
 .myt-section,
 .myt-showcase,
@@ -1322,15 +1299,6 @@ select {
   color: var(--blue);
   font-weight: 900;
   text-decoration: none;
-}
-
-@keyframes tapeMove {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
 }
 
 @keyframes liquiditySweep {
@@ -2648,15 +2616,6 @@ select {
   color: #f8f4eb;
   font-size: 26px;
   line-height: 1;
-}
-
-.myt-tape {
-  border-color: rgba(9, 15, 13, 0.12);
-  background: #f2efe6;
-}
-
-.myt-tape span {
-  color: rgba(8, 12, 10, 0.62);
 }
 
 .myt-stats,

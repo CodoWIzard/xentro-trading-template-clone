@@ -28,17 +28,6 @@ const learningMenu = [
   { href: "/learning/courses", label: "Courses" }
 ];
 
-const marketTape = [
-  "Session prep",
-  "Context first",
-  "Risk rules",
-  "Execution review",
-  "Course library",
-  "Indicator suite",
-  "Live room",
-  "Trader discipline"
-];
-
 const proofStats = [
   { value: "4", label: "commercial paths: courses, tools, room, coaching" },
   { value: "24/7", label: "course library for review outside market hours" },
@@ -223,7 +212,6 @@ function HomePage() {
     <>
       <HeroCommand />
       <MarketGraph />
-      <MarketTape />
       <Stats />
       <LearningOverview />
       <ProductStory />
@@ -343,18 +331,6 @@ function SubHero({ eyebrow, title, text, cta, href }: { eyebrow: string; title: 
         priority
         sizes="(max-width: 900px) 100vw, 45vw"
       />
-    </section>
-  );
-}
-
-function MarketTape() {
-  return (
-    <section className="myt-tape" aria-label="MYT focus ticker">
-      <div>
-        {[...marketTape, ...marketTape].map((item, index) => (
-          <span key={`${item}-${index}`}>{item}</span>
-        ))}
-      </div>
     </section>
   );
 }
