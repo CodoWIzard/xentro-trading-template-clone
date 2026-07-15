@@ -1,18 +1,16 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import gsap from "gsap";
-import { ArrowRight, BookOpenCheck, CandlestickChart, Radio, ShieldCheck } from "lucide-react";
-
-const heroSignals = ["Structured courses", "Indicator tools", "Live market room", "Execution coaching"];
+import { ArrowRight } from "lucide-react";
 
 const proofItems = [
-  ["01", "Prepare", "Map the session before risk enters the equation."],
-  ["02", "Execute", "Use rules, levels, and context instead of impulse."],
-  ["03", "Review", "Turn screenshots and journals into repeatable progress."]
+  "Structured courses",
+  "Indicator tools",
+  "Live market room",
+  "Execution coaching"
 ];
 
 export function HeroCommand() {
@@ -25,21 +23,15 @@ export function HeroCommand() {
     const hero = heroRef.current;
     const ctx = gsap.context(() => {
       gsap.fromTo(
-        ".myt-atelier-line",
-        { scaleX: 0 },
-        { scaleX: 1, duration: 1.1, ease: "expo.out", delay: 0.15 }
+        [".myt-bipsync-pill", ".myt-bipsync-title", ".myt-bipsync-copy", ".myt-bipsync-actions", ".myt-bipsync-proof"],
+        { y: 28, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: "power3.out", delay: 0.08 }
       );
 
       gsap.fromTo(
-        ".myt-atelier-visual",
-        { y: 56, opacity: 0, clipPath: "inset(18% 8% 0% 8% round 12px)" },
-        { y: 0, opacity: 1, clipPath: "inset(0% 0% 0% 0% round 12px)", duration: 1.1, ease: "expo.out", delay: 0.25 }
-      );
-
-      gsap.fromTo(
-        ".myt-atelier-proof li",
-        { y: 18, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.7, stagger: 0.08, ease: "power3.out", delay: 0.45 }
+        ".myt-bipsync-canvas",
+        { scale: 0.94, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 1.35, ease: "expo.out", delay: 0.2 }
       );
     }, hero);
 
@@ -49,9 +41,9 @@ export function HeroCommand() {
       const y = (event.clientY - rect.top) / rect.height - 0.5;
 
       gsap.to(hero, {
-        "--tilt-x": (x * 10).toFixed(2),
-        "--tilt-y": (y * -8).toFixed(2),
-        duration: 0.7,
+        "--hero-x": x.toFixed(3),
+        "--hero-y": y.toFixed(3),
+        duration: 0.8,
         ease: "power3.out"
       });
     };
@@ -65,86 +57,74 @@ export function HeroCommand() {
   }, [reduceMotion]);
 
   return (
-    <section className="myt-atelier-hero" id="home" aria-labelledby="hero-title" ref={heroRef}>
-      <div className="myt-atelier-backdrop" aria-hidden>
-        <Image src="/images/myt-precision-edge.png" alt="" fill priority sizes="100vw" />
-      </div>
-      <div className="myt-atelier-shell">
-        <motion.div
-          className="myt-atelier-copy"
-          initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-          animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <p className="myt-atelier-kicker">Mind Your Trades / futures education platform</p>
-          <h1 id="hero-title">
-            The workspace for traders building a real process.
+    <section
+      className="hero home-hero myt-bipsync-hero"
+      id="home"
+      aria-labelledby="hero-title"
+      ref={heroRef}
+    >
+      <div className="hero__container myt-bipsync-container">
+        <div className="hero__layout myt-bipsync-layout">
+          <motion.div
+            className="hero__featured-content myt-bipsync-pill"
+            initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+            animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <Link className="button myt-glow-button" href="/pricing">
+              <span className="myt-glow-button-inner">
+                <span>
+                  Now open <strong>MYT access</strong>
+                </span>
+                <ArrowRight size={14} aria-hidden />
+              </span>
+              <span className="myt-glow-button-border" aria-hidden />
+              <span className="myt-glow-button-glows" aria-hidden>
+                <span />
+                <span />
+              </span>
+            </Link>
+          </motion.div>
+
+          <h1 className="hero__title myt-bipsync-title" id="hero-title">
+            Your futures trading workspace.
           </h1>
-          <p className="myt-atelier-lede">
-            Courses, indicators, live-room context, and coaching arranged into one serious learning
-            system for futures traders who want discipline before performance claims.
+
+          <p className="hero__paragraph myt-bipsync-copy">
+            Courses, indicator tools, live market context, and coaching in one disciplined system
+            for traders building a repeatable futures process.
           </p>
-          <div className="myt-atelier-actions">
+
+          <div className="hero__buttons myt-bipsync-actions">
             <Link className="myt-button myt-button-primary" href="/pricing">
-              Request access
+              View access options
               <ArrowRight size={18} aria-hidden />
             </Link>
             <Link className="myt-button myt-button-secondary" href="/learning/courses">
-              View curriculum
-              <BookOpenCheck size={18} aria-hidden />
+              Explore the method
             </Link>
           </div>
-        </motion.div>
 
-        <div className="myt-atelier-panel" aria-label="MYT offer overview">
-          <div className="myt-atelier-panel-head">
-            <span>MYT operating system</span>
-            <strong>Course stack / tool suite / live review</strong>
-          </div>
-          <div className="myt-atelier-line" aria-hidden />
-          <ul className="myt-atelier-proof">
-            {proofItems.map(([number, label, text]) => (
-              <li key={number}>
-                <span>{number}</span>
-                <strong>{label}</strong>
-                <p>{text}</p>
-              </li>
+          <div className="myt-bipsync-proof" aria-label="MYT offer tracks">
+            {proofItems.map((item) => (
+              <span key={item}>{item}</span>
             ))}
-          </ul>
-        </div>
-      </div>
-
-      <div className="myt-atelier-visual-wrap">
-        <div className="myt-atelier-visual">
-          <Image
-            src="/webflow/hero-dashboard.webp"
-            alt="Trading dashboard and market analysis workspace."
-            width={2880}
-            height={1970}
-            priority
-            sizes="(max-width: 900px) 96vw, 1120px"
-          />
-          <div className="myt-atelier-visual-caption">
-            <span>
-              <CandlestickChart size={16} aria-hidden />
-              Live chart context
-            </span>
-            <span>
-              <ShieldCheck size={16} aria-hidden />
-              Risk-first framework
-            </span>
-            <span>
-              <Radio size={16} aria-hidden />
-              Room-ready workflow
-            </span>
           </div>
         </div>
       </div>
 
-      <div className="myt-atelier-ticker" aria-label="MYT offer tracks">
-        {heroSignals.map((item) => (
-          <span key={item}>{item}</span>
-        ))}
+      <div className="hero__background myt-bipsync-background" aria-hidden>
+        <div className="myt-bipsync-canvas">
+          <span className="myt-bipsync-orbit is-one" />
+          <span className="myt-bipsync-orbit is-two" />
+          <span className="myt-bipsync-orbit is-three" />
+          <span className="myt-bipsync-path is-a" />
+          <span className="myt-bipsync-path is-b" />
+          <span className="myt-bipsync-core" />
+          <span className="myt-bipsync-node is-first" />
+          <span className="myt-bipsync-node is-second" />
+          <span className="myt-bipsync-node is-third" />
+        </div>
       </div>
     </section>
   );
