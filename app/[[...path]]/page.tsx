@@ -213,10 +213,11 @@ function HomePage() {
       <section className="myt-hero" id="home" aria-labelledby="hero-title">
         <Image className="myt-hero-bg" src="/images/myt-precision-edge.png" alt="" fill priority sizes="100vw" />
         <div className="myt-hero-noise" aria-hidden />
+        <div className="myt-hero-spotlight" aria-hidden />
         <div className="myt-hero-inner">
           <div className="myt-hero-copy">
             <p className="myt-trust-line">Globally trusted by serious futures traders</p>
-            <p className="myt-kicker">Live room, course path, and execution review</p>
+            <p className="myt-kicker">MYT command center</p>
             <h1 id="hero-title">
               Trade from a process, <span>not pressure.</span>
             </h1>
@@ -233,6 +234,12 @@ function HomePage() {
                 <ShieldCheck size={15} aria-hidden />
                 Risk locked first
               </span>
+            </div>
+            <div className="myt-process-strip" aria-label="MYT trading process">
+              <span>Plan</span>
+              <span>Wait</span>
+              <span>Execute</span>
+              <span>Review</span>
             </div>
             <div className="myt-actions">
               <Link className="myt-button myt-button-primary" href="/pricing">
@@ -276,6 +283,9 @@ function HomePage() {
               <div className="myt-liquidity-line" aria-hidden />
               <div className="myt-risk-band" aria-hidden>
                 <span>Risk boundary</span>
+              </div>
+              <div className="myt-dashboard-label" aria-hidden>
+                <span>PROCESS FIRST</span>
               </div>
             </div>
             <div className="myt-session-card" aria-hidden>
