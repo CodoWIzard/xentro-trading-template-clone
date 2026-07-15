@@ -29,6 +29,7 @@ select {
   --soft: rgba(247, 251, 255, 0.08);
   --blue: #16dff1;
   --green: #2cff9a;
+  --blue-ink: #001015;
   --gold: #ffd84d;
   --red: #ff6076;
   --line: rgba(22, 223, 241, 0.24);
@@ -62,7 +63,7 @@ select {
   max-width: 1240px;
   margin: 0 auto;
   padding: 12px 14px;
-  border: 1px solid rgba(44, 255, 154, 0.18);
+  border: 1px solid rgba(22, 223, 241, 0.2);
   border-radius: 8px;
   background: rgba(3, 13, 14, 0.78);
   box-shadow: 0 18px 80px rgba(0, 0, 0, 0.42);
@@ -170,10 +171,10 @@ select {
 
 .myt-header-cta {
   padding: 11px 15px;
-  border: 1px solid rgba(44, 255, 154, 0.42);
-  color: #02140b;
-  background: linear-gradient(135deg, #d9ffd8, var(--green));
-  box-shadow: 0 0 26px rgba(44, 255, 154, 0.2);
+  border: 1px solid rgba(22, 223, 241, 0.5);
+  color: var(--blue-ink);
+  background: linear-gradient(135deg, #d9fbff, var(--blue));
+  box-shadow: 0 0 26px rgba(22, 223, 241, 0.22);
 }
 
 .myt-hero {
@@ -201,7 +202,7 @@ select {
   background:
     linear-gradient(90deg, rgba(2, 12, 13, 0.96), rgba(2, 12, 13, 0.7) 46%, rgba(2, 12, 13, 0.36) 72%, rgba(2, 12, 13, 0.76)),
     radial-gradient(ellipse at 78% 46%, rgba(255, 216, 77, 0.18), transparent 24rem),
-    radial-gradient(ellipse at 16% 46%, rgba(44, 255, 154, 0.16), transparent 22rem),
+    radial-gradient(ellipse at 16% 46%, rgba(22, 223, 241, 0.16), transparent 22rem),
     linear-gradient(180deg, rgba(1, 7, 9, 0.62), rgba(2, 5, 10, 0.96) 100%);
 }
 
@@ -283,10 +284,10 @@ select {
   max-width: 100%;
   margin: 0;
   padding: 8px 13px;
-  border: 1px solid rgba(44, 255, 154, 0.28);
+  border: 1px solid rgba(22, 223, 241, 0.3);
   border-radius: 999px;
-  color: rgba(210, 255, 215, 0.96);
-  background: rgba(44, 255, 154, 0.09);
+  color: rgba(214, 251, 255, 0.96);
+  background: rgba(22, 223, 241, 0.1);
   font-family: "Fira Code", monospace;
   font-size: 12px;
   font-weight: 800;
@@ -301,7 +302,7 @@ select {
   width: max-content;
   max-width: calc(100% - 32px);
   margin: 0;
-  color: rgba(44, 255, 154, 0.82);
+  color: rgba(22, 223, 241, 0.86);
   font-family: "Fira Code", monospace;
   font-size: 12px;
   font-weight: 800;
@@ -329,8 +330,8 @@ select {
 }
 
 .myt-hero h1 span {
-  color: var(--green);
-  text-shadow: 0 0 34px rgba(44, 255, 154, 0.2);
+  color: var(--blue);
+  text-shadow: 0 0 34px rgba(22, 223, 241, 0.22);
 }
 
 .myt-hero-text {
@@ -363,7 +364,7 @@ select {
 }
 
 .myt-hero-badges svg {
-  color: var(--green);
+  color: var(--blue);
 }
 
 .myt-actions {
@@ -393,10 +394,10 @@ select {
 }
 
 .myt-button-primary {
-  border: 1px solid rgba(44, 255, 154, 0.5);
-  color: #02140b;
-  background: linear-gradient(135deg, #d9ffd8, var(--green));
-  box-shadow: 0 0 38px rgba(44, 255, 154, 0.2);
+  border: 1px solid rgba(22, 223, 241, 0.56);
+  color: var(--blue-ink);
+  background: linear-gradient(135deg, #d9fbff, var(--blue));
+  box-shadow: 0 0 38px rgba(22, 223, 241, 0.24);
 }
 
 .myt-button-secondary {
@@ -452,7 +453,7 @@ select {
   inset: 10% 4% 2%;
   border-radius: 22px;
   background:
-    radial-gradient(circle at 42% 44%, rgba(44, 255, 154, 0.28), transparent 34%),
+    radial-gradient(circle at 42% 44%, rgba(22, 223, 241, 0.3), transparent 34%),
     radial-gradient(circle at 70% 18%, rgba(255, 216, 77, 0.18), transparent 28%),
     rgba(4, 12, 22, 0.72);
   filter: blur(28px);
@@ -467,7 +468,7 @@ select {
   width: min(640px, 100%);
   aspect-ratio: 1.42 / 1;
   overflow: hidden;
-  border: 1px solid rgba(217, 255, 216, 0.2);
+  border: 1px solid rgba(214, 251, 255, 0.22);
   border-radius: 22px;
   background:
     linear-gradient(180deg, rgba(247, 251, 255, 0.08), rgba(247, 251, 255, 0.02)),
@@ -485,11 +486,11 @@ select {
   inset: 0 0 auto;
   z-index: 1;
   height: 42px;
-  border-bottom: 1px solid rgba(44, 255, 154, 0.14);
+  border-bottom: 1px solid rgba(22, 223, 241, 0.16);
   background:
     radial-gradient(circle at 22px 19px, rgba(255, 96, 118, 0.86) 0 4px, transparent 4.5px),
     radial-gradient(circle at 42px 19px, rgba(255, 216, 77, 0.82) 0 4px, transparent 4.5px),
-    radial-gradient(circle at 62px 19px, rgba(44, 255, 154, 0.82) 0 4px, transparent 4.5px),
+    radial-gradient(circle at 62px 19px, rgba(22, 223, 241, 0.82) 0 4px, transparent 4.5px),
     rgba(2, 5, 10, 0.74);
   backdrop-filter: blur(14px);
 }
@@ -533,9 +534,9 @@ select {
   padding: 12px;
   border: 3px solid rgba(247, 251, 255, 0.28);
   border-radius: 999px;
-  color: #06140c;
-  background: linear-gradient(135deg, #e8ffe4, var(--green));
-  box-shadow: 0 0 46px rgba(44, 255, 154, 0.3);
+  color: var(--blue-ink);
+  background: linear-gradient(135deg, #e8fdff, var(--blue));
+  box-shadow: 0 0 46px rgba(22, 223, 241, 0.32);
 }
 
 .myt-tape {
@@ -1210,7 +1211,7 @@ select {
     background:
       radial-gradient(circle at 18px 15px, rgba(255, 96, 118, 0.86) 0 3.5px, transparent 4px),
       radial-gradient(circle at 34px 15px, rgba(255, 216, 77, 0.82) 0 3.5px, transparent 4px),
-      radial-gradient(circle at 50px 15px, rgba(44, 255, 154, 0.82) 0 3.5px, transparent 4px),
+      radial-gradient(circle at 50px 15px, rgba(22, 223, 241, 0.82) 0 3.5px, transparent 4px),
       rgba(2, 5, 10, 0.74);
   }
 
