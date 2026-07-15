@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SmoothScroll } from "@/components/smooth-scroll";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -29,7 +30,10 @@ export default function RootLayout({
         <link href="/brand/myt-mark.png" rel="shortcut icon" type="image/png" />
         <link href="/brand/myt-mark.png" rel="apple-touch-icon" />
       </head>
-      <body>{children}</body>
+      <body>
+        <SmoothScroll />
+        {children}
+      </body>
     </html>
   );
 }
