@@ -178,16 +178,18 @@ select {
 
 .myt-hero {
   position: relative;
-  min-height: 100vh;
-  padding: 158px 24px 74px;
+  min-height: 100svh;
+  height: 100svh;
+  padding: 132px 24px 0;
+  overflow: hidden;
   isolation: isolate;
 }
 
 .myt-hero-bg {
   z-index: -4;
   object-fit: cover;
-  opacity: 0.34;
-  filter: saturate(1.15) contrast(1.08);
+  opacity: 0.18;
+  filter: saturate(0.8) contrast(1.05);
 }
 
 .myt-hero::after {
@@ -196,74 +198,44 @@ select {
   inset: 0;
   z-index: -3;
   background:
-    linear-gradient(90deg, rgba(2, 5, 10, 0.96), rgba(2, 5, 10, 0.54) 54%, rgba(2, 5, 10, 0.8)),
-    linear-gradient(180deg, rgba(2, 5, 10, 0.28), #02050a 96%);
+    radial-gradient(ellipse at 50% 34%, rgba(22, 223, 241, 0.18), transparent 28rem),
+    radial-gradient(ellipse at 50% 82%, rgba(255, 216, 77, 0.13), transparent 24rem),
+    linear-gradient(180deg, rgba(2, 5, 10, 0.88), rgba(5, 16, 28, 0.94) 45%, #02050a 100%);
 }
 
 .myt-hero-noise {
   position: absolute;
   inset: 0;
   z-index: -2;
-  opacity: 0.18;
+  opacity: 0.22;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: linear-gradient(180deg, transparent, #000 14%, #000 74%, transparent);
-}
-
-.myt-market-orbits {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.myt-market-orbits span {
-  position: absolute;
-  border: 1px solid rgba(22, 223, 241, 0.16);
-  border-radius: 999px;
-  animation: orbitDrift 11s ease-in-out infinite alternate;
-}
-
-.myt-market-orbits span:nth-child(1) {
-  top: 19%;
-  right: 11%;
-  width: 220px;
-  height: 220px;
-}
-
-.myt-market-orbits span:nth-child(2) {
-  right: 34%;
-  bottom: 8%;
-  width: 150px;
-  height: 150px;
-  border-color: rgba(255, 216, 77, 0.2);
-  animation-delay: -3s;
-}
-
-.myt-market-orbits span:nth-child(3) {
-  top: 34%;
-  left: 5%;
-  width: 104px;
-  height: 104px;
-  border-color: rgba(44, 255, 154, 0.18);
-  animation-delay: -6s;
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    radial-gradient(circle at 20% 30%, rgba(22, 223, 241, 0.18) 0 1px, transparent 1px),
+    radial-gradient(circle at 78% 22%, rgba(255, 216, 77, 0.14) 0 1px, transparent 1px);
+  background-position: center top, center top, 0 0, 20px 20px;
+  background-size: 72px 72px, 72px 72px, 52px 52px, 68px 68px;
+  mask-image: linear-gradient(180deg, transparent, #000 12%, #000 80%, transparent);
 }
 
 .myt-hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
-  gap: 46px;
+  grid-template-columns: 1fr;
+  gap: clamp(22px, 3.2vh, 32px);
   align-items: center;
-  max-width: 1240px;
+  grid-template-rows: auto minmax(250px, 0.9fr);
+  height: 100%;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
 .myt-hero-copy {
   display: grid;
-  gap: 24px;
-  max-width: 760px;
+  gap: 17px;
+  justify-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .myt-subhero {
@@ -334,17 +306,17 @@ select {
 }
 
 .myt-hero h1 {
-  max-width: 830px;
-  font-size: 76px;
-  line-height: 0.94;
+  max-width: 930px;
+  font-size: clamp(50px, 5.9vw, 72px);
+  line-height: 0.98;
 }
 
 .myt-hero-text {
-  max-width: 680px;
+  max-width: 720px;
   margin: 0;
   color: var(--muted);
-  font-size: 19px;
-  line-height: 1.72;
+  font-size: 18px;
+  line-height: 1.62;
 }
 
 .myt-actions {
@@ -352,6 +324,7 @@ select {
   flex-wrap: wrap;
   gap: 14px;
   align-items: center;
+  justify-content: center;
 }
 
 .myt-button {
@@ -389,7 +362,8 @@ select {
   display: flex;
   gap: 14px;
   align-items: center;
-  max-width: 620px;
+  justify-content: center;
+  max-width: 640px;
   padding-top: 4px;
 }
 
@@ -419,65 +393,75 @@ select {
 
 .myt-dashboard-stage {
   position: relative;
-  min-height: 610px;
+  align-self: end;
+  min-height: min(38vh, 360px);
+  width: min(1120px, 92vw);
+  margin: 0 auto;
   perspective: 1400px;
 }
 
 .myt-dashboard-glow {
   position: absolute;
-  inset: 11% 5% 7%;
-  border-radius: 40px;
+  inset: 6% 4% -18%;
+  border-radius: 8px 8px 0 0;
   background:
-    radial-gradient(circle at 28% 20%, rgba(22, 223, 241, 0.35), transparent 34%),
-    radial-gradient(circle at 72% 70%, rgba(255, 216, 77, 0.2), transparent 30%);
-  filter: blur(22px);
-  opacity: 0.74;
+    linear-gradient(115deg, rgba(22, 223, 241, 0.28), transparent 42%),
+    linear-gradient(245deg, rgba(255, 216, 77, 0.18), transparent 38%),
+    rgba(4, 12, 22, 0.72);
+  filter: blur(20px);
+  opacity: 0.82;
+}
+
+.myt-dashboard-frame {
+  position: absolute;
+  bottom: -12%;
+  left: 50%;
+  width: 100%;
+  aspect-ratio: 2.38 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(22, 223, 241, 0.2);
+  border-radius: 8px 8px 0 0;
+  background:
+    linear-gradient(180deg, rgba(247, 251, 255, 0.08), rgba(247, 251, 255, 0.02)),
+    #02050a;
+  box-shadow:
+    0 38px 110px rgba(0, 0, 0, 0.62),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: translateX(-50%) rotateX(3deg);
+  transform-origin: center bottom;
+}
+
+.myt-dashboard-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 1;
+  height: 38px;
+  border-bottom: 1px solid rgba(22, 223, 241, 0.16);
+  background:
+    radial-gradient(circle at 22px 19px, rgba(255, 96, 118, 0.86) 0 4px, transparent 4.5px),
+    radial-gradient(circle at 42px 19px, rgba(255, 216, 77, 0.82) 0 4px, transparent 4.5px),
+    radial-gradient(circle at 62px 19px, rgba(44, 255, 154, 0.82) 0 4px, transparent 4.5px),
+    rgba(2, 5, 10, 0.74);
+  backdrop-filter: blur(14px);
+}
+
+.myt-dashboard-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(2, 5, 10, 0.2), transparent 22%, rgba(2, 5, 10, 0.18)),
+    linear-gradient(90deg, rgba(22, 223, 241, 0.14), transparent 22%, transparent 78%, rgba(255, 216, 77, 0.1));
 }
 
 .myt-dashboard-main {
-  position: absolute;
-  top: 4%;
-  right: -18%;
-  width: 118%;
-  height: auto;
-  transform: rotateX(9deg) rotateY(-13deg) rotateZ(1deg);
-  transform-origin: center;
-  filter: drop-shadow(0 38px 90px rgba(0, 0, 0, 0.58));
-  animation: dashboardFloat 7s ease-in-out infinite;
-}
-
-.myt-floating-card {
-  position: absolute;
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-  min-height: 48px;
-  padding: 12px 14px;
-  border: 1px solid rgba(22, 223, 241, 0.24);
-  border-radius: 8px;
-  color: rgba(247, 251, 255, 0.9);
-  background: rgba(3, 9, 16, 0.78);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(16px);
-  font-family: "Fira Code", monospace;
-  font-size: 12px;
-  font-weight: 800;
-  animation: badgeFloat 4.5s ease-in-out infinite;
-}
-
-.myt-floating-card svg {
-  color: var(--gold);
-}
-
-.myt-floating-card-one {
-  top: 18%;
-  left: 2%;
-}
-
-.myt-floating-card-two {
-  right: 0;
-  bottom: 20%;
-  animation-delay: -2.2s;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
 }
 
 .myt-tape {
@@ -928,41 +912,12 @@ select {
   text-decoration: none;
 }
 
-@keyframes dashboardFloat {
-  0%,
-  100% {
-    transform: rotateX(9deg) rotateY(-13deg) rotateZ(1deg) translate3d(0, 0, 0);
-  }
-  50% {
-    transform: rotateX(7deg) rotateY(-10deg) rotateZ(0deg) translate3d(-8px, -16px, 0);
-  }
-}
-
-@keyframes badgeFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
 @keyframes tapeMove {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-50%);
-  }
-}
-
-@keyframes orbitDrift {
-  from {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  to {
-    transform: translate3d(18px, -20px, 0) scale(1.08);
   }
 }
 
@@ -1036,12 +991,12 @@ select {
   }
 
   .myt-dashboard-stage {
-    min-height: 520px;
+    min-height: min(34vh, 320px);
+    width: min(940px, 90vw);
   }
 
-  .myt-dashboard-main {
-    right: -10%;
-    width: 110%;
+  .myt-dashboard-frame {
+    aspect-ratio: 2.08 / 1;
   }
 
   .myt-hero h1 {
@@ -1086,15 +1041,18 @@ select {
   }
 
   .myt-hero {
-    padding: 122px 16px 54px;
+    height: auto;
+    min-height: 100svh;
+    padding: 116px 16px 0;
   }
 
   .myt-hero-inner {
-    gap: 28px;
+    gap: 24px;
+    grid-template-rows: auto minmax(190px, 1fr);
   }
 
   .myt-hero h1 {
-    font-size: 42px;
+    font-size: 40px;
     line-height: 1;
   }
 
@@ -1117,27 +1075,26 @@ select {
   }
 
   .myt-dashboard-stage {
-    min-height: 350px;
+    min-height: 190px;
+    width: min(620px, 96vw);
+  }
+
+  .myt-dashboard-frame {
+    bottom: -1%;
+    aspect-ratio: 1.58 / 1;
+  }
+
+  .myt-dashboard-frame::before {
+    height: 30px;
+    background:
+      radial-gradient(circle at 18px 15px, rgba(255, 96, 118, 0.86) 0 3.5px, transparent 4px),
+      radial-gradient(circle at 34px 15px, rgba(255, 216, 77, 0.82) 0 3.5px, transparent 4px),
+      radial-gradient(circle at 50px 15px, rgba(44, 255, 154, 0.82) 0 3.5px, transparent 4px),
+      rgba(2, 5, 10, 0.74);
   }
 
   .myt-dashboard-main {
-    top: 8%;
-    right: -46%;
-    width: 152%;
-  }
-
-  .myt-floating-card {
-    max-width: 190px;
-    font-size: 11px;
-  }
-
-  .myt-floating-card-one {
-    left: 0;
-  }
-
-  .myt-floating-card-two {
-    right: 0;
-    bottom: 12%;
+    object-position: center 22%;
   }
 
   .myt-stats,

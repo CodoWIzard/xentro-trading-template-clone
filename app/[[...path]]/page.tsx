@@ -8,11 +8,9 @@ import {
   Check,
   ChevronDown,
   ChevronRight,
-  CircleDollarSign,
   MonitorPlay,
   PlayCircle,
   ShieldCheck,
-  Signal,
   Sparkles,
   UsersRound,
   Zap
@@ -215,11 +213,6 @@ function HomePage() {
       <section className="myt-hero" id="home" aria-labelledby="hero-title">
         <Image className="myt-hero-bg" src="/images/myt-precision-edge.png" alt="" fill priority sizes="100vw" />
         <div className="myt-hero-noise" aria-hidden />
-        <div className="myt-market-orbits" aria-hidden>
-          <span />
-          <span />
-          <span />
-        </div>
         <div className="myt-hero-inner">
           <div className="myt-hero-copy">
             <p className="myt-kicker">Futures trading room, course path, and indicator suite</p>
@@ -250,22 +243,16 @@ function HomePage() {
 
           <aside className="myt-dashboard-stage" aria-label="MYT trading dashboard preview">
             <div className="myt-dashboard-glow" aria-hidden />
-            <Image
-              className="myt-dashboard-main"
-              src="/webflow/hero-dashboard.webp"
-              alt="Trading platform dashboard preview with performance panels and market charts."
-              width={2880}
-              height={1970}
-              priority
-              sizes="(max-width: 900px) 100vw, 52vw"
-            />
-            <div className="myt-floating-card myt-floating-card-one">
-              <Signal size={18} aria-hidden />
-              <span>Bias locked before entry</span>
-            </div>
-            <div className="myt-floating-card myt-floating-card-two">
-              <CircleDollarSign size={18} aria-hidden />
-              <span>Risk defined first</span>
+            <div className="myt-dashboard-frame">
+              <Image
+                className="myt-dashboard-main"
+                src="/webflow/hero-dashboard.webp"
+                alt="Trading platform dashboard preview with performance panels and market charts."
+                width={2880}
+                height={1970}
+                priority
+                sizes="(max-width: 900px) 96vw, 1120px"
+              />
             </div>
           </aside>
         </div>
