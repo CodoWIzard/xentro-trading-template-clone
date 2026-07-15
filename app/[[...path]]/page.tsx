@@ -215,12 +215,25 @@ function HomePage() {
         <div className="myt-hero-noise" aria-hidden />
         <div className="myt-hero-inner">
           <div className="myt-hero-copy">
-            <p className="myt-kicker">Futures trading room, course path, and indicator suite</p>
-            <h1 id="hero-title">Build a futures trading edge you can repeat under pressure.</h1>
+            <p className="myt-trust-line">Globally trusted by serious futures traders</p>
+            <p className="myt-kicker">35% off founding room access until launch</p>
+            <h1 id="hero-title">
+              Trade, review, and grow with <span>Mind Your Trades.</span>
+            </h1>
             <p className="myt-hero-text">
               MYT turns market prep, execution review, live coaching, and chart tools into one premium
               operating system for traders who are done chasing random signals.
             </p>
+            <div className="myt-hero-badges" aria-label="MYT platform benefits">
+              <span>
+                <Zap size={15} aria-hidden />
+                Live room prep
+              </span>
+              <span>
+                <ShieldCheck size={15} aria-hidden />
+                Risk-first playbook
+              </span>
+            </div>
             <div className="myt-actions">
               <Link className="myt-button myt-button-primary" href="/pricing">
                 Request access
@@ -237,12 +250,18 @@ function HomePage() {
                 <Image src="/webflow/avatar-02.webp" alt="" width={50} height={50} />
                 <Image src="/webflow/avatar-03.webp" alt="" width={50} height={50} />
               </div>
-              <p>Trusted layout cues restored from the original Xentro template, rebuilt around MYT.</p>
+              <p>
+                Trustpilot style social proof, a clean education path, and trader-first review systems.
+              </p>
             </div>
           </div>
 
           <aside className="myt-dashboard-stage" aria-label="MYT trading dashboard preview">
             <div className="myt-dashboard-glow" aria-hidden />
+            <div className="myt-video-cue" aria-hidden>
+              <PlayCircle size={28} />
+              <span>Watch method</span>
+            </div>
             <div className="myt-dashboard-frame">
               <Image
                 className="myt-dashboard-main"

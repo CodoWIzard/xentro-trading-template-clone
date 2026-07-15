@@ -62,9 +62,9 @@ select {
   max-width: 1240px;
   margin: 0 auto;
   padding: 12px 14px;
-  border: 1px solid rgba(22, 223, 241, 0.22);
+  border: 1px solid rgba(44, 255, 154, 0.18);
   border-radius: 8px;
-  background: rgba(3, 8, 15, 0.78);
+  background: rgba(3, 13, 14, 0.78);
   box-shadow: 0 18px 80px rgba(0, 0, 0, 0.42);
   backdrop-filter: blur(20px);
 }
@@ -170,17 +170,17 @@ select {
 
 .myt-header-cta {
   padding: 11px 15px;
-  border: 1px solid rgba(255, 216, 77, 0.5);
-  color: #111407;
-  background: linear-gradient(135deg, #fff2a1, var(--gold));
-  box-shadow: 0 0 26px rgba(255, 216, 77, 0.18);
+  border: 1px solid rgba(44, 255, 154, 0.42);
+  color: #02140b;
+  background: linear-gradient(135deg, #d9ffd8, var(--green));
+  box-shadow: 0 0 26px rgba(44, 255, 154, 0.2);
 }
 
 .myt-hero {
   position: relative;
   min-height: 100svh;
   height: 100svh;
-  padding: 132px 24px 0;
+  padding: 118px 24px 0;
   overflow: hidden;
   isolation: isolate;
 }
@@ -188,8 +188,9 @@ select {
 .myt-hero-bg {
   z-index: -4;
   object-fit: cover;
-  opacity: 0.18;
-  filter: saturate(0.8) contrast(1.05);
+  object-position: center;
+  opacity: 0.38;
+  filter: saturate(0.7) contrast(1.08) blur(1px);
 }
 
 .myt-hero::after {
@@ -198,16 +199,17 @@ select {
   inset: 0;
   z-index: -3;
   background:
-    radial-gradient(ellipse at 50% 34%, rgba(22, 223, 241, 0.18), transparent 28rem),
-    radial-gradient(ellipse at 50% 82%, rgba(255, 216, 77, 0.13), transparent 24rem),
-    linear-gradient(180deg, rgba(2, 5, 10, 0.88), rgba(5, 16, 28, 0.94) 45%, #02050a 100%);
+    linear-gradient(90deg, rgba(2, 12, 13, 0.96), rgba(2, 12, 13, 0.7) 46%, rgba(2, 12, 13, 0.36) 72%, rgba(2, 12, 13, 0.76)),
+    radial-gradient(ellipse at 78% 46%, rgba(255, 216, 77, 0.18), transparent 24rem),
+    radial-gradient(ellipse at 16% 46%, rgba(44, 255, 154, 0.16), transparent 22rem),
+    linear-gradient(180deg, rgba(1, 7, 9, 0.62), rgba(2, 5, 10, 0.96) 100%);
 }
 
 .myt-hero-noise {
   position: absolute;
   inset: 0;
   z-index: -2;
-  opacity: 0.22;
+  opacity: 0.17;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
@@ -220,22 +222,20 @@ select {
 
 .myt-hero-inner {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(22px, 3.2vh, 32px);
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  gap: clamp(34px, 5vw, 70px);
   align-items: center;
-  grid-template-rows: auto minmax(250px, 0.9fr);
   height: 100%;
-  max-width: 1120px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
 .myt-hero-copy {
   display: grid;
   gap: 17px;
-  justify-items: center;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
+  justify-items: start;
+  max-width: 680px;
+  text-align: left;
 }
 
 .myt-subhero {
@@ -282,16 +282,33 @@ select {
   width: max-content;
   max-width: 100%;
   margin: 0;
-  padding: 8px 11px;
-  border: 1px solid rgba(22, 223, 241, 0.24);
+  padding: 8px 13px;
+  border: 1px solid rgba(44, 255, 154, 0.28);
   border-radius: 999px;
-  color: var(--blue);
-  background: rgba(22, 223, 241, 0.08);
+  color: rgba(210, 255, 215, 0.96);
+  background: rgba(44, 255, 154, 0.09);
   font-family: "Fira Code", monospace;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.myt-trust-line {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  margin: 0;
+  color: rgba(44, 255, 154, 0.82);
+  font-family: "Fira Code", monospace;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateX(-50%);
 }
 
 .myt-hero h1,
@@ -306,17 +323,47 @@ select {
 }
 
 .myt-hero h1 {
-  max-width: 930px;
-  font-size: clamp(50px, 5.9vw, 72px);
+  max-width: 700px;
+  font-size: clamp(48px, 5.7vw, 78px);
   line-height: 0.98;
 }
 
+.myt-hero h1 span {
+  color: var(--green);
+  text-shadow: 0 0 34px rgba(44, 255, 154, 0.2);
+}
+
 .myt-hero-text {
-  max-width: 720px;
+  max-width: 620px;
   margin: 0;
   color: var(--muted);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.62;
+}
+
+.myt-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.myt-hero-badges span {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(247, 251, 255, 0.1);
+  border-radius: 999px;
+  color: rgba(247, 251, 255, 0.86);
+  background: rgba(0, 0, 0, 0.44);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.myt-hero-badges svg {
+  color: var(--green);
 }
 
 .myt-actions {
@@ -324,7 +371,7 @@ select {
   flex-wrap: wrap;
   gap: 14px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .myt-button {
@@ -346,10 +393,10 @@ select {
 }
 
 .myt-button-primary {
-  border: 1px solid rgba(22, 223, 241, 0.62);
-  color: #001015;
-  background: linear-gradient(135deg, #7ff8ff, var(--blue));
-  box-shadow: 0 0 38px rgba(22, 223, 241, 0.22);
+  border: 1px solid rgba(44, 255, 154, 0.5);
+  color: #02140b;
+  background: linear-gradient(135deg, #d9ffd8, var(--green));
+  box-shadow: 0 0 38px rgba(44, 255, 154, 0.2);
 }
 
 .myt-button-secondary {
@@ -362,8 +409,8 @@ select {
   display: flex;
   gap: 14px;
   align-items: center;
-  justify-content: center;
-  max-width: 640px;
+  justify-content: flex-start;
+  max-width: 580px;
   padding-top: 4px;
 }
 
@@ -393,42 +440,43 @@ select {
 
 .myt-dashboard-stage {
   position: relative;
-  align-self: end;
-  min-height: min(38vh, 360px);
-  width: min(1120px, 92vw);
+  align-self: center;
+  min-height: 520px;
+  width: min(680px, 100%);
   margin: 0 auto;
   perspective: 1400px;
 }
 
 .myt-dashboard-glow {
   position: absolute;
-  inset: 6% 4% -18%;
-  border-radius: 8px 8px 0 0;
+  inset: 10% 4% 2%;
+  border-radius: 22px;
   background:
-    linear-gradient(115deg, rgba(22, 223, 241, 0.28), transparent 42%),
-    linear-gradient(245deg, rgba(255, 216, 77, 0.18), transparent 38%),
+    radial-gradient(circle at 42% 44%, rgba(44, 255, 154, 0.28), transparent 34%),
+    radial-gradient(circle at 70% 18%, rgba(255, 216, 77, 0.18), transparent 28%),
     rgba(4, 12, 22, 0.72);
-  filter: blur(20px);
-  opacity: 0.82;
+  filter: blur(28px);
+  opacity: 0.9;
 }
 
 .myt-dashboard-frame {
   position: absolute;
-  bottom: -12%;
+  right: 0;
+  bottom: 8%;
   left: 50%;
-  width: 100%;
-  aspect-ratio: 2.38 / 1;
+  width: min(640px, 100%);
+  aspect-ratio: 1.42 / 1;
   overflow: hidden;
-  border: 1px solid rgba(22, 223, 241, 0.2);
-  border-radius: 8px 8px 0 0;
+  border: 1px solid rgba(217, 255, 216, 0.2);
+  border-radius: 22px;
   background:
     linear-gradient(180deg, rgba(247, 251, 255, 0.08), rgba(247, 251, 255, 0.02)),
     #02050a;
   box-shadow:
     0 38px 110px rgba(0, 0, 0, 0.62),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  transform: translateX(-50%) rotateX(3deg);
-  transform-origin: center bottom;
+  transform: translateX(-42%) rotateZ(-1deg);
+  transform-origin: center;
 }
 
 .myt-dashboard-frame::before {
@@ -436,8 +484,8 @@ select {
   position: absolute;
   inset: 0 0 auto;
   z-index: 1;
-  height: 38px;
-  border-bottom: 1px solid rgba(22, 223, 241, 0.16);
+  height: 42px;
+  border-bottom: 1px solid rgba(44, 255, 154, 0.14);
   background:
     radial-gradient(circle at 22px 19px, rgba(255, 96, 118, 0.86) 0 4px, transparent 4.5px),
     radial-gradient(circle at 42px 19px, rgba(255, 216, 77, 0.82) 0 4px, transparent 4.5px),
@@ -461,7 +509,33 @@ select {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 28%;
+  object-position: center 36%;
+}
+
+.myt-video-cue {
+  position: absolute;
+  top: 18%;
+  left: 48%;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: rgba(247, 251, 255, 0.86);
+  font-family: "Fira Code", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  transform: translateX(-50%);
+}
+
+.myt-video-cue svg {
+  width: 58px;
+  height: 58px;
+  padding: 12px;
+  border: 3px solid rgba(247, 251, 255, 0.28);
+  border-radius: 999px;
+  color: #06140c;
+  background: linear-gradient(135deg, #e8ffe4, var(--green));
+  box-shadow: 0 0 46px rgba(44, 255, 154, 0.3);
 }
 
 .myt-tape {
@@ -990,13 +1064,43 @@ select {
     grid-template-columns: 1fr;
   }
 
+  .myt-hero {
+    height: auto;
+    min-height: 100svh;
+    padding-bottom: 28px;
+  }
+
+  .myt-hero-inner {
+    gap: 26px;
+    align-content: center;
+    padding-top: 18px;
+  }
+
+  .myt-hero-copy {
+    justify-items: center;
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .myt-actions,
+  .myt-proof-row {
+    justify-content: center;
+  }
+
   .myt-dashboard-stage {
-    min-height: min(34vh, 320px);
-    width: min(940px, 90vw);
+    min-height: min(42vh, 380px);
+    width: min(720px, 90vw);
   }
 
   .myt-dashboard-frame {
-    aspect-ratio: 2.08 / 1;
+    bottom: 0;
+    aspect-ratio: 1.62 / 1;
+    transform: translateX(-50%);
+  }
+
+  .myt-video-cue {
+    top: 2%;
   }
 
   .myt-hero h1 {
@@ -1043,17 +1147,28 @@ select {
   .myt-hero {
     height: auto;
     min-height: 100svh;
-    padding: 116px 16px 0;
+    padding: 108px 16px 26px;
   }
 
   .myt-hero-inner {
-    gap: 24px;
-    grid-template-rows: auto minmax(190px, 1fr);
+    gap: 26px;
+    grid-template-rows: auto auto;
   }
 
   .myt-hero h1 {
-    font-size: 40px;
+    font-size: 38px;
     line-height: 1;
+  }
+
+  .myt-trust-line {
+    top: 6px;
+    font-size: 10px;
+  }
+
+  .myt-kicker {
+    width: auto;
+    font-size: 10px;
+    text-align: center;
   }
 
   .myt-hero-text,
@@ -1072,16 +1187,22 @@ select {
 
   .myt-proof-row {
     align-items: flex-start;
+    text-align: left;
+  }
+
+  .myt-hero-badges {
+    justify-content: center;
   }
 
   .myt-dashboard-stage {
-    min-height: 190px;
+    min-height: 252px;
     width: min(620px, 96vw);
   }
 
   .myt-dashboard-frame {
-    bottom: -1%;
-    aspect-ratio: 1.58 / 1;
+    bottom: 0;
+    aspect-ratio: 1.34 / 1;
+    border-radius: 16px;
   }
 
   .myt-dashboard-frame::before {
@@ -1094,7 +1215,22 @@ select {
   }
 
   .myt-dashboard-main {
-    object-position: center 22%;
+    object-position: center 34%;
+  }
+
+  .myt-video-cue {
+    top: -3%;
+    left: 50%;
+  }
+
+  .myt-video-cue span {
+    display: none;
+  }
+
+  .myt-video-cue svg {
+    width: 46px;
+    height: 46px;
+    padding: 9px;
   }
 
   .myt-stats,
