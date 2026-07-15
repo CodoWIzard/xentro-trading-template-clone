@@ -1965,8 +1965,8 @@ select {
   position: relative;
   overflow: hidden;
   padding: 38px 0 0;
-  background: #050706;
-  box-shadow: 0 0 0 100vmax #050706;
+  background: transparent;
+  box-shadow: none;
   clip-path: inset(0 -100vmax);
 }
 
@@ -1981,7 +1981,7 @@ select {
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: hMarqueeMove 28s linear infinite;
+  animation: hMarqueeMove 56s linear infinite;
 }
 
 .h-marquee_inner {
@@ -2015,9 +2015,8 @@ select {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    linear-gradient(90deg, #050706 0%, rgba(5, 7, 6, 0) 16%, rgba(5, 7, 6, 0) 84%, #050706 100%),
-    linear-gradient(180deg, rgba(5, 7, 6, 0) 62%, #050706 100%);
+  display: none;
+  background: none;
 }
 
 .section-border_wrap {
@@ -2028,7 +2027,7 @@ select {
 .section-border_bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #050706 0%, #f2efe6 100%);
+  background: transparent;
 }
 
 .section-border_container {
