@@ -2102,7 +2102,7 @@ select {
 
 .pattern_line {
   width: clamp(74px, 8vw, 128px);
-  height: 3.5px;
+  height: 1.75px;
   border-radius: 999px;
   background: rgba(248, 244, 235, 0.18);
 }
