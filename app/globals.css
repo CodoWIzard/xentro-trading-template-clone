@@ -1961,6 +1961,169 @@ select {
   text-transform: uppercase;
 }
 
+.myt-network-section {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.36fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 88px 24px 76px;
+  background: #050706;
+  box-shadow: 0 0 0 100vmax #050706;
+  clip-path: inset(0 -100vmax);
+}
+
+.myt-network-copy {
+  display: grid;
+  gap: 16px;
+}
+
+.myt-network-copy h2 {
+  margin: 0;
+  color: #f8f4eb;
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.myt-network-copy p:not(.myt-kicker) {
+  margin: 0;
+  color: rgba(248, 244, 235, 0.62);
+  font-size: 16px;
+  line-height: 1.66;
+}
+
+.myt-network-board {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  border: 1px solid rgba(248, 244, 235, 0.14);
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 68% 24%, rgba(141, 223, 255, 0.16), transparent 18rem),
+    linear-gradient(135deg, rgba(248, 244, 235, 0.07), rgba(248, 244, 235, 0.025)),
+    #080b0a;
+  box-shadow:
+    0 42px 110px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.myt-network-board-head {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  left: 18px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+}
+
+.myt-network-board-head span {
+  color: rgba(141, 223, 255, 0.82);
+  font-family: "Fira Code", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.myt-network-board-head strong {
+  color: rgba(248, 244, 235, 0.88);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.myt-network-board svg {
+  display: block;
+  width: 100%;
+  min-height: 360px;
+  margin-top: 26px;
+}
+
+.myt-network-grid line {
+  stroke: rgba(248, 244, 235, 0.055);
+  stroke-width: 1;
+}
+
+.myt-network-path {
+  stroke: url("#mytNetworkLine");
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.myt-network-flow {
+  stroke: #f7f0ce;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 0.035 0.09;
+  stroke-dashoffset: 0;
+  filter: drop-shadow(0 0 10px rgba(247, 240, 206, 0.38));
+}
+
+.myt-network-node {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.myt-network-node-glow {
+  fill: url("#mytNodeGlow");
+  opacity: 0.34;
+  animation: networkPulse 3.2s ease-in-out infinite;
+}
+
+.myt-network-node-core {
+  fill: #f8f4eb;
+  stroke: #8ddfff;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 12px rgba(141, 223, 255, 0.44));
+}
+
+.myt-network-node-label {
+  fill: rgba(248, 244, 235, 0.92);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.myt-network-node-value {
+  fill: rgba(248, 244, 235, 0.54);
+  font-family: "Fira Code", monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.myt-network-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(248, 244, 235, 0.1);
+}
+
+.myt-network-metrics span {
+  display: grid;
+  gap: 4px;
+  padding: 16px 18px 18px;
+  border-right: 1px solid rgba(248, 244, 235, 0.1);
+  color: rgba(248, 244, 235, 0.58);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.myt-network-metrics span:last-child {
+  border-right: 0;
+}
+
+.myt-network-metrics strong {
+  color: #f8f4eb;
+  font-size: 26px;
+  line-height: 1;
+}
+
 .myt-tape {
   border-color: rgba(9, 15, 13, 0.12);
   background: #f2efe6;
@@ -2098,6 +2261,10 @@ select {
   .myt-atelier-visual img {
     height: auto;
   }
+
+  .myt-network-section {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 720px) {
@@ -2141,5 +2308,49 @@ select {
   .myt-atelier-ticker {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .myt-network-section {
+    padding: 58px 16px 54px;
+  }
+
+  .myt-network-board {
+    min-height: auto;
+  }
+
+  .myt-network-board-head {
+    position: relative;
+    inset: auto;
+    display: grid;
+    padding: 16px 16px 0;
+  }
+
+  .myt-network-board svg {
+    min-width: 760px;
+  }
+
+  .myt-network-board {
+    overflow-x: auto;
+  }
+
+  .myt-network-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .myt-network-metrics span {
+    border-right: 0;
+    border-bottom: 1px solid rgba(248, 244, 235, 0.1);
+  }
+}
+
+@keyframes networkPulse {
+  0%,
+  100% {
+    opacity: 0.22;
+    transform: scale(0.88);
+  }
+  50% {
+    opacity: 0.46;
+    transform: scale(1.08);
   }
 }

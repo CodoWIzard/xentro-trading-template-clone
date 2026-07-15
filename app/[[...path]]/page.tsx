@@ -15,6 +15,7 @@ import {
   Zap
 } from "lucide-react";
 import { HeroCommand } from "../../components/hero-command";
+import { MarketGraph } from "../../components/market-graph";
 import { MagneticCard, Reveal } from "../../components/reveal";
 
 type PageProps = {
@@ -211,6 +212,7 @@ function HomePage() {
   return (
     <>
       <HeroCommand />
+      <MarketGraph />
       <MarketTape />
       <Stats />
       <LearningOverview />
