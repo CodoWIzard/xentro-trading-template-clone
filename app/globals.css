@@ -1961,6 +1961,106 @@ select {
   text-transform: uppercase;
 }
 
+.section_h-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 38px 0 0;
+  background: #050706;
+  box-shadow: 0 0 0 100vmax #050706;
+  clip-path: inset(0 -100vmax);
+}
+
+.h-marquee_wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: clamp(220px, 28vw, 410px);
+}
+
+.h-marquee_track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: hMarqueeMove 28s linear infinite;
+}
+
+.h-marquee_inner {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.h-marquee_item {
+  display: block;
+  flex: 0 0 auto;
+  width: clamp(620px, 72vw, 1120px);
+  aspect-ratio: 1.72 / 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.94;
+  filter: drop-shadow(0 34px 70px rgba(0, 0, 0, 0.28));
+}
+
+.h-marquee_item.is-n {
+  background-image: url("/primora/home-marquee-n.svg");
+}
+
+.h-marquee_item.is-r {
+  margin-left: clamp(-120px, -7vw, -64px);
+  background-image: url("/primora/home-marquee-r.svg");
+}
+
+.h-marquee_overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, #050706 0%, rgba(5, 7, 6, 0) 16%, rgba(5, 7, 6, 0) 84%, #050706 100%),
+    linear-gradient(180deg, rgba(5, 7, 6, 0) 62%, #050706 100%);
+}
+
+.section-border_wrap {
+  position: relative;
+  height: 42px;
+}
+
+.section-border_bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #050706 0%, #f2efe6 100%);
+}
+
+.section-border_container {
+  position: relative;
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-border_inner {
+  position: relative;
+  height: 100%;
+  border-right: 1px solid rgba(7, 16, 13, 0.13);
+  border-left: 1px solid rgba(7, 16, 13, 0.13);
+}
+
+.section-border_square {
+  position: absolute;
+  bottom: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid rgba(7, 16, 13, 0.34);
+  background: #f2efe6;
+}
+
+.section-border_square.is-right {
+  right: -4px;
+  left: auto;
+}
+
 .myt-network-section {
   display: grid;
   grid-template-columns: minmax(280px, 0.36fr) minmax(0, 1fr);
@@ -2352,5 +2452,14 @@ select {
   50% {
     opacity: 0.46;
     transform: scale(1.08);
+  }
+}
+
+@keyframes hMarqueeMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
