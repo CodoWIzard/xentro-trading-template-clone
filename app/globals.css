@@ -2065,6 +2065,66 @@ select {
   left: auto;
 }
 
+.pattern_component {
+  display: grid;
+  gap: 8px;
+  overflow: hidden;
+  padding: 18px 0 24px;
+  background: #050706;
+  box-shadow: 0 0 0 100vmax #050706;
+  clip-path: inset(0 -100vmax);
+}
+
+.pattern_wrap {
+  overflow: hidden;
+  width: 100%;
+}
+
+.pattern_track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: patternMove 64s linear infinite;
+}
+
+.pattern_track.is-reverse {
+  animation-name: patternMoveReverse;
+  animation-duration: 72s;
+}
+
+.pattern_inner {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.pattern_line {
+  width: clamp(74px, 8vw, 128px);
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(248, 244, 235, 0.18);
+}
+
+.pattern_line.is-medium {
+  width: clamp(112px, 12vw, 184px);
+}
+
+.pattern_line.is-long {
+  width: clamp(220px, 24vw, 420px);
+}
+
+.pattern_line.is-green {
+  background: #2ecf7a;
+  box-shadow: 0 0 28px rgba(46, 207, 122, 0.22);
+}
+
+.pattern_line.is-red {
+  background: #ff4f5e;
+  box-shadow: 0 0 28px rgba(255, 79, 94, 0.2);
+}
+
 .myt-network-section {
   display: grid;
   grid-template-columns: minmax(280px, 0.36fr) minmax(0, 1fr);
@@ -2465,5 +2525,23 @@ select {
   }
   to {
     transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+@keyframes patternMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes patternMoveReverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
