@@ -258,10 +258,6 @@ function HomePage() {
 
           <aside className="myt-dashboard-stage" aria-label="MYT trading dashboard preview">
             <div className="myt-dashboard-glow" aria-hidden />
-            <div className="myt-video-cue" aria-hidden>
-              <PlayCircle size={28} />
-              <span>Watch method</span>
-            </div>
             <div className="myt-dashboard-frame">
               <Image
                 className="myt-dashboard-main"

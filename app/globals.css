@@ -442,8 +442,8 @@ select {
 .myt-dashboard-stage {
   position: relative;
   align-self: center;
-  min-height: 520px;
-  width: min(680px, 100%);
+  min-height: 560px;
+  width: min(760px, 100%);
   margin: 0 auto;
   perspective: 1400px;
 }
@@ -463,10 +463,10 @@ select {
 .myt-dashboard-frame {
   position: absolute;
   right: 0;
-  bottom: 8%;
+  bottom: 4%;
   left: 50%;
-  width: min(640px, 100%);
-  aspect-ratio: 1.42 / 1;
+  width: min(740px, 106%);
+  aspect-ratio: 1.5 / 1;
   overflow: hidden;
   border: 1px solid rgba(214, 251, 255, 0.22);
   border-radius: 22px;
@@ -476,23 +476,12 @@ select {
   box-shadow:
     0 38px 110px rgba(0, 0, 0, 0.62),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  transform: translateX(-42%) rotateZ(-1deg);
+  transform: translateX(-43%) rotateZ(-1deg);
   transform-origin: center;
 }
 
 .myt-dashboard-frame::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto;
-  z-index: 1;
-  height: 42px;
-  border-bottom: 1px solid rgba(22, 223, 241, 0.16);
-  background:
-    radial-gradient(circle at 22px 19px, rgba(255, 96, 118, 0.86) 0 4px, transparent 4.5px),
-    radial-gradient(circle at 42px 19px, rgba(255, 216, 77, 0.82) 0 4px, transparent 4.5px),
-    radial-gradient(circle at 62px 19px, rgba(22, 223, 241, 0.82) 0 4px, transparent 4.5px),
-    rgba(2, 5, 10, 0.74);
-  backdrop-filter: blur(14px);
+  content: none;
 }
 
 .myt-dashboard-frame::after {
@@ -510,33 +499,9 @@ select {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 36%;
-}
-
-.myt-video-cue {
-  position: absolute;
-  top: 18%;
-  left: 48%;
-  z-index: 3;
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  color: rgba(247, 251, 255, 0.86);
-  font-family: "Fira Code", monospace;
-  font-size: 11px;
-  font-weight: 900;
-  transform: translateX(-50%);
-}
-
-.myt-video-cue svg {
-  width: 58px;
-  height: 58px;
-  padding: 12px;
-  border: 3px solid rgba(247, 251, 255, 0.28);
-  border-radius: 999px;
-  color: var(--blue-ink);
-  background: linear-gradient(135deg, #e8fdff, var(--blue));
-  box-shadow: 0 0 46px rgba(22, 223, 241, 0.32);
+  object-position: center 62%;
+  transform: scale(1.22);
+  transform-origin: center 58%;
 }
 
 .myt-tape {
@@ -1100,10 +1065,6 @@ select {
     transform: translateX(-50%);
   }
 
-  .myt-video-cue {
-    top: 2%;
-  }
-
   .myt-hero h1 {
     font-size: 62px;
   }
@@ -1196,42 +1157,19 @@ select {
   }
 
   .myt-dashboard-stage {
-    min-height: 252px;
+    min-height: 282px;
     width: min(620px, 96vw);
   }
 
   .myt-dashboard-frame {
     bottom: 0;
-    aspect-ratio: 1.34 / 1;
+    aspect-ratio: 1.44 / 1;
     border-radius: 16px;
   }
 
-  .myt-dashboard-frame::before {
-    height: 30px;
-    background:
-      radial-gradient(circle at 18px 15px, rgba(255, 96, 118, 0.86) 0 3.5px, transparent 4px),
-      radial-gradient(circle at 34px 15px, rgba(255, 216, 77, 0.82) 0 3.5px, transparent 4px),
-      radial-gradient(circle at 50px 15px, rgba(22, 223, 241, 0.82) 0 3.5px, transparent 4px),
-      rgba(2, 5, 10, 0.74);
-  }
-
   .myt-dashboard-main {
-    object-position: center 34%;
-  }
-
-  .myt-video-cue {
-    top: -3%;
-    left: 50%;
-  }
-
-  .myt-video-cue span {
-    display: none;
-  }
-
-  .myt-video-cue svg {
-    width: 46px;
-    height: 46px;
-    padding: 9px;
+    object-position: center 60%;
+    transform: scale(1.2);
   }
 
   .myt-stats,
