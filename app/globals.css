@@ -2270,6 +2270,53 @@ select {
   bottom: 23%;
 }
 
+.text-block.myt-text-block {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(34px, 5vw, 72px) 24px clamp(58px, 8vw, 118px);
+  background: #050706;
+  isolation: isolate;
+}
+
+.text-block__glow {
+  position: absolute;
+  top: var(--vertical-position, 0%);
+  left: -16rem;
+  z-index: -1;
+  width: min(42vw, 32rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(44, 255, 154, 0.2), rgba(141, 223, 255, 0.08) 34%, transparent 68%);
+  filter: blur(28px);
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+.text-block__container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.text-block__text {
+  display: grid;
+  gap: clamp(16px, 2.2vw, 28px);
+  text-align: center;
+}
+
+.large-text {
+  margin: 0;
+  color: rgba(248, 244, 235, 0.84);
+  font-size: clamp(28px, 4.6vw, 72px);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.green-text {
+  color: #2cff9a;
+}
+
 @keyframes mytHeroOrbit {
   to {
     rotate: 360deg;
@@ -2975,6 +3022,19 @@ select {
   .myt-bipsync-video {
     opacity: 0.42;
     filter: blur(12px) saturate(0.86) contrast(1.08);
+  }
+
+  .text-block.myt-text-block {
+    padding: 36px 16px 64px;
+  }
+
+  .text-block__text {
+    gap: 16px;
+  }
+
+  .large-text {
+    font-size: clamp(28px, 9vw, 44px);
+    line-height: 1.08;
   }
 
   .myt-bipsync-canvas {

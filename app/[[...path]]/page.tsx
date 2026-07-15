@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import {
   ArrowRight,
   BookOpenCheck,
@@ -211,6 +212,7 @@ function HomePage() {
   return (
     <>
       <HeroCommand />
+      <TradingTextBlock />
       <MarketGraph />
       <Stats />
       <LearningOverview />
@@ -218,6 +220,34 @@ function HomePage() {
       <BrandProof />
       <FinalCta />
     </>
+  );
+}
+
+function TradingTextBlock() {
+  return (
+    <section
+      className="text-block myt-text-block"
+      data-background="black"
+      data-align="center"
+      data-align-mobile="center"
+    >
+      <div className="text-block__glow" data-position="left" style={{ "--vertical-position": "0%" } as CSSProperties} />
+      <div className="text-block__container">
+        <div className="text-block__text">
+          <p className="large-text">
+            Your trading process is scattered across screenshots, notes, indicators, emotions, and
+            half-remembered session rules.
+          </p>
+          <p className="large-text">
+            You are dealing with inconsistent prep, noisy chart decisions, weak review loops, and
+            discipline that disappears when the market speeds up.
+          </p>
+          <p className="large-text">
+            <span className="green-text">This is where Mind Your Trades comes in.</span>
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
 
