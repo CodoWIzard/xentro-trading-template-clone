@@ -36,6 +36,24 @@ const proofStats = [
   { value: "0", label: "signal-room positioning or unrealistic performance claims" }
 ];
 
+const featureSystem = [
+  {
+    icon: BookOpenCheck,
+    heading: "Prepare & Structure",
+    text: "Turn scattered notes, indicators, and session plans into one clear pre-market process."
+  },
+  {
+    icon: CandlestickChart,
+    heading: "Execute With Context",
+    text: "Use chart levels, momentum, and risk criteria to make decisions without chasing every move."
+  },
+  {
+    icon: ShieldCheck,
+    heading: "Review & Improve",
+    text: "Convert screenshots, journals, and live-room feedback into repeatable trading habits."
+  }
+];
+
 const pillars = [
   {
     icon: MonitorPlay,
@@ -214,12 +232,81 @@ function HomePage() {
       <HeroCommand />
       <TradingTextBlock />
       <MarketGraph />
+      <TradingFeatures />
       <Stats />
       <LearningOverview />
       <ProductStory />
       <BrandProof />
       <FinalCta />
     </>
+  );
+}
+
+function TradingFeatures() {
+  return (
+    <section
+      className="features myt-features"
+      data-top-spacing-mobile="none"
+      data-bottom-spacing-mobile="regular"
+      data-top-spacing-desktop="regular"
+      data-bottom-spacing-desktop="large"
+      style={{ "--theme-color": "var(--green)" } as CSSProperties}
+    >
+      <div className="features__container">
+        <div className="features__layout">
+          <div className="features__list">
+            {featureSystem.map((feature) => {
+              const Icon = feature.icon;
+
+              return (
+                <article className="features__item" key={feature.heading}>
+                  <div className="features__item-glows" aria-hidden>
+                    <div className="features-glow-1" />
+                    <div className="features-glow-2" />
+                  </div>
+                  <div className="features__item-content">
+                    <div className="features__icon">
+                      <Icon size={22} aria-hidden />
+                    </div>
+                    <h3 className="features__heading">{feature.heading}</h3>
+                    <p className="features__text">{feature.text}</p>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+
+          <div className="features__media has-mobile-version">
+            <video
+              playsInline
+              width={1200}
+              height={1200}
+              autoPlay
+              muted
+              loop
+              preload="metadata"
+              className="for-desktop"
+              poster="/images/myt-precision-edge.png"
+            >
+              <source src="/videos/hero-trading-chart.mp4" type="video/mp4" />
+            </video>
+            <video
+              playsInline
+              width={720}
+              height={720}
+              autoPlay
+              muted
+              loop
+              preload="metadata"
+              className="for-mobile"
+              poster="/images/myt-precision-edge.png"
+            >
+              <source src="/videos/hero-trading-chart.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
