@@ -1974,7 +1974,7 @@ select {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: clamp(116px, 15vw, 218px);
+  min-height: clamp(160px, 20vw, 300px);
 }
 
 .h-marquee_track {
@@ -1993,7 +1993,7 @@ select {
 .h-marquee_item {
   display: block;
   flex: 0 0 auto;
-  width: clamp(360px, 43vw, 660px);
+  width: clamp(620px, 72vw, 1120px);
   aspect-ratio: 1.72 / 1;
   background-repeat: no-repeat;
   background-position: center;
@@ -2007,7 +2007,7 @@ select {
 }
 
 .h-marquee_item.is-r {
-  margin-left: clamp(-72px, -4vw, -34px);
+  margin-left: clamp(-120px, -7vw, -64px);
   background-image: url("/primora/home-marquee-r.svg");
 }
 
