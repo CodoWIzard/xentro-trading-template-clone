@@ -246,7 +246,6 @@ function HomePage() {
       <TradingTextBlock />
       <MarketGraph />
       <TradingFeatures />
-      <Stats />
       <LearningOverview />
       <ProductStory />
       <BrandProof />
