@@ -266,26 +266,26 @@ function TradingFeatures() {
       style={{ "--theme-color": "var(--green)" } as CSSProperties}
     >
       <div className="features__container">
-        <div className="myt-offer-grid">
+        <div className="myt-access-grid">
           {offerCards.map((feature) => {
               const Icon = feature.icon;
 
               return (
-                <article className={"myt-offer-card myt-offer-card-" + feature.variant} key={feature.heading}>
-                  <div className="myt-offer-glow" aria-hidden />
-                  <div className="myt-offer-topline">
-                    <div className="myt-offer-icon">
+                <article className={"myt-access-card myt-access-card-" + feature.variant} key={feature.heading}>
+                  <div className="myt-access-glow" aria-hidden />
+                  <div className="myt-access-topline">
+                    <div className="myt-access-icon">
                       <Icon size={30} aria-hidden />
                     </div>
                     <span>{feature.badge}</span>
                   </div>
 
-                  <div className="myt-offer-copy">
+                  <div className="myt-access-copy">
                     <h2>{feature.heading}</h2>
                     <p>{feature.text}</p>
                   </div>
 
-                  <ul className="myt-offer-points">
+                  <ul className="myt-access-points">
                     {feature.points.map((point) => (
                       <li key={point}>
                         <Check size={17} aria-hidden />
@@ -294,7 +294,7 @@ function TradingFeatures() {
                     ))}
                   </ul>
 
-                  <Link className="myt-offer-cta" href={feature.href}>
+                  <Link className="myt-access-cta" href={feature.href}>
                     {feature.cta}
                     <ArrowRight size={18} aria-hidden />
                   </Link>

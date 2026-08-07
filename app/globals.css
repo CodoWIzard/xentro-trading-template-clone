@@ -2527,13 +2527,13 @@ select {
   margin: 0 auto;
 }
 
-.myt-offer-grid {
+.myt-access-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(18px, 2.8vw, 34px);
 }
 
-.myt-offer-card {
+.myt-access-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -2549,28 +2549,28 @@ select {
   isolation: isolate;
 }
 
-.myt-offer-card-community {
+.myt-access-card-community {
   border-color: rgba(44, 255, 154, 0.28);
   background: linear-gradient(145deg, rgba(5, 22, 19, 0.98), rgba(2, 7, 8, 0.98));
 }
 
-.myt-offer-card-indicators {
+.myt-access-card-indicators {
   border-color: rgba(22, 223, 241, 0.28);
   background: linear-gradient(145deg, rgba(5, 16, 25, 0.98), rgba(2, 5, 10, 0.98));
 }
 
-.myt-offer-glow {
+.myt-access-glow {
   display: none;
 }
 
-.myt-offer-topline {
+.myt-access-topline {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
 }
 
-.myt-offer-topline > span {
+.myt-access-topline > span {
   display: inline-flex;
   align-items: center;
   min-height: 26px;
@@ -2584,13 +2584,13 @@ select {
   line-height: 1;
 }
 
-.myt-offer-card-indicators .myt-offer-topline > span {
+.myt-access-card-indicators .myt-access-topline > span {
   border-color: rgba(22, 223, 241, 0.22);
   color: #16dff1;
   background: rgba(22, 223, 241, 0.08);
 }
 
-.myt-offer-icon {
+.myt-access-icon {
   display: grid;
   place-items: center;
   width: clamp(64px, 6vw, 82px);
@@ -2602,18 +2602,18 @@ select {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
-.myt-offer-card-indicators .myt-offer-icon {
+.myt-access-card-indicators .myt-access-icon {
   border-color: rgba(22, 223, 241, 0.2);
   color: #16dff1;
   background: rgba(22, 223, 241, 0.09);
 }
 
-.myt-offer-copy {
+.myt-access-copy {
   max-width: 780px;
   padding-top: clamp(52px, 6vw, 88px);
 }
 
-.myt-offer-copy h2 {
+.myt-access-copy h2 {
   max-width: 620px;
   margin: 0;
   color: #f7fbff;
@@ -2623,7 +2623,7 @@ select {
   letter-spacing: 0;
 }
 
-.myt-offer-copy p {
+.myt-access-copy p {
   max-width: 600px;
   margin: 16px 0 0;
   color: rgba(227, 239, 255, 0.66);
@@ -2631,7 +2631,7 @@ select {
   line-height: 1.52;
 }
 
-.myt-offer-points {
+.myt-access-points {
   display: grid;
   gap: 13px;
   padding: 0;
@@ -2639,7 +2639,7 @@ select {
   list-style: none;
 }
 
-.myt-offer-points li {
+.myt-access-points li {
   display: flex;
   gap: 12px;
   align-items: flex-start;
@@ -2649,17 +2649,17 @@ select {
   line-height: 1.45;
 }
 
-.myt-offer-points svg {
+.myt-access-points svg {
   flex: 0 0 auto;
   margin-top: 2px;
   color: #2cff9a;
 }
 
-.myt-offer-card-indicators .myt-offer-points svg {
+.myt-access-card-indicators .myt-access-points svg {
   color: #16dff1;
 }
 
-.myt-offer-cta {
+.myt-access-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2678,17 +2678,17 @@ select {
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.myt-offer-card-community .myt-offer-cta {
+.myt-access-card-community .myt-access-cta {
   background: linear-gradient(135deg, #e8fff3, #2cff9a);
   box-shadow: 0 0 30px rgba(44, 255, 154, 0.17);
 }
 
-.myt-offer-cta:hover {
+.myt-access-cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 42px rgba(22, 223, 241, 0.26);
 }
 
-.myt-offer-card-community .myt-offer-cta:hover {
+.myt-access-card-community .myt-access-cta:hover {
   box-shadow: 0 0 42px rgba(44, 255, 154, 0.24);
 }
 
@@ -3372,53 +3372,53 @@ select {
     padding: 52px 16px 72px;
   }
 
-  .myt-offer-grid {
+  .myt-access-grid {
     grid-template-columns: 1fr;
   }
 
-  .myt-offer-card {
+  .myt-access-card {
     min-height: auto;
     padding: 22px;
   }
 
-  .myt-offer-topline {
+  .myt-access-topline {
     gap: 12px;
   }
 
-  .myt-offer-topline > span {
+  .myt-access-topline > span {
     max-width: 136px;
     justify-content: center;
     text-align: center;
   }
 
-  .myt-offer-icon {
+  .myt-access-icon {
     width: 58px;
     height: 58px;
   }
 
-  .myt-offer-copy {
+  .myt-access-copy {
     padding-top: 42px;
   }
 
-  .myt-offer-copy h2 {
+  .myt-access-copy h2 {
     font-size: clamp(30px, 9vw, 38px);
     line-height: 1.02;
   }
 
-  .myt-offer-copy p {
+  .myt-access-copy p {
     font-size: 16px;
   }
 
-  .myt-offer-points {
+  .myt-access-points {
     gap: 12px;
     margin: 26px 0;
   }
 
-  .myt-offer-points li {
+  .myt-access-points li {
     font-size: 15px;
   }
 
-  .myt-offer-cta {
+  .myt-access-cta {
     min-height: 56px;
   }
 
