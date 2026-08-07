@@ -69,22 +69,16 @@ const offerCards = [
 
 const tradingSystemSteps = [
   {
-    time: "PREP",
-    label: "Build the plan",
-    text: "Course rules, bias, key levels, and invalidation before the trade starts.",
-    value: "Before open"
+    label: "Learn the framework",
+    text: "Courses and coaching explain the market language, risk model, and repeatable routines."
   },
   {
-    time: "LIVE",
-    label: "Trade with context",
-    text: "Indicators and room commentary keep attention on clean locations, not impulse.",
-    value: "During session"
+    label: "Read the market",
+    text: "Indicators and live context help traders understand location, momentum, and timing."
   },
   {
-    time: "RECAP",
-    label: "Close the loop",
-    text: "Coaching, journaling, and review turn each decision into a better playbook.",
-    value: "After close"
+    label: "Review the decision",
+    text: "The work continues after the trade: notes, screenshots, feedback, and discipline checks."
   }
 ];
 
@@ -340,11 +334,11 @@ function TradingTextBlock() {
         <div className="myt-explainer">
           <div className="myt-explainer-copy">
             <p className="myt-kicker">Mind Your Trades in plain English</p>
-            <h2>A trading desk for learning the method and staying disciplined live.</h2>
+            <h2>Method over mood.</h2>
             <p>
-              MYT brings the parts of a serious futures routine together: education, indicators, live
-              market context, coaching, and review. The goal is simple: know what you are looking for,
-              act with rules, and learn from the session.
+              Mind Your Trades is for futures traders who want a cleaner way to prepare, execute, and
+              review. Courses teach the method. Indicators sharpen the read. The live room and coaching
+              keep the work honest when the market gets loud.
             </p>
             <div className="myt-explainer-tags" aria-label="Mind Your Trades offer">
               <span>Courses</span>
@@ -354,36 +348,23 @@ function TradingTextBlock() {
             </div>
           </div>
 
-          <div className="myt-session-map" aria-label="Mind Your Trades session map">
-            <div className="myt-session-map-head">
-              <span>MYT session loop</span>
-              <strong>NQ / ES process</strong>
+          <div className="myt-method-ledger" aria-label="Mind Your Trades method">
+            <div className="myt-method-ledger-mark" aria-hidden>
+              MYT
             </div>
-            <div className="myt-session-map-body">
-              <div className="myt-price-rail" aria-hidden>
-                <span>liquidity</span>
-                <span>entry</span>
-                <span>review</span>
-              </div>
-              <div className="myt-session-rows">
-                {tradingSystemSteps.map((step, index) => (
-                  <article className="myt-session-row" key={step.label}>
-                    <div>
-                      <span>{step.time}</span>
-                      <h3>{step.label}</h3>
-                      <p>{step.text}</p>
-                    </div>
-                    <strong>{step.value}</strong>
-                    <i aria-hidden>{index + 1}</i>
-                  </article>
-                ))}
-              </div>
+            <div className="myt-method-ledger-head">
+              <span>What the system gives you</span>
+              <strong>No signals. No hype. Just better process.</strong>
             </div>
-            <div className="myt-session-map-footer">
-              <span>Rules before risk</span>
-              <span>Context before clicks</span>
-              <span>Review before repetition</span>
-            </div>
+            {tradingSystemSteps.map((step, index) => (
+              <article className="myt-method-ledger-row" key={step.label}>
+                <span>0{index + 1}</span>
+                <div>
+                  <h3>{step.label}</h3>
+                  <p>{step.text}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </div>

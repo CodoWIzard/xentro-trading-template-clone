@@ -2344,62 +2344,36 @@ select {
   font-weight: 900;
 }
 
-.myt-session-map {
+.myt-method-ledger {
   position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(248, 244, 235, 0.16);
-  border-radius: 8px;
-  background:
-    linear-gradient(90deg, rgba(248, 244, 235, 0.06) 1px, transparent 1px),
-    linear-gradient(rgba(248, 244, 235, 0.045) 1px, transparent 1px),
-    radial-gradient(circle at 82% 20%, rgba(22, 223, 241, 0.16), transparent 26rem),
-    #060908;
-  background-size: 54px 54px, 54px 54px, auto, auto;
-  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.38), inset 0 1px rgba(255, 255, 255, 0.07);
+  padding: clamp(22px, 3vw, 34px) 0;
+  border-top: 1px solid rgba(248, 244, 235, 0.22);
+  border-bottom: 1px solid rgba(248, 244, 235, 0.22);
 }
 
-.myt-session-map::before {
-  content: "";
+.myt-method-ledger-mark {
   position: absolute;
-  top: 22%;
-  right: -12%;
-  width: 58%;
-  height: 1px;
-  background: #16dff1;
-  box-shadow: 0 0 28px rgba(22, 223, 241, 0.6);
-  transform: rotate(-13deg);
-  opacity: 0.72;
+  top: -0.16em;
+  right: 0;
+  color: rgba(22, 223, 241, 0.08);
+  font-size: clamp(118px, 15vw, 218px);
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: 0;
+  pointer-events: none;
 }
 
-.myt-session-map::after {
-  content: "";
-  position: absolute;
-  right: 17%;
-  bottom: 14%;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #16dff1;
-  box-shadow: 0 0 0 7px rgba(22, 223, 241, 0.1), 0 0 24px rgba(22, 223, 241, 0.7);
-}
-
-.myt-session-map-head,
-.myt-session-map-footer {
+.myt-method-ledger-head {
   position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+  max-width: 560px;
+  padding-bottom: 22px;
 }
 
-.myt-session-map-head {
-  padding: 18px 20px;
-  border-bottom: 1px solid rgba(248, 244, 235, 0.12);
-}
-
-.myt-session-map-head span,
-.myt-session-row span,
-.myt-session-map-footer span {
+.myt-method-ledger-head span,
+.myt-method-ledger-row > span {
   color: rgba(22, 223, 241, 0.86);
   font-family: "Fira Code", monospace;
   font-size: 11px;
@@ -2408,134 +2382,36 @@ select {
   text-transform: uppercase;
 }
 
-.myt-session-map-head strong {
+.myt-method-ledger-head strong {
   color: rgba(248, 244, 235, 0.82);
-  font-size: 13px;
+  font-size: clamp(18px, 1.8vw, 25px);
+  line-height: 1.12;
 }
 
-.myt-session-map-body {
+.myt-method-ledger-row {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
-  gap: 18px;
-  padding: 22px 20px 20px;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: clamp(18px, 3vw, 36px);
+  padding: clamp(18px, 2.4vw, 26px) 0;
+  border-top: 1px solid rgba(248, 244, 235, 0.14);
 }
 
-.myt-price-rail {
-  position: relative;
-  display: grid;
-  align-content: space-between;
-  min-height: 390px;
-  padding: 8px 0;
-}
-
-.myt-price-rail::before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  bottom: 12px;
-  left: 18px;
-  width: 2px;
-  background: linear-gradient(to bottom, transparent, #16dff1 20%, rgba(248, 244, 235, 0.28) 50%, #16dff1 82%, transparent);
-  box-shadow: 0 0 18px rgba(22, 223, 241, 0.34);
-}
-
-.myt-price-rail span {
-  position: relative;
-  padding-left: 34px;
-  color: rgba(248, 244, 235, 0.48);
-  font-family: "Fira Code", monospace;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.myt-price-rail span::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 14px;
-  width: 10px;
-  height: 10px;
-  border: 1px solid rgba(22, 223, 241, 0.72);
-  border-radius: 50%;
-  background: #060908;
-  transform: translateY(-50%);
-}
-
-.myt-session-rows {
-  display: grid;
-  gap: 12px;
-}
-
-.myt-session-row {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 18px;
-  min-height: 122px;
-  padding: 18px 56px 18px 18px;
-  overflow: hidden;
-  border: 1px solid rgba(248, 244, 235, 0.13);
-  border-radius: 8px;
-  background: rgba(2, 5, 10, 0.64);
-}
-
-.myt-session-row:nth-child(2) {
-  margin-left: 28px;
-  border-color: rgba(22, 223, 241, 0.3);
-  background: rgba(22, 223, 241, 0.065);
-}
-
-.myt-session-row:nth-child(3) {
-  margin-left: 56px;
-}
-
-.myt-session-row h3 {
-  margin: 9px 0 8px;
+.myt-method-ledger-row h3 {
+  margin: 0 0 8px;
   color: #f8f4eb;
-  font-size: clamp(21px, 1.85vw, 30px);
-  line-height: 1;
+  font-size: clamp(24px, 2.7vw, 40px);
+  font-weight: 900;
+  line-height: 0.98;
 }
 
-.myt-session-row p {
-  max-width: 360px;
+.myt-method-ledger-row p {
+  max-width: 590px;
   margin: 0;
   color: rgba(248, 244, 235, 0.62);
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.myt-session-row strong {
-  align-self: start;
-  color: rgba(248, 244, 235, 0.58);
-  font-size: 12px;
-  font-weight: 900;
-  white-space: nowrap;
-}
-
-.myt-session-row i {
-  position: absolute;
-  right: 14px;
-  bottom: -7px;
-  color: rgba(248, 244, 235, 0.06);
-  font-size: 76px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.myt-session-map-footer {
-  flex-wrap: wrap;
-  padding: 16px 20px 18px;
-  border-top: 1px solid rgba(248, 244, 235, 0.12);
-}
-
-.myt-session-map-footer span {
-  color: rgba(248, 244, 235, 0.58);
-  font-size: 10px;
+  font-size: clamp(15px, 1.12vw, 17px);
+  line-height: 1.56;
 }
 
 @keyframes mytHeroOrbit {
@@ -3590,53 +3466,26 @@ select {
     line-height: 1;
   }
 
-  .myt-session-map-head,
-  .myt-session-map-footer {
-    display: grid;
+  .myt-method-ledger {
+    padding: 18px 0;
   }
 
-  .myt-session-map-body {
-    grid-template-columns: 1fr;
+  .myt-method-ledger-mark {
+    top: 0;
+    font-size: clamp(74px, 24vw, 128px);
+  }
+
+  .myt-method-ledger-head {
+    padding-bottom: 18px;
+  }
+
+  .myt-method-ledger-row {
+    grid-template-columns: 42px minmax(0, 1fr);
     gap: 14px;
-    padding: 18px;
   }
 
-  .myt-price-rail {
-    display: flex;
-    justify-content: space-between;
-    min-height: auto;
-    padding: 0 0 8px;
-  }
-
-  .myt-price-rail::before {
-    top: auto;
-    right: 6px;
-    bottom: 0;
-    left: 6px;
-    width: auto;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #16dff1, transparent);
-  }
-
-  .myt-price-rail span {
-    padding-left: 0;
-    font-size: 9px;
-  }
-
-  .myt-price-rail span::before {
-    display: none;
-  }
-
-  .myt-session-row,
-  .myt-session-row:nth-child(2),
-  .myt-session-row:nth-child(3) {
-    grid-template-columns: 1fr;
-    margin-left: 0;
-    padding: 17px 48px 17px 17px;
-  }
-
-  .myt-session-row strong {
-    white-space: normal;
+  .myt-method-ledger-row h3 {
+    font-size: clamp(24px, 8vw, 34px);
   }
 
   .myt-bipsync-canvas {
