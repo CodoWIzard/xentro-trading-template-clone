@@ -2535,56 +2535,39 @@ select {
 
 .myt-offer-card {
   position: relative;
-  display: grid;
-  min-height: clamp(500px, 42vw, 620px);
+  display: flex;
+  flex-direction: column;
+  min-height: clamp(520px, 38vw, 600px);
   overflow: hidden;
-  padding: clamp(24px, 3.4vw, 48px);
+  padding: clamp(26px, 3vw, 42px);
   border: 1px solid rgba(22, 223, 241, 0.18);
   border-radius: 8px;
-  background:
-    linear-gradient(145deg, rgba(9, 22, 34, 0.98), rgba(2, 5, 10, 0.98)),
-    #02050a;
+  background: linear-gradient(145deg, rgba(6, 15, 24, 0.98), rgba(2, 5, 10, 0.98));
   box-shadow:
-    0 34px 110px rgba(0, 0, 0, 0.36),
+    0 30px 90px rgba(0, 0, 0, 0.32),
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
   isolation: isolate;
 }
 
 .myt-offer-card-community {
   border-color: rgba(44, 255, 154, 0.28);
-  background:
-    radial-gradient(circle at 10% 0%, rgba(44, 255, 154, 0.16), transparent 24rem),
-    linear-gradient(145deg, rgba(6, 29, 27, 0.98), rgba(2, 5, 10, 0.98));
+  background: linear-gradient(145deg, rgba(5, 22, 19, 0.98), rgba(2, 7, 8, 0.98));
 }
 
 .myt-offer-card-indicators {
   border-color: rgba(22, 223, 241, 0.28);
-  background:
-    radial-gradient(circle at 78% 4%, rgba(22, 223, 241, 0.15), transparent 24rem),
-    linear-gradient(145deg, rgba(7, 18, 31, 0.98), rgba(2, 5, 10, 0.98));
+  background: linear-gradient(145deg, rgba(5, 16, 25, 0.98), rgba(2, 5, 10, 0.98));
 }
 
 .myt-offer-glow {
-  position: absolute;
-  right: -18%;
-  bottom: -24%;
-  z-index: -1;
-  width: 58%;
-  aspect-ratio: 1;
-  border-radius: 999px;
-  background: rgba(44, 255, 154, 0.14);
-  filter: blur(54px);
-}
-
-.myt-offer-card-indicators .myt-offer-glow {
-  background: rgba(22, 223, 241, 0.13);
+  display: none;
 }
 
 .myt-offer-topline {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 18px;
+  gap: 16px;
 }
 
 .myt-offer-topline > span {
@@ -2626,49 +2609,48 @@ select {
 }
 
 .myt-offer-copy {
-  align-self: end;
   max-width: 780px;
-  padding-top: clamp(72px, 9vw, 140px);
+  padding-top: clamp(52px, 6vw, 88px);
 }
 
 .myt-offer-copy h2 {
-  max-width: 720px;
+  max-width: 620px;
   margin: 0;
   color: #f7fbff;
-  font-size: clamp(34px, 4.1vw, 60px);
+  font-size: clamp(32px, 3.05vw, 48px);
   font-weight: 900;
-  line-height: 0.98;
+  line-height: 1;
   letter-spacing: 0;
 }
 
 .myt-offer-copy p {
-  max-width: 680px;
-  margin: 18px 0 0;
+  max-width: 600px;
+  margin: 16px 0 0;
   color: rgba(227, 239, 255, 0.66);
-  font-size: clamp(16px, 1.55vw, 22px);
-  line-height: 1.48;
+  font-size: clamp(16px, 1.28vw, 19px);
+  line-height: 1.52;
 }
 
 .myt-offer-points {
   display: grid;
-  gap: 14px;
+  gap: 13px;
   padding: 0;
-  margin: clamp(28px, 3vw, 42px) 0 clamp(26px, 3vw, 40px);
+  margin: clamp(28px, 3vw, 38px) 0 clamp(24px, 2.6vw, 34px);
   list-style: none;
 }
 
 .myt-offer-points li {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
   gap: 12px;
-  align-items: start;
+  align-items: flex-start;
   color: rgba(227, 239, 255, 0.78);
-  font-size: clamp(15px, 1.25vw, 18px);
+  font-size: clamp(15px, 1.08vw, 17px);
   font-weight: 700;
   line-height: 1.45;
 }
 
 .myt-offer-points svg {
+  flex: 0 0 auto;
   margin-top: 2px;
   color: #2cff9a;
 }
@@ -2682,6 +2664,7 @@ select {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  margin-top: auto;
   min-height: 62px;
   width: 100%;
   padding: 16px 18px;
@@ -3414,11 +3397,11 @@ select {
   }
 
   .myt-offer-copy {
-    padding-top: 64px;
+    padding-top: 42px;
   }
 
   .myt-offer-copy h2 {
-    font-size: clamp(30px, 10vw, 40px);
+    font-size: clamp(30px, 9vw, 38px);
     line-height: 1.02;
   }
 
