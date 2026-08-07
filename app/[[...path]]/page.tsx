@@ -67,6 +67,24 @@ const offerCards = [
   }
 ];
 
+const tradingSystemSteps = [
+  {
+    icon: BookOpenCheck,
+    label: "Learn the method",
+    text: "Courses and coaching turn market structure, risk, and psychology into rules you can repeat."
+  },
+  {
+    icon: CandlestickChart,
+    label: "Read the session",
+    text: "Indicators and live context help you separate clean trade locations from noisy chart movement."
+  },
+  {
+    icon: Brain,
+    label: "Review the work",
+    text: "Prep, execution, and review loops keep the focus on discipline instead of chasing calls."
+  }
+];
+
 const pillars = [
   {
     icon: MonitorPlay,
@@ -316,18 +334,31 @@ function TradingTextBlock() {
     >
       <div className="text-block__glow" data-position="left" style={{ "--vertical-position": "0%" } as CSSProperties} />
       <div className="text-block__container">
-        <div className="text-block__text">
-          <p className="large-text">
-            Your trading process is scattered across screenshots, notes, indicators, emotions, and
-            half-remembered session rules.
-          </p>
-          <p className="large-text">
-            You are dealing with inconsistent prep, noisy chart decisions, weak review loops, and
-            discipline that disappears when the market speeds up.
-          </p>
-          <p className="large-text">
-            <span className="green-text">This is where Mind Your Trades comes in.</span>
-          </p>
+        <div className="myt-explainer">
+          <div className="myt-explainer-copy">
+            <p className="myt-kicker">What Mind Your Trades does</p>
+            <h2>One place to learn, read, execute, and review futures trading.</h2>
+            <p>
+              MYT gives traders a clearer operating system: structured education, premium indicators,
+              live market context, and review habits that keep decisions disciplined when the session
+              gets fast.
+            </p>
+          </div>
+
+          <div className="myt-explainer-steps" aria-label="Mind Your Trades system">
+            {tradingSystemSteps.map((step, index) => {
+              const Icon = step.icon;
+
+              return (
+                <article className="myt-explainer-step" key={step.label}>
+                  <span className="myt-explainer-number">0{index + 1}</span>
+                  <Icon size={24} aria-hidden />
+                  <h3>{step.label}</h3>
+                  <p>{step.text}</p>
+                </article>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

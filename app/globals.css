@@ -2295,24 +2295,88 @@ select {
   margin: 0 auto;
 }
 
-.text-block__text {
+.myt-explainer {
   display: grid;
-  gap: clamp(18px, 2.3vw, 34px);
-  text-align: center;
+  grid-template-columns: minmax(0, 0.9fr) minmax(520px, 1.1fr);
+  gap: clamp(26px, 4.5vw, 68px);
+  align-items: center;
 }
 
-.large-text {
+.myt-explainer-copy {
+  display: grid;
+  gap: 18px;
+  max-width: 620px;
+}
+
+.myt-explainer-copy h2 {
   margin: 0;
-  color: rgba(248, 244, 235, 0.84);
-  font-size: clamp(24px, 2.45vw, 38px);
-  font-weight: 500;
-  line-height: 1.16;
+  color: #f8f4eb;
+  font-size: clamp(38px, 4.6vw, 72px);
+  font-weight: 900;
+  line-height: 0.96;
   letter-spacing: 0;
-  text-wrap: balance;
 }
 
-.green-text {
+.myt-explainer-copy p:not(.myt-kicker) {
+  margin: 0;
+  color: rgba(248, 244, 235, 0.68);
+  font-size: clamp(16px, 1.24vw, 19px);
+  line-height: 1.62;
+}
+
+.myt-explainer-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.myt-explainer-step {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  min-height: 286px;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(248, 244, 235, 0.14);
+  border-radius: 8px;
+  background: rgba(248, 244, 235, 0.055);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.myt-explainer-step::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-top: 2px solid rgba(22, 223, 241, 0.72);
+  opacity: 0.76;
+  pointer-events: none;
+}
+
+.myt-explainer-step svg {
   color: #16dff1;
+}
+
+.myt-explainer-number {
+  width: max-content;
+  color: rgba(22, 223, 241, 0.86);
+  font-family: "Fira Code", monospace;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.myt-explainer-step h3 {
+  margin: auto 0 0;
+  color: #f8f4eb;
+  font-size: clamp(20px, 1.7vw, 26px);
+  line-height: 1.02;
+}
+
+.myt-explainer-step p {
+  margin: 0;
+  color: rgba(248, 244, 235, 0.62);
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 @keyframes mytHeroOrbit {
@@ -3286,6 +3350,14 @@ select {
     grid-template-columns: 1fr;
   }
 
+  .myt-explainer {
+    grid-template-columns: 1fr;
+  }
+
+  .myt-explainer-copy {
+    max-width: 760px;
+  }
+
   .features__media {
     max-width: 720px;
     margin: 0 auto;
@@ -3350,13 +3422,26 @@ select {
     padding: 34px 16px 56px;
   }
 
-  .text-block__text {
-    gap: 18px;
+  .myt-explainer {
+    gap: 24px;
   }
 
-  .large-text {
-    font-size: clamp(21px, 6vw, 29px);
-    line-height: 1.16;
+  .myt-explainer-copy h2 {
+    font-size: clamp(34px, 10vw, 48px);
+    line-height: 1;
+  }
+
+  .myt-explainer-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .myt-explainer-step {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .myt-explainer-step h3 {
+    margin-top: 10px;
   }
 
   .myt-bipsync-canvas {
