@@ -36,21 +36,34 @@ const proofStats = [
   { value: "0", label: "signal-room positioning or unrealistic performance claims" }
 ];
 
-const featureSystem = [
+const offerCards = [
   {
-    icon: BookOpenCheck,
-    heading: "Prepare & Structure",
-    text: "Turn scattered notes, indicators, and session plans into one clear pre-market process."
+    icon: UsersRound,
+    badge: "Most active path",
+    heading: "Live Discord trading room",
+    text: "Trade around live futures context, structured prep, session review, and a community built for process instead of signal noise.",
+    points: [
+      "Daily market prep and live-session context",
+      "Trade review, Q&A, and execution feedback",
+      "Process-first support for serious futures traders"
+    ],
+    cta: "Join the room",
+    href: "/community",
+    variant: "community"
   },
   {
     icon: CandlestickChart,
-    heading: "Execute With Context",
-    text: "Use chart levels, momentum, and risk criteria to make decisions without chasing every move."
-  },
-  {
-    icon: ShieldCheck,
-    heading: "Review & Improve",
-    text: "Convert screenshots, journals, and live-room feedback into repeatable trading habits."
+    badge: "Indicator suite",
+    heading: "Premium futures indicators",
+    text: "Professional decision-support tools for levels, momentum, confluence, and trade location, styled for clarity under pressure.",
+    points: [
+      "Built for futures sessions and repeatable routines",
+      "Cleaner context for entries, invalidation, and review",
+      "Works alongside courses, coaching, and the live room"
+    ],
+    cta: "View indicators",
+    href: "/learning/indicators",
+    variant: "indicators"
   }
 ];
 
@@ -253,57 +266,41 @@ function TradingFeatures() {
       style={{ "--theme-color": "var(--green)" } as CSSProperties}
     >
       <div className="features__container">
-        <div className="features__layout">
-          <div className="features__list">
-            {featureSystem.map((feature) => {
+        <div className="myt-offer-grid">
+          {offerCards.map((feature) => {
               const Icon = feature.icon;
 
               return (
-                <article className="features__item" key={feature.heading}>
-                  <div className="features__item-glows" aria-hidden>
-                    <div className="features-glow-1" />
-                    <div className="features-glow-2" />
-                  </div>
-                  <div className="features__item-content">
-                    <div className="features__icon">
-                      <Icon size={22} aria-hidden />
+                <article className={"myt-offer-card myt-offer-card-" + feature.variant} key={feature.heading}>
+                  <div className="myt-offer-glow" aria-hidden />
+                  <div className="myt-offer-topline">
+                    <div className="myt-offer-icon">
+                      <Icon size={30} aria-hidden />
                     </div>
-                    <h3 className="features__heading">{feature.heading}</h3>
-                    <p className="features__text">{feature.text}</p>
+                    <span>{feature.badge}</span>
                   </div>
+
+                  <div className="myt-offer-copy">
+                    <h2>{feature.heading}</h2>
+                    <p>{feature.text}</p>
+                  </div>
+
+                  <ul className="myt-offer-points">
+                    {feature.points.map((point) => (
+                      <li key={point}>
+                        <Check size={17} aria-hidden />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link className="myt-offer-cta" href={feature.href}>
+                    {feature.cta}
+                    <ArrowRight size={18} aria-hidden />
+                  </Link>
                 </article>
               );
             })}
-          </div>
-
-          <div className="features__media has-mobile-version">
-            <video
-              playsInline
-              width={1200}
-              height={1200}
-              autoPlay
-              muted
-              loop
-              preload="metadata"
-              className="for-desktop"
-              poster="/images/myt-precision-edge.png"
-            >
-              <source src="/videos/hero-trading-chart.mp4" type="video/mp4" />
-            </video>
-            <video
-              playsInline
-              width={720}
-              height={720}
-              autoPlay
-              muted
-              loop
-              preload="metadata"
-              className="for-mobile"
-              poster="/images/myt-precision-edge.png"
-            >
-              <source src="/videos/hero-trading-chart.mp4" type="video/mp4" />
-            </video>
-          </div>
         </div>
       </div>
     </section>
