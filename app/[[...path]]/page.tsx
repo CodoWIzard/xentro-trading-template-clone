@@ -69,19 +69,22 @@ const offerCards = [
 
 const tradingSystemSteps = [
   {
-    icon: BookOpenCheck,
-    label: "Learn the method",
-    text: "Courses and coaching turn market structure, risk, and psychology into rules you can repeat."
+    time: "PREP",
+    label: "Build the plan",
+    text: "Course rules, bias, key levels, and invalidation before the trade starts.",
+    value: "Before open"
   },
   {
-    icon: CandlestickChart,
-    label: "Read the session",
-    text: "Indicators and live context help you separate clean trade locations from noisy chart movement."
+    time: "LIVE",
+    label: "Trade with context",
+    text: "Indicators and room commentary keep attention on clean locations, not impulse.",
+    value: "During session"
   },
   {
-    icon: Brain,
-    label: "Review the work",
-    text: "Prep, execution, and review loops keep the focus on discipline instead of chasing calls."
+    time: "RECAP",
+    label: "Close the loop",
+    text: "Coaching, journaling, and review turn each decision into a better playbook.",
+    value: "After close"
   }
 ];
 
@@ -336,28 +339,51 @@ function TradingTextBlock() {
       <div className="text-block__container">
         <div className="myt-explainer">
           <div className="myt-explainer-copy">
-            <p className="myt-kicker">What Mind Your Trades does</p>
-            <h2>One place to learn, read, execute, and review futures trading.</h2>
+            <p className="myt-kicker">Mind Your Trades in plain English</p>
+            <h2>A trading desk for learning the method and staying disciplined live.</h2>
             <p>
-              MYT gives traders a clearer operating system: structured education, premium indicators,
-              live market context, and review habits that keep decisions disciplined when the session
-              gets fast.
+              MYT brings the parts of a serious futures routine together: education, indicators, live
+              market context, coaching, and review. The goal is simple: know what you are looking for,
+              act with rules, and learn from the session.
             </p>
+            <div className="myt-explainer-tags" aria-label="Mind Your Trades offer">
+              <span>Courses</span>
+              <span>Indicators</span>
+              <span>Live room</span>
+              <span>Coaching</span>
+            </div>
           </div>
 
-          <div className="myt-explainer-steps" aria-label="Mind Your Trades system">
-            {tradingSystemSteps.map((step, index) => {
-              const Icon = step.icon;
-
-              return (
-                <article className="myt-explainer-step" key={step.label}>
-                  <span className="myt-explainer-number">0{index + 1}</span>
-                  <Icon size={24} aria-hidden />
-                  <h3>{step.label}</h3>
-                  <p>{step.text}</p>
-                </article>
-              );
-            })}
+          <div className="myt-session-map" aria-label="Mind Your Trades session map">
+            <div className="myt-session-map-head">
+              <span>MYT session loop</span>
+              <strong>NQ / ES process</strong>
+            </div>
+            <div className="myt-session-map-body">
+              <div className="myt-price-rail" aria-hidden>
+                <span>liquidity</span>
+                <span>entry</span>
+                <span>review</span>
+              </div>
+              <div className="myt-session-rows">
+                {tradingSystemSteps.map((step, index) => (
+                  <article className="myt-session-row" key={step.label}>
+                    <div>
+                      <span>{step.time}</span>
+                      <h3>{step.label}</h3>
+                      <p>{step.text}</p>
+                    </div>
+                    <strong>{step.value}</strong>
+                    <i aria-hidden>{index + 1}</i>
+                  </article>
+                ))}
+              </div>
+            </div>
+            <div className="myt-session-map-footer">
+              <span>Rules before risk</span>
+              <span>Context before clicks</span>
+              <span>Review before repetition</span>
+            </div>
           </div>
         </div>
       </div>
