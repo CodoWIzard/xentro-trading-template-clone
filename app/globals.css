@@ -3344,6 +3344,35 @@ select {
   align-items: center;
 }
 
+.footer_editorial_line {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 24px 18px;
+  overflow: hidden;
+  color: rgba(248, 244, 235, 0.2);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(11px, 1vw, 14px);
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 15%, #000 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 15%, #000 85%, transparent 100%);
+}
+
+.footer_editorial_line span {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer_editorial_line span:not(:last-child)::after {
+  content: "·";
+  color: rgba(22, 223, 241, 0.34);
+  font-style: normal;
+}
+
 @keyframes footerMarqueeMove {
   from {
     transform: translateX(0);

@@ -748,6 +748,12 @@ function SiteFooter() {
           </nav>
         </div>
       </div>
+
+      <div className="footer_editorial_line" aria-hidden>
+        {Array.from({ length: 7 }).map((_, index) => (
+          <span key={index}>Mind Your Trades</span>
+        ))}
+      </div>
     </footer>
   );
 }
