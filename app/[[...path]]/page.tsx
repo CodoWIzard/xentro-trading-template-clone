@@ -12,8 +12,7 @@ import {
   MonitorPlay,
   ShieldCheck,
   Sparkles,
-  UsersRound,
-  Zap
+  UsersRound
 } from "lucide-react";
 import { HeroCommand } from "../../components/hero-command";
 import { MarketGraph } from "../../components/market-graph";
@@ -671,17 +670,6 @@ function SiteFooter() {
       <div className="myt-footer-container">
         <div className="footer_inner">
           <div className="footer_body">
-            <div className="footer_summary">
-              <div>
-                <span>MYT operating system</span>
-                <strong>Prepare the market. Execute with context. Review the work.</strong>
-              </div>
-              <Link className="footer_cta" href="/pricing">
-                Join the next cohort
-                <Zap size={16} aria-hidden />
-              </Link>
-            </div>
-
             <div className="footer_grid">
               <div className="footer_main">
                 <Link aria-label="Mind Your Trades home" className="footer_logo-link" href="/">
