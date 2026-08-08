@@ -3200,7 +3200,7 @@ select {
   padding: 0;
   overflow: hidden;
   color: #f8f4eb;
-  background: linear-gradient(180deg, #050706 0%, #0a100d 100%);
+  background: #050706;
 }
 
 .footer_component .footer_pattern {
