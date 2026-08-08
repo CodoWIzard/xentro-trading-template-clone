@@ -7,10 +7,10 @@ import gsap from "gsap";
 import { ArrowRight } from "lucide-react";
 
 const proofItems = [
-  "Structured courses",
-  "Indicator tools",
-  "Live market room",
-  "Execution coaching"
+  "Courses",
+  "Indicators",
+  "Live room",
+  "Coaching"
 ];
 
 export function HeroCommand() {
@@ -69,7 +69,7 @@ export function HeroCommand() {
             <Link className="button myt-glow-button" href="/pricing">
               <span className="myt-glow-button-inner">
                 <span>
-                  Now open <strong>MYT access</strong>
+                  Applications open <strong>MYT access</strong>
                 </span>
                 <ArrowRight size={14} aria-hidden />
               </span>
@@ -82,21 +82,21 @@ export function HeroCommand() {
           </motion.div>
 
           <h1 className="hero__title myt-bipsync-title" id="hero-title">
-            Your futures trading workspace.
+            A futures trading room for process-first traders.
           </h1>
 
           <p className="hero__paragraph myt-bipsync-copy">
-            Courses, indicator tools, live market context, and coaching in one disciplined system
-            for traders building a repeatable futures process.
+            Learn the framework, read live market context, use decision-support tools, and review
+            execution inside one disciplined MYT operating system.
           </p>
 
           <div className="hero__buttons myt-bipsync-actions">
             <Link className="myt-button myt-button-primary" href="/pricing">
-              View access options
+              Request access
               <ArrowRight size={18} aria-hidden />
             </Link>
             <Link className="myt-button myt-button-secondary" href="/learning/courses">
-              Explore the method
+              See the method
             </Link>
           </div>
 

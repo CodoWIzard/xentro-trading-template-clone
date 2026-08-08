@@ -33,7 +33,7 @@ const proofStats = [
   { value: "4", label: "commercial paths: courses, tools, room, coaching" },
   { value: "24/7", label: "course library for review outside market hours" },
   { value: "1", label: "clear operating system around futures execution" },
-  { value: "0", label: "signal-room positioning or unrealistic performance claims" }
+  { value: "0", label: "signal-room dependency or unrealistic performance claims" }
 ];
 
 const offerCards = [
@@ -41,7 +41,7 @@ const offerCards = [
     icon: UsersRound,
     badge: "Most active path",
     heading: "Live Discord trading room",
-    text: "Trade around live futures context, structured prep, session review, and a community built for process instead of signal noise.",
+    text: "Trade around live futures context, structured prep, session review, and a room built for process instead of signal noise.",
     points: [
       "Daily market prep and live-session context",
       "Trade review, Q&A, and execution feedback",
@@ -55,7 +55,7 @@ const offerCards = [
     icon: CandlestickChart,
     badge: "Indicator suite",
     heading: "Premium futures indicators",
-    text: "Professional decision-support tools for levels, momentum, confluence, and trade location, styled for clarity under pressure.",
+    text: "Decision-support tools for levels, momentum, confluence, and trade location, styled for clarity under pressure.",
     points: [
       "Built for futures sessions and repeatable routines",
       "Cleaner context for entries, invalidation, and review",
@@ -69,16 +69,16 @@ const offerCards = [
 
 const tradingSystemSteps = [
   {
-    label: "Learn the framework",
-    text: "Courses and coaching explain the market language, risk model, and repeatable routines."
+    label: "Prepare the read",
+    text: "Courses and coaching build the market language, risk model, and session routine."
   },
   {
-    label: "Read the market",
-    text: "Indicators and live context help traders understand location, momentum, and timing."
+    label: "Execute with context",
+    text: "Indicators and live-room prep help traders understand location, momentum, and timing."
   },
   {
-    label: "Review the decision",
-    text: "The work continues after the trade: notes, screenshots, feedback, and discipline checks."
+    label: "Review the work",
+    text: "The edge compounds after the trade: notes, screenshots, feedback, and discipline checks."
   }
 ];
 
@@ -86,7 +86,7 @@ const pillars = [
   {
     icon: MonitorPlay,
     label: "Live Market Room",
-    text: "Session prep, trade context, execution criteria, and after-market review without signal noise.",
+    text: "Session prep, trade context, execution criteria, and after-market review without signal-room noise.",
     href: "/community"
   },
   {
@@ -104,7 +104,7 @@ const pillars = [
   {
     icon: Brain,
     label: "Coaching",
-    text: "Patience, discipline, and review habits baked into the brand, not treated as a side note.",
+    text: "Patience, discipline, and review habits for traders who need a tighter feedback loop.",
     href: "/learning/coaching"
   }
 ];
@@ -127,7 +127,7 @@ const pricing = [
   {
     name: "MYT Room",
     price: "Core access",
-    text: "The main conversion target for traders ready to build a repeatable process.",
+    text: "For traders ready to build a repeatable process around live context and review.",
     points: ["Live sessions", "Member library", "Weekly review", "Community Q&A"],
     cta: "Request room access",
     featured: true
@@ -135,7 +135,7 @@ const pricing = [
   {
     name: "Edge Builder",
     price: "Coaching",
-    text: "Higher-intent path for traders who want closer feedback on execution and psychology.",
+    text: "For traders who want closer feedback on execution, journaling, and psychology.",
     points: ["Private reviews", "Trade journal audits", "Personal playbook", "Priority feedback"],
     cta: "Apply for coaching"
   }
@@ -145,7 +145,7 @@ const faqs = [
   {
     question: "Is this a signal service?",
     answer:
-      "No. The positioning is process-first: context, decision criteria, risk, and review. That is stronger and more defensible for serious traders."
+      "No. MYT is process-first: context, decision criteria, risk, and review. Traders still make their own decisions."
   },
   {
     question: "Who is MYT for?",
@@ -155,7 +155,7 @@ const faqs = [
   {
     question: "Where do indicators fit?",
     answer:
-      "They are positioned as context tools, not shortcuts. That keeps the offer premium and avoids hype-heavy claims."
+      "They support the read. The goal is cleaner context around levels, momentum, confluence, and trade location, not shortcut thinking."
   }
 ];
 
@@ -354,7 +354,7 @@ function TradingTextBlock() {
             </div>
             <div className="myt-method-ledger-head">
               <span>What the system gives you</span>
-              <strong>No signals. No hype. Just better process.</strong>
+              <strong>No signals. No hype. Just cleaner preparation, execution, and review.</strong>
             </div>
             {tradingSystemSteps.map((step, index) => (
               <article className="myt-method-ledger-row" key={step.label}>
@@ -407,7 +407,7 @@ function CommunityPage() {
       <SubHero
         eyebrow="Community"
         title="A live trading room built around context, review, and discipline."
-        text="Community is where the live room belongs: session prep, trade review, Q&A, psychology, and a cleaner way to develop with other serious traders."
+        text="Join session prep, trade review, Q&A, psychology work, and a cleaner way to develop with serious futures traders."
         cta="Join the room"
         href="/pricing"
       />
@@ -424,10 +424,10 @@ function CommunityPage() {
         </div>
         <div className="myt-showcase-copy">
           <p className="myt-kicker">Live room</p>
-          <h2>Make the product feel expensive before the user ever joins.</h2>
+          <h2>Walk into the session with a plan before price starts moving.</h2>
           <p>
-            The Webflow dashboard imagery is back, but the story is sharper: live futures context,
-            trade review, discipline, and a real learning loop.
+            The room is built around preparation, execution criteria, live futures context,
+            trade review, and the discipline to keep improving after the closing bell.
           </p>
           <div className="myt-checklist">
             {playbook.map((item) => (
@@ -451,7 +451,7 @@ function PricingPage() {
       <SubHero
         eyebrow="Pricing"
         title="Choose the access path that matches your trading stage."
-        text="Pricing gets its own page so buyers can compare the room, education, and coaching offers without scrolling through the full home story."
+        text="Compare the preview, live room, and coaching routes, then request the level of support that fits your process."
         cta="Request access"
         href="mailto:hello@mindyourtrades.com"
       />
@@ -504,10 +504,10 @@ function LearningOverview() {
     <Reveal className="myt-section myt-method" as="section">
       <div className="myt-section-heading">
         <p className="myt-kicker">The MYT learning system</p>
-        <h2>Conversion improves when traders can see the whole path, not just a promise.</h2>
+        <h2>See the whole path before you commit to the room.</h2>
         <p>
           Prepare the market, execute with rules, review the decision, then improve the playbook with
-          coaching, courses, and tools.
+          coaching, courses, live context, and tools.
         </p>
       </div>
       <div className="myt-pillar-grid">
@@ -545,11 +545,10 @@ function ProductStory() {
       </div>
       <div className="myt-showcase-copy">
         <p className="myt-kicker">The commercial core</p>
-        <h2>A premium product story, not a decorated landing page.</h2>
+        <h2>Everything points back to a repeatable trading process.</h2>
         <p>
-          The site should make the owner look like the operator of a serious trading education desk:
-          structured curriculum, decision-support tools, live context, and coaching routes that feel
-          worth paying for.
+          MYT combines structured curriculum, decision-support tools, live market context, and
+          coaching routes for traders who want a serious way to develop.
         </p>
         <div className="myt-checklist">
           {["Course path before claims", "Tools as decision support", "Live room as context, not signals"].map((item) => (
@@ -573,10 +572,10 @@ function BrandProof() {
       </div>
       <article>
         <p className="myt-kicker">Premium trading brand posture</p>
-        <h2>Institutional enough to trust. Human enough to buy from.</h2>
+        <h2>Serious enough to trust. Human enough to learn from.</h2>
         <p>
-          The direction borrows from finance software and founder-led growth sites: calm confidence,
-          sharp hierarchy, meaningful visuals, and a sales path that never needs hype to feel valuable.
+          The tone is calm by design: no loud claims, no unrealistic promises, just a clear path
+          for traders who want structure, feedback, and better decisions.
         </p>
         <Link className="myt-button myt-button-secondary" href="/pricing">
           Compare access paths
@@ -592,8 +591,8 @@ function PricingSection() {
     <Reveal className="myt-pricing" as="section">
       <div className="myt-section-heading myt-centered">
         <p className="myt-kicker">Choose your access path</p>
-        <h2>Give every buyer intent a clear next step.</h2>
-        <p>The pricing section is structured for conversion even before real prices are finalized.</p>
+        <h2>Start with the path that matches the way you trade.</h2>
+        <p>Choose the preview, join the live room, or apply for closer coaching support.</p>
       </div>
       <div className="myt-pricing-grid">
         {pricing.map((plan) => (
@@ -630,7 +629,7 @@ function FaqSection() {
     <Reveal className="myt-faq" as="section">
       <div className="myt-section-heading">
         <p className="myt-kicker">Buyer questions</p>
-        <h2>Answer the objections before they become hesitation.</h2>
+        <h2>Clear answers before you request access.</h2>
       </div>
       <div className="myt-faq-list">
         {faqs.map((faq) => (
