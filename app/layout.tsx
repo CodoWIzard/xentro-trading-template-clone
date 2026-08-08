@@ -5,15 +5,15 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://xentro-trading-template-clone.vercel.app"),
   title: {
-    default: "Mind Your Trades | Futures Trading Room, Courses and Indicators",
+    default: "Mind Your Trades | Futures Trading Mindset Coaching and Tools",
     template: "%s | MYT"
   },
   description:
-    "Mind Your Trades helps futures traders build a repeatable process through courses, indicators, live market context, coaching, and review.",
+    "Mind Your Trades helps futures traders improve discipline, mindset, and rule-following through 1:1 coaching, intent-engine tools, and Whop access.",
   openGraph: {
-    title: "Mind Your Trades | Futures Trading Room, Courses and Indicators",
+    title: "Mind Your Trades | Futures Trading Mindset Coaching and Tools",
     description:
-      "Courses, indicators, live market context, coaching, and review for futures traders building a repeatable process.",
+      "1:1 coaching, mindset-first trading tools, and Whop access for futures traders building discipline and better execution habits.",
     images: ["/images/myt-precision-edge.png"],
     type: "website"
   }

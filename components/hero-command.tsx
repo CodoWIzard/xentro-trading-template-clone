@@ -7,11 +7,13 @@ import gsap from "gsap";
 import { ArrowRight } from "lucide-react";
 
 const proofItems = [
-  "Courses",
-  "Indicators",
-  "Live room",
-  "Coaching"
+  "1:1 coaching",
+  "Intent engines",
+  "Mindset rules",
+  "Whop access"
 ];
+
+const whopUrl = "https://whop.com/joined/mind-your-trades/";
 
 export function HeroCommand() {
   const heroRef = useRef<HTMLElement | null>(null);
@@ -66,10 +68,10 @@ export function HeroCommand() {
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
-            <Link className="button myt-glow-button" href="/pricing">
+            <Link className="button myt-glow-button" href={whopUrl} rel="noreferrer" target="_blank">
               <span className="myt-glow-button-inner">
                 <span>
-                  Applications open <strong>MYT access</strong>
+                  Coaching and tools <strong>available on Whop</strong>
                 </span>
                 <ArrowRight size={14} aria-hidden />
               </span>
@@ -82,21 +84,22 @@ export function HeroCommand() {
           </motion.div>
 
           <h1 className="hero__title myt-bipsync-title" id="hero-title">
-            A futures trading room for process-first traders.
+            Rewire the way you trade.
           </h1>
 
           <p className="hero__paragraph myt-bipsync-copy">
-            Learn the framework, read live market context, use decision-support tools, and review
-            execution inside one disciplined MYT operating system.
+            Mind Your Trades helps futures traders build discipline, follow rules, and stop
+            making emotional decisions through 1:1 coaching, trading tools, and a mindset-first
+            operating system.
           </p>
 
           <div className="hero__buttons myt-bipsync-actions">
-            <Link className="myt-button myt-button-primary" href="/pricing">
-              Request access
+            <Link className="myt-button myt-button-primary" href={whopUrl} rel="noreferrer" target="_blank">
+              View Whop
               <ArrowRight size={18} aria-hidden />
             </Link>
-            <Link className="myt-button myt-button-secondary" href="/learning/courses">
-              See the method
+            <Link className="myt-button myt-button-secondary" href="/learning/coaching">
+              Explore coaching
             </Link>
           </div>
 
