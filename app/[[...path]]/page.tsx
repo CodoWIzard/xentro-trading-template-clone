@@ -169,6 +169,12 @@ const footerNav = [
 
 const footerSocial = ["YouTube", "Instagram", "Discord", "X"];
 
+const footerHighlights = [
+  "Process-first futures education",
+  "Live context without signal-room noise",
+  "Courses, indicators, room, and coaching"
+];
+
 const learningDetails = {
   indicators: {
     eyebrow: "Indicators",
@@ -665,7 +671,18 @@ function SiteFooter() {
       <div className="myt-footer-container">
         <div className="footer_inner">
           <div className="footer_body">
-            <div className="footer_top">
+            <div className="footer_summary">
+              <div>
+                <span>MYT operating system</span>
+                <strong>Prepare the market. Execute with context. Review the work.</strong>
+              </div>
+              <Link className="footer_cta" href="/pricing">
+                Join the next cohort
+                <Zap size={16} aria-hidden />
+              </Link>
+            </div>
+
+            <div className="footer_grid">
               <div className="footer_main">
                 <Link aria-label="Mind Your Trades home" className="footer_logo-link" href="/">
                   <Image src="/brand/myt-logo.png" alt="MYT" width={360} height={151} />
@@ -674,9 +691,18 @@ function SiteFooter() {
                   Courses, tools, live context, and coaching for futures traders building a
                   repeatable process.
                 </p>
+                <ul className="footer_highlights" aria-label="Mind Your Trades footer highlights">
+                  {footerHighlights.map((item) => (
+                    <li key={item}>
+                      <Check size={15} aria-hidden />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <nav aria-label="Footer navigation" className="footer_nav">
+              <nav aria-label="Footer navigation" className="footer_nav footer_column">
+                <span>Explore</span>
                 <ul className="footer_nav_list">
                   {footerNav.map((item) => (
                     <li className="footer_nav_item" key={item.href}>
@@ -687,6 +713,26 @@ function SiteFooter() {
                   ))}
                 </ul>
               </nav>
+
+              <div className="footer_column">
+                <span>Access paths</span>
+                <div className="footer_access_list">
+                  <Link href="/learning/courses">Courses</Link>
+                  <Link href="/learning/indicators">Indicators</Link>
+                  <Link href="/community">Live room</Link>
+                  <Link href="/learning/coaching">Coaching</Link>
+                </div>
+              </div>
+
+              <aside className="footer_panel" aria-label="Request MYT access">
+                <span>Next step</span>
+                <h2>Ready to build the process around your trading?</h2>
+                <p>Request access and compare the room, tools, course path, and coaching routes.</p>
+                <Link className="myt-button myt-button-primary" href="/pricing">
+                  Request access
+                  <ArrowRight size={18} aria-hidden />
+                </Link>
+              </aside>
             </div>
 
             <div className="footer_bottom">
@@ -700,34 +746,25 @@ function SiteFooter() {
                 </ul>
               </nav>
 
-              <Link className="footer_cta" href="/pricing">
-                Join the next cohort
-                <Zap size={16} aria-hidden />
-              </Link>
+              <div className="footer_legal_cluster">
+                <div className="footer_legal_text">© 2026 Mind Your Trades. All rights reserved.</div>
+                <nav aria-label="Legal navigation" className="footer_nav">
+                  <ul className="footer_nav_list">
+                    <li className="footer_nav_item">
+                      <Link className="footer_nav_link" href="/privacy-policy">
+                        Privacy policy
+                      </Link>
+                    </li>
+                    <li className="footer_nav_item">
+                      <Link className="footer_nav_link" href="/terms-conditions">
+                        Terms &amp; Conditions
+                      </Link>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <FooterSectionBorder />
-
-      <div className="myt-footer-container">
-        <div className="footer_legal_wrap">
-          <div className="footer_legal_text">© 2026 Mind Your Trades. All rights reserved.</div>
-          <nav aria-label="Legal navigation" className="footer_nav">
-            <ul className="footer_nav_list">
-              <li className="footer_nav_item">
-                <Link className="footer_nav_link" href="/privacy-policy">
-                  Privacy policy
-                </Link>
-              </li>
-              <li className="footer_nav_item">
-                <Link className="footer_nav_link" href="/terms-conditions">
-                  Terms &amp; Conditions
-                </Link>
-              </li>
-            </ul>
-          </nav>
         </div>
       </div>
 
@@ -741,19 +778,5 @@ function SiteFooter() {
         </div>
       </div>
     </footer>
-  );
-}
-
-function FooterSectionBorder() {
-  return (
-    <div className="section-border_wrap footer_section-border" aria-hidden>
-      <div className="section-border_bg" />
-      <div className="section-border_container">
-        <div className="section-border_inner">
-          <div className="section-border_square" />
-          <div className="section-border_square is-right" />
-        </div>
-      </div>
-    </div>
   );
 }
