@@ -3820,3 +3820,61 @@ select {
     transform: translateX(0);
   }
 }
+
+/* Remove glow styling while keeping layout, contrast, and motion intact. */
+.myt-brand img,
+.footer_logo-link img,
+.myt-subhero img,
+.myt-dashboard-main,
+.myt-bipsync-video,
+.h-marquee_item,
+.myt-network-flow,
+.myt-network-node-core {
+  filter: none;
+}
+
+.myt-header-cta,
+.myt-button-primary,
+.myt-glow-button,
+.myt-access-cta,
+.footer_panel .myt-button,
+.footer_cta,
+.pattern_line.is-green,
+.pattern_line.is-red,
+.myt-plan-featured,
+.myt-liquidity-line,
+.myt-bipsync-node,
+.myt-access-card,
+.myt-screen-frame,
+.myt-split-proof > div img,
+.myt-apply {
+  box-shadow: none;
+}
+
+.myt-hero h1 span {
+  text-shadow: none;
+}
+
+.myt-hero-spotlight,
+.myt-dashboard-glow,
+.text-block__glow,
+.myt-access-glow,
+.features__item-glows,
+.myt-light-border,
+.myt-bipsync-core,
+.myt-bipsync-path,
+.myt-bipsync-node,
+.myt-glow-button-glows {
+  display: none;
+}
+
+.myt-bipsync-background::after,
+.myt-dashboard-frame::after,
+.features__media::after,
+.myt-atelier-visual::after {
+  background: none;
+}
+
+.myt-glow-button-border {
+  border-color: rgba(248, 244, 235, 0.18);
+}
