@@ -662,12 +662,6 @@ function FinalCta() {
 function SiteFooter() {
   return (
     <footer className="myt-footer footer_component">
-      <FooterPattern />
-      <FooterSectionBorder />
-
-      <FooterPattern variant="base" />
-      <FooterSectionBorder />
-
       <div className="myt-footer-container">
         <div className="footer_inner">
           <div className="footer_body">
@@ -753,64 +747,6 @@ function SiteFooter() {
         </div>
       </div>
     </footer>
-  );
-}
-
-function FooterPattern({ variant = "inverse" }: { variant?: "inverse" | "base" }) {
-  return (
-    <div data-pattern-divider-variant={variant} className="pattern_component footer_pattern" aria-hidden>
-      <div className="pattern_wrap">
-        <div className="pattern_track">
-          <FooterPatternInner />
-          <FooterPatternInner />
-        </div>
-      </div>
-      <div className="pattern_wrap">
-        <div className="pattern_track is-reverse">
-          <FooterPatternInner variant="reverse" />
-          <FooterPatternInner variant="reverse" />
-        </div>
-      </div>
-      <div className="pattern_wrap">
-        <div className="pattern_track">
-          <FooterPatternInner variant="alternate" />
-          <FooterPatternInner variant="alternate" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function FooterPatternInner({ variant = "base" }: { variant?: "base" | "reverse" | "alternate" }) {
-  if (variant === "reverse") {
-    return (
-      <div className="pattern_inner">
-        <div className="pattern_line is-medium" />
-        <div className="pattern_line is-long is-green" />
-        <div className="pattern_line is-medium" />
-        <div className="pattern_line is-long is-red" />
-      </div>
-    );
-  }
-
-  if (variant === "alternate") {
-    return (
-      <div className="pattern_inner">
-        <div className="pattern_line is-red" />
-        <div className="pattern_line is-long" />
-        <div className="pattern_line is-green" />
-        <div className="pattern_line is-long" />
-      </div>
-    );
-  }
-
-  return (
-    <div className="pattern_inner">
-      <div className="pattern_line is-green" />
-      <div className="pattern_line is-long" />
-      <div className="pattern_line is-red" />
-      <div className="pattern_line is-long" />
-    </div>
   );
 }
 
