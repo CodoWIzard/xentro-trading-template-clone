@@ -665,17 +665,6 @@ function SiteFooter() {
       <FooterPattern />
       <FooterSectionBorder />
 
-      <div className="footer_marquee_wrap" aria-hidden>
-        <div className="footer_marquee_inner">
-          {Array.from({ length: 6 }).map((_, index) => (
-            <div className="footer_marquee_item" key={index}>
-              <span>Mind Your Trades</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <FooterSectionBorder />
       <FooterPattern variant="base" />
       <FooterSectionBorder />
 
@@ -752,6 +741,16 @@ function SiteFooter() {
         {Array.from({ length: 7 }).map((_, index) => (
           <span key={index}>Mind Your Trades</span>
         ))}
+      </div>
+
+      <div className="footer_marquee_wrap" aria-hidden>
+        <div className="footer_marquee_inner">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <div className="footer_marquee_item" key={index}>
+              <span>Mind Your Trades</span>
+            </div>
+          ))}
+        </div>
       </div>
     </footer>
   );
