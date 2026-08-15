@@ -104,14 +104,6 @@ const toolSignals = [
   { title: "Key Levels", text: "Where could price react?" }
 ];
 
-const intentChecklist = [
-  "Market trending?",
-  "ATR above minimum?",
-  "Price at relevant level?",
-  "Setup confirmed?",
-  "Risk within limits?"
-];
-
 const operatingSystem = [
   { label: "Market", text: "What do I trade?" },
   { label: "Conditions", text: "When can I trade?" },
@@ -308,7 +300,6 @@ function HomePage() {
       <MethodFramework />
       <LearningOverview />
       <TradingFeatures />
-      <IntentEngine />
       <OperatingSystem />
       <ProductStory />
       <BrandProof />
@@ -402,16 +393,33 @@ function TradingTextBlock() {
             </div>
           </div>
 
-          <div className="myt-problem-stack" aria-label="Trading problems MYT helps solve">
-            {[
-              "You chase a breakout.",
-              "You enter too early.",
-              "You move your stop.",
-              "You trade the wrong conditions."
-            ].map((item) => (
-              <span key={item}>{item}</span>
-            ))}
-            <strong>The problem is not always your strategy. It is the lack of a process.</strong>
+          <div className="myt-problem-stack" aria-label="Trading mistakes MYT helps review">
+            <div className="myt-problem-shell-head">
+              <span>Session Review</span>
+              <strong>Process missing</strong>
+            </div>
+            <div className="myt-problem-command">
+              <span>Filter: rule breaks</span>
+              <strong>4 patterns found</strong>
+            </div>
+            <div className="myt-problem-rows">
+              {[
+                ["01", "Breakout chase", "You chase a breakout."],
+                ["02", "Early trigger", "You enter too early."],
+                ["03", "Stop override", "You move your stop."],
+                ["04", "Wrong condition", "You trade the wrong conditions."]
+              ].map(([number, label, text]) => (
+                <div className="myt-problem-row" key={label}>
+                  <span>{number}</span>
+                  <strong>{label}</strong>
+                  <p>{text}</p>
+                </div>
+              ))}
+            </div>
+            <div className="myt-problem-insight">
+              <span>Root cause</span>
+              <strong>The problem is not always your strategy. It is the lack of a process.</strong>
+            </div>
           </div>
         </div>
       </div>
@@ -438,33 +446,6 @@ function MethodFramework() {
             <p>{step.text}</p>
           </article>
         ))}
-      </div>
-    </Reveal>
-  );
-}
-
-function IntentEngine() {
-  return (
-    <Reveal className="myt-intent-engine" as="section">
-      <div className="myt-intent-copy">
-        <p className="myt-kicker">MYT Intent Engine</p>
-        <h2>Your chart tells you what price is doing. Your Intent Engine tells you what you are allowed to do.</h2>
-        <p>
-          The point is not to add another indicator to stare at. It is to turn market
-          conditions, setup, and risk into a clear yes-or-no decision before emotion takes over.
-        </p>
-      </div>
-      <div className="myt-intent-panel" aria-label="MYT Intent Engine checklist">
-        {intentChecklist.map((item) => (
-          <div className="myt-intent-row" key={item}>
-            <span>{item}</span>
-            <Check size={18} aria-hidden />
-          </div>
-        ))}
-        <div className="myt-intent-status">
-          <strong>Trade allowed</strong>
-          <span>Conditions before entries.</span>
-        </div>
       </div>
     </Reveal>
   );

@@ -2511,60 +2511,135 @@ select {
 .myt-problem-stack {
   position: relative;
   display: grid;
-  gap: 12px;
-  padding: clamp(22px, 3vw, 34px);
-  border: 1px solid rgba(255, 216, 77, 0.2);
-  border-radius: 8px;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid rgba(248, 244, 235, 0.14);
+  border-radius: 12px;
   background:
-    linear-gradient(135deg, rgba(255, 216, 77, 0.12), rgba(255, 96, 118, 0.055) 42%, rgba(248, 244, 235, 0.025)),
-    rgba(10, 22, 37, 0.72);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    linear-gradient(180deg, rgba(248, 244, 235, 0.08), rgba(248, 244, 235, 0.025)),
+    rgba(4, 9, 10, 0.9);
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
 }
 
 .myt-problem-stack::before {
-  content: "BROKEN TRADE LOG";
-  position: absolute;
-  top: -12px;
-  left: 18px;
-  padding: 4px 8px;
-  border: 1px solid rgba(255, 216, 77, 0.26);
-  border-radius: 4px;
-  color: #ffd84d;
-  background: #050706;
-  font-family: "Fira Code", monospace;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-}
-
-.myt-problem-stack span,
-.myt-problem-stack strong {
-  position: relative;
-  min-height: 58px;
-  padding: 16px 16px 16px 46px;
-  border: 1px solid rgba(248, 244, 235, 0.1);
-  border-radius: 7px;
-  color: rgba(248, 244, 235, 0.76);
-  background: rgba(2, 5, 10, 0.36);
-  font-weight: 800;
-}
-
-.myt-problem-stack span::before,
-.myt-problem-stack strong::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 16px;
-  width: 14px;
-  height: 14px;
-  border: 1px solid rgba(255, 96, 118, 0.62);
-  border-radius: 50%;
-  transform: translateY(-50%);
+  inset: 10px;
+  border: 1px dashed rgba(248, 244, 235, 0.08);
+  border-radius: 9px;
+  pointer-events: none;
 }
 
-.myt-problem-stack strong {
+.myt-problem-shell-head,
+.myt-problem-command,
+.myt-problem-row,
+.myt-problem-insight {
+  position: relative;
+  z-index: 1;
+}
+
+.myt-problem-shell-head,
+.myt-problem-command {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.myt-problem-shell-head {
+  min-height: 46px;
+  padding: 0 10px;
+}
+
+.myt-problem-shell-head span,
+.myt-problem-command span,
+.myt-problem-insight span,
+.myt-problem-row span {
+  color: rgba(248, 244, 235, 0.48);
+  font-family: "Fira Code", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.myt-problem-shell-head strong {
+  padding: 6px 9px;
+  border: 1px solid rgba(255, 216, 77, 0.28);
+  border-radius: 999px;
+  color: #ffd84d;
+  background: rgba(255, 216, 77, 0.08);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.myt-problem-command {
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid rgba(248, 244, 235, 0.09);
+  border-radius: 8px;
+  background: rgba(248, 244, 235, 0.045);
+}
+
+.myt-problem-command strong {
+  color: rgba(248, 244, 235, 0.68);
+  font-size: 12px;
+}
+
+.myt-problem-rows {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid rgba(248, 244, 235, 0.09);
+  border-radius: 9px;
+}
+
+.myt-problem-row {
+  display: grid;
+  grid-template-columns: 48px minmax(120px, 0.55fr) minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  min-height: 64px;
+  padding: 0 16px;
+  background: rgba(2, 5, 10, 0.36);
+}
+
+.myt-problem-row:nth-child(even) {
+  background: rgba(248, 244, 235, 0.035);
+}
+
+.myt-problem-row strong {
   color: #f8f4eb;
-  background: rgba(22, 223, 241, 0.1);
+  font-size: 15px;
+}
+
+.myt-problem-row p {
+  margin: 0;
+  color: rgba(248, 244, 235, 0.66);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.myt-problem-insight {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+  border: 1px solid rgba(22, 223, 241, 0.2);
+  border-radius: 9px;
+  background:
+    linear-gradient(135deg, rgba(22, 223, 241, 0.12), rgba(255, 216, 77, 0.08)),
+    rgba(2, 5, 10, 0.44);
+}
+
+.myt-problem-insight strong {
+  max-width: 620px;
+  color: #f8f4eb;
+  font-size: clamp(20px, 2.1vw, 30px);
+  line-height: 1.08;
 }
 
 .myt-framework-grid {
@@ -2719,8 +2794,7 @@ select {
   gap: 10px;
 }
 
-.myt-tool-signals div,
-.myt-intent-row {
+.myt-tool-signals div {
   display: flex;
   justify-content: space-between;
   gap: 16px;
@@ -2732,8 +2806,7 @@ select {
   background: rgba(247, 251, 255, 0.045);
 }
 
-.myt-tool-signals strong,
-.myt-intent-row span {
+.myt-tool-signals strong {
   color: var(--white);
   font-size: 14px;
 }
@@ -2742,72 +2815,6 @@ select {
   color: rgba(227, 239, 255, 0.62);
   font-size: 13px;
   text-align: right;
-}
-
-.myt-intent-engine {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(340px, 0.72fr);
-  gap: clamp(28px, 5vw, 70px);
-  align-items: center;
-  padding: clamp(78px, 9vw, 136px) 24px;
-  background:
-    radial-gradient(circle at 18% 20%, rgba(22, 223, 241, 0.15), transparent 32%),
-    linear-gradient(180deg, #050706, #02050a);
-}
-
-.myt-intent-copy {
-  display: grid;
-  gap: 18px;
-  max-width: 760px;
-}
-
-.myt-intent-copy h2 {
-  margin: 0;
-  color: var(--white);
-  font-size: clamp(38px, 4.6vw, 72px);
-  font-weight: 900;
-  line-height: 0.98;
-}
-
-.myt-intent-copy p:not(.myt-kicker) {
-  margin: 0;
-  color: var(--muted);
-  font-size: clamp(16px, 1.2vw, 19px);
-  line-height: 1.68;
-}
-
-.myt-intent-panel {
-  display: grid;
-  gap: 10px;
-  padding: clamp(20px, 2.5vw, 30px);
-  border: 1px solid rgba(22, 223, 241, 0.2);
-  border-radius: 8px;
-  background: rgba(10, 22, 37, 0.72);
-  box-shadow: 0 34px 110px rgba(0, 0, 0, 0.38);
-}
-
-.myt-intent-row svg {
-  color: var(--gold);
-}
-
-.myt-intent-status {
-  display: grid;
-  gap: 4px;
-  margin-top: 8px;
-  padding: 18px;
-  border-radius: 8px;
-  color: var(--blue-ink);
-  background: var(--blue);
-}
-
-.myt-intent-status strong {
-  font-size: clamp(24px, 2.4vw, 36px);
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.myt-intent-status span {
-  font-weight: 900;
 }
 
 .myt-no-shortcuts {
@@ -4052,10 +4059,6 @@ select {
     transform: none;
   }
 
-  .myt-intent-engine {
-    grid-template-columns: 1fr;
-  }
-
   .myt-explainer-copy {
     max-width: 760px;
   }
@@ -4159,6 +4162,22 @@ select {
     gap: 24px;
   }
 
+  .myt-problem-row {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 6px 12px;
+    padding: 14px;
+  }
+
+  .myt-problem-row p {
+    grid-column: 2;
+  }
+
+  .myt-problem-command,
+  .myt-problem-shell-head {
+    display: grid;
+    justify-content: stretch;
+  }
+
   .myt-framework-grid,
   .myt-learning-tracks,
   .myt-os-grid,
@@ -4190,14 +4209,6 @@ select {
 
   .myt-os-grid {
     padding: 10px;
-  }
-
-  .myt-intent-engine {
-    padding: 62px 16px;
-  }
-
-  .myt-intent-copy h2 {
-    font-size: clamp(34px, 10vw, 48px);
   }
 
   .myt-tool-signals div {
