@@ -7,10 +7,10 @@ import gsap from "gsap";
 import { ArrowRight } from "lucide-react";
 
 const proofItems = [
-  "Market context",
-  "Condition filters",
-  "Execution rules",
-  "Review loops"
+  "Market conditions",
+  "Repeatable process",
+  "Intent engines",
+  "Execution discipline"
 ];
 
 const whopUrl = "https://whop.com/joined/mind-your-trades/";
@@ -72,7 +72,7 @@ export function HeroCommand() {
               <Link className="button myt-glow-button" href={whopUrl} rel="noreferrer" target="_blank">
                 <span className="myt-glow-button-inner">
                   <span>
-                    Futures trading education <strong>built around process</strong>
+                    Learning, tools and coaching <strong>available through MYT</strong>
                   </span>
                   <ArrowRight size={14} aria-hidden />
                 </span>
@@ -85,12 +85,12 @@ export function HeroCommand() {
             </motion.div>
 
             <h1 className="hero__title myt-bipsync-title" id="hero-title">
-              Insights before entry. Discipline after execution.
+              Stop chasing trades. Start building a trading system.
             </h1>
 
             <p className="hero__paragraph myt-bipsync-copy">
-              Mind Your Trades helps futures traders turn market context, conditions, setup, execution,
-              and review into one repeatable decision system.
+              Mind Your Trades helps futures traders understand market conditions, build a repeatable
+              trading process, and develop the discipline to execute it.
             </p>
 
             <div className="hero__buttons myt-bipsync-actions">
