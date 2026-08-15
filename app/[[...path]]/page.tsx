@@ -31,9 +31,9 @@ const learningMenu = [
 const whopUrl = "https://whop.com/joined/mind-your-trades/";
 
 const proofStats = [
-  { value: "5", label: "MYT framework stages before, during, and after every trade" },
-  { value: "4", label: "learning tracks covering foundations, price action, system, and mindset" },
-  { value: "1:1", label: "coaching for discipline, execution, and trading behavior" },
+  { value: "5", label: "decision stages from context to post-trade review" },
+  { value: "4", label: "learning tracks for market reading, system design, and mindset" },
+  { value: "1:1", label: "coaching for discipline, execution, and behavior review" },
   { value: "0", label: "signals, copy trading, shortcuts, or unrealistic performance claims" }
 ];
 
@@ -146,6 +146,36 @@ const operatingSystem = [
   { label: "Risk", text: "How much do I risk?" },
   { label: "Execution", text: "How do I manage?" },
   { label: "Review", text: "How do I improve?" }
+];
+
+const intelligencePrompts = [
+  "Is this market worth trading?",
+  "Show the rule I keep breaking",
+  "Map the session before entry"
+];
+
+const intelligenceCapabilities = [
+  {
+    eyebrow: "Context",
+    title: "Read the environment first",
+    text: "Start with structure, volatility, session behavior, and key zones before deciding whether a setup matters."
+  },
+  {
+    eyebrow: "Control",
+    title: "Make entry permission explicit",
+    text: "Turn setup, risk, invalidation, and timing into a checklist the trader can follow under pressure."
+  },
+  {
+    eyebrow: "Review",
+    title: "Separate outcome from behavior",
+    text: "Audit whether the rules were followed so one green trade does not hide a bad process."
+  }
+];
+
+const intelligenceStats = [
+  { value: "Before", label: "context and condition filter" },
+  { value: "During", label: "execution and risk control" },
+  { value: "After", label: "journal and behavior review" }
 ];
 
 const pillars = [
@@ -333,6 +363,7 @@ function HomePage() {
       <TradingTextBlock />
       <MarketGraph />
       <MethodFramework />
+      <TradingIntelligence />
       <LearningOverview />
       <TradingFeatures />
       <OperatingSystem />
@@ -507,6 +538,48 @@ function MethodFramework() {
                 <p>{step.action}</p>
               </div>
             </article>
+          ))}
+        </div>
+      </div>
+    </Reveal>
+  );
+}
+
+function TradingIntelligence() {
+  return (
+    <Reveal className="myt-section myt-intelligence" as="section">
+      <div className="myt-intelligence-copy">
+        <p className="myt-kicker">Process Intelligence</p>
+        <h2>One system for the decisions that happen before, during, and after the trade.</h2>
+        <p>
+          MYT presents trading as a controlled workflow, not a collection of disconnected
+          lessons, tools, and emotional reactions.
+        </p>
+      </div>
+
+      <div className="myt-intelligence-console" aria-label="MYT process intelligence preview">
+        <div className="myt-intelligence-prompts">
+          {intelligencePrompts.map((prompt) => (
+            <span key={prompt}>{prompt}</span>
+          ))}
+        </div>
+
+        <div className="myt-intelligence-grid">
+          {intelligenceCapabilities.map((item) => (
+            <article key={item.title}>
+              <span>{item.eyebrow}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="myt-intelligence-stats">
+          {intelligenceStats.map((stat) => (
+            <div key={stat.value}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </div>
           ))}
         </div>
       </div>
