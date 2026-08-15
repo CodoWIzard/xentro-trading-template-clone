@@ -31,18 +31,46 @@ const learningMenu = [
 const whopUrl = "https://whop.com/joined/mind-your-trades/";
 
 const proofStats = [
+  { value: "5", label: "MYT framework stages before, during, and after every trade" },
+  { value: "4", label: "learning tracks covering foundations, price action, system, and mindset" },
   { value: "1:1", label: "coaching for discipline, execution, and trading behavior" },
-  { value: "Tools", label: "intent engines and trading resources sold through Whop" },
-  { value: "Soon", label: "course material planned as the brand grows" },
-  { value: "0", label: "signal selling or unrealistic performance claims" }
+  { value: "0", label: "signals, copy trading, shortcuts, or unrealistic performance claims" }
 ];
 
 const offerCards = [
   {
+    icon: BookOpenCheck,
+    badge: "MYT Learning",
+    heading: "Learn to read the market",
+    text: "Education built around Renko, ATR, volume, structure, pivots, trend, pullbacks, ranges, liquidity, risk, and review.",
+    points: [
+      "Market foundations without signal dependency",
+      "Price action and condition reading",
+      "Mindset lessons that connect to execution"
+    ],
+    cta: "Explore learning",
+    href: "/learning/courses",
+    variant: "community"
+  },
+  {
+    icon: CandlestickChart,
+    badge: "MYT Tools",
+    heading: "Reduce decisions, not add noise",
+    text: "Purpose-built TradingView tools that help identify market conditions, structure, volume pressure, and key levels.",
+    points: [
+      "Market condition and structure support",
+      "Volume pressure and key level context",
+      "Built to support intent before entry"
+    ],
+    cta: "View tools",
+    href: "/learning/indicators",
+    variant: "indicators"
+  },
+  {
     icon: UsersRound,
-    badge: "Core offer",
-    heading: "1:1 mindset coaching",
-    text: "Personal coaching for traders who know their biggest problem is not another strategy, but discipline under pressure.",
+    badge: "MYT Coaching",
+    heading: "Train the trader behind the trade",
+    text: "Personal coaching focused on trading behavior, discipline, rules, risk, and execution.",
     points: [
       "Identify the habits causing impulsive trades",
       "Build rules and conditions you can actually follow",
@@ -50,62 +78,72 @@ const offerCards = [
     ],
     cta: "Explore coaching",
     href: "/learning/coaching",
-    variant: "community"
-  },
-  {
-    icon: CandlestickChart,
-    badge: "Paid tools",
-    heading: "Intent engines and trading tools",
-    text: "Practical tools that support rule-based trading decisions without turning the chart into another source of noise.",
-    points: [
-      "Designed around conditions, intent, and restraint",
-      "Supports the trader's decision-making process",
-      "Available through the MYT Whop hub"
-    ],
-    cta: "View tools",
-    href: "/learning/indicators",
-    variant: "indicators"
+    variant: "coaching"
   }
 ];
 
-const tradingSystemSteps = [
-  {
-    label: "Spot the pattern",
-    text: "The work starts by identifying the emotional loops: chasing, forcing, hesitating, revenge trading, or ignoring conditions."
-  },
-  {
-    label: "Install conditions",
-    text: "MYT centers the trader around clear rules, market conditions, and intent before a trade is allowed to happen."
-  },
-  {
-    label: "Rewire the reaction",
-    text: "Coaching and review make the trading day less about prediction and more about repeating the right behavior."
-  }
+const methodFramework = [
+  { number: "01", title: "Context", text: "What is the market doing?" },
+  { number: "02", title: "Condition", text: "Is this market tradable?" },
+  { number: "03", title: "Setup", text: "What am I waiting for?" },
+  { number: "04", title: "Execution", text: "Entry. Risk. Exit." },
+  { number: "05", title: "Review", text: "Did I follow my rules?" }
+];
+
+const learningTracks = [
+  { title: "Market Foundations", text: "Renko, ATR, volume, structure, and pivots." },
+  { title: "Price Action", text: "Trend, pullbacks, ranges, and liquidity." },
+  { title: "Trading System", text: "Setup, entry, stops, targets, and risk." },
+  { title: "Mindset", text: "FOMO, discipline, patience, and review." }
+];
+
+const toolSignals = [
+  { title: "Market Conditions", text: "Is the market worth trading?" },
+  { title: "Market Structure", text: "Where is price actually moving?" },
+  { title: "Volume Pressure", text: "Who is controlling the market?" },
+  { title: "Key Levels", text: "Where could price react?" }
+];
+
+const intentChecklist = [
+  "Market trending?",
+  "ATR above minimum?",
+  "Price at relevant level?",
+  "Setup confirmed?",
+  "Risk within limits?"
+];
+
+const operatingSystem = [
+  { label: "Market", text: "What do I trade?" },
+  { label: "Conditions", text: "When can I trade?" },
+  { label: "Setup", text: "What am I waiting for?" },
+  { label: "Risk", text: "How much do I risk?" },
+  { label: "Execution", text: "How do I manage?" },
+  { label: "Review", text: "How do I improve?" }
 ];
 
 const pillars = [
   {
     icon: Brain,
-    label: "Mindset Coaching",
-    text: "1:1 support for traders who need to rebuild discipline, patience, and rule-following under pressure.",
+    label: "Context Before Entry",
+    text: "Trade ideas start with market context, not emotion, urgency, or a random chart reaction.",
     href: "/learning/coaching"
   },
   {
     icon: CandlestickChart,
-    label: "Intent Engines",
-    text: "Decision-support tools built around conditions and intent, not hype or blind signals.",
+    label: "Conditions Before Action",
+    text: "A trade only makes sense when the environment, level, setup, and risk are aligned.",
     href: "/learning/indicators"
   },
   {
     icon: MonitorPlay,
-    label: "Whop Hub",
-    text: "The current place to view and buy MYT access, tools, and available services.",
+    label: "Intent Before Impulse",
+    text: "The MYT Intent Engine turns the chart into a decision process instead of a reaction trigger.",
     href: whopUrl
   },
   {
     icon: BookOpenCheck,
-    label: "Courses Coming",
-    text: "Education can grow later without the homepage pretending a full course ecosystem already exists.",
+    label: "Review Before Growth",
+    text: "Progress comes from reviewing rule-following, not only entries, exits, or short-term outcomes.",
     href: "/learning/courses"
   }
 ];
@@ -119,26 +157,26 @@ const playbook = [
 
 const pricing = [
   {
-    name: "Mindset Coaching",
-    price: "1:1",
-    text: "For traders who want direct support with discipline, execution habits, and rule-following.",
-    points: ["Private feedback", "Behavior review", "Trading rules", "Accountability"],
-    cta: "View on Whop"
+    name: "MYT Learning",
+    price: "Learn",
+    text: "For traders who want to understand the market instead of depending on someone else's signals.",
+    points: ["Market foundations", "Price action", "Trading system", "Mindset modules"],
+    cta: "Start learning"
   },
   {
-    name: "Intent Engines",
+    name: "MYT Tools",
     price: "Tools",
     text: "For traders who want practical resources that support cleaner decisions and proper conditions.",
-    points: ["Intent tools", "Rule support", "Decision context", "Whop access"],
+    points: ["Market conditions", "Structure context", "Volume pressure", "Key levels"],
     cta: "View tools",
     featured: true
   },
   {
-    name: "Courses",
-    price: "Future",
-    text: "For future buyers once MYT expands the material into paid course products.",
-    points: ["Mindset lessons", "Rule systems", "Execution modules", "Future library"],
-    cta: "Check updates"
+    name: "MYT Coaching",
+    price: "1:1",
+    text: "For traders who want direct support with discipline, execution habits, and rule-following.",
+    points: ["Private feedback", "Behavior review", "Trading rules", "Accountability"],
+    cta: "View on Whop"
   }
 ];
 
@@ -146,17 +184,17 @@ const faqs = [
   {
     question: "Is this a signal service?",
     answer:
-      "No. MYT is positioned around discipline, mindset, conditions, and tools. Traders are expected to make their own decisions."
+      "No. MYT is positioned around education, conditions, tools, discipline, and execution. No signals, no copy trading, and no shortcuts."
   },
   {
     question: "Who is MYT for?",
     answer:
-      "Futures traders who already understand that mindset, patience, and rule-following are usually the real bottleneck."
+      "Futures traders who want to stop chasing trades and build a repeatable process around context, conditions, setup, execution, and review."
   },
   {
     question: "Where do the tools fit?",
     answer:
-      "Tools such as intent engines support decision-making and conditions. They should reinforce discipline, not replace judgment."
+      "MYT tools support market conditions, structure, volume pressure, key levels, and intent. They should reduce decisions, not create more of them."
   }
 ];
 
@@ -179,27 +217,27 @@ const footerHighlights = [
 const learningDetails = {
   indicators: {
     eyebrow: "Tools",
-    title: "Use tools that reinforce discipline instead of replacing it.",
+    title: "Tools should reduce decisions. Not create more of them.",
     text:
-      "MYT tools and intent engines are framed as decision support for traders who want clearer conditions before they act.",
+      "MYT tools and intent engines help traders identify market conditions, structure, volume pressure, and key levels before they act.",
     image: "/webflow/usecase-dashboard-three.webp",
-    points: ["Intent and condition support", "Cleaner decision context", "Built to reduce impulsive trading"]
+    points: ["Market conditions", "Market structure", "Volume pressure", "Key levels"]
   },
   coaching: {
     eyebrow: "Coaching",
-    title: "Rebuild the trading behavior behind the trade.",
+    title: "Your strategy is not always the problem. Your execution might be.",
     text:
-      "1:1 coaching focuses on the mindset side of trading: patience, rule-following, discipline, and the reactions that show up under pressure.",
+      "1:1 coaching focuses on trading behavior, discipline, rules, risk, and execution. No signals, no copy trading, no shortcuts.",
     image: "/webflow/dashboard-03.webp",
-    points: ["Mindset and discipline review", "Rule-building", "Personal trading behavior feedback"]
+    points: ["Behavior review", "Rule-building", "Risk discipline", "Execution feedback"]
   },
   courses: {
-    eyebrow: "Courses",
-    title: "Courses can become the next layer of the MYT brand.",
+    eyebrow: "Learning",
+    title: "Learn to read the market. Not someone else's signals.",
     text:
-      "Courses are positioned as future paid education, so the website can mention them without making the brand look bigger than it is today.",
+      "MYT learning covers market foundations, price action, trading system design, and mindset so futures traders can build a process.",
     image: "/webflow/features-card-02.webp",
-    points: ["Future paid lessons", "Mindset frameworks", "Rules and execution modules"]
+    points: ["Renko, ATR, volume, structure, pivots", "Trend, pullbacks, ranges, liquidity", "Setup, entry, stops, targets, risk"]
   }
 } as const;
 
@@ -267,10 +305,14 @@ function HomePage() {
       <HeroCommand />
       <TradingTextBlock />
       <MarketGraph />
-      <TradingFeatures />
+      <MethodFramework />
       <LearningOverview />
+      <TradingFeatures />
+      <IntentEngine />
+      <OperatingSystem />
       <ProductStory />
       <BrandProof />
+      <Stats />
       <FinalCta />
     </>
   );
@@ -341,41 +383,135 @@ function TradingTextBlock() {
         <div className="myt-explainer">
           <div className="myt-explainer-copy">
             <p className="myt-kicker">Mind Your Trades in plain English</p>
-            <h2>Mindset over impulse.</h2>
+            <h2>Most traders do not need another strategy. They need a better process.</h2>
             <p>
-              Mind Your Trades is a professional home for traders who need help with the part
-              that usually breaks first: discipline. The brand points people to coaching,
-              practical tools, and future education without pretending to be a giant academy on day one.
+              You follow your plan until you do not. You chase a breakout, enter too early,
+              move your stop, or trade conditions that do not fit your setup. MYT was built
+              to replace that loop with a repeatable trading process.
             </p>
             <div className="myt-explainer-tags" aria-label="Mind Your Trades offer">
-              <span>1:1 coaching</span>
-              <span>Intent engines</span>
-              <span>Whop access</span>
-              <span>Courses later</span>
+              <span>Context</span>
+              <span>Conditions</span>
+              <span>Setup</span>
+              <span>Execution</span>
+              <span>Review</span>
             </div>
           </div>
 
-          <div className="myt-method-ledger" aria-label="Mind Your Trades method">
-            <div className="myt-method-ledger-mark" aria-hidden>
-              MYT
-            </div>
-            <div className="myt-method-ledger-head">
-              <span>The MYT focus</span>
-              <strong>Rules before reactions. Conditions before entries. Mindset before size.</strong>
-            </div>
-            {tradingSystemSteps.map((step, index) => (
-              <article className="myt-method-ledger-row" key={step.label}>
-                <span>0{index + 1}</span>
-                <div>
-                  <h3>{step.label}</h3>
-                  <p>{step.text}</p>
-                </div>
-              </article>
+          <div className="myt-problem-stack" aria-label="Trading problems MYT helps solve">
+            {[
+              "You chase a breakout.",
+              "You enter too early.",
+              "You move your stop.",
+              "You trade the wrong conditions."
+            ].map((item) => (
+              <span key={item}>{item}</span>
             ))}
+            <strong>The problem is not always your strategy. It is the lack of a process.</strong>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function MethodFramework() {
+  return (
+    <Reveal className="myt-section myt-framework-section" as="section">
+      <div className="myt-section-heading myt-centered">
+        <p className="myt-kicker">The MYT Framework</p>
+        <h2>Trade the process. Not the impulse.</h2>
+        <p>
+          Every trade starts before the entry. MYT turns the trading day into a sequence
+          of decisions that can be followed, reviewed, and improved.
+        </p>
+      </div>
+      <div className="myt-framework-grid">
+        {methodFramework.map((step) => (
+          <article className="myt-framework-card" key={step.title}>
+            <span>{step.number}</span>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </article>
+        ))}
+      </div>
+    </Reveal>
+  );
+}
+
+function IntentEngine() {
+  return (
+    <Reveal className="myt-intent-engine" as="section">
+      <div className="myt-intent-copy">
+        <p className="myt-kicker">MYT Intent Engine</p>
+        <h2>Your chart tells you what price is doing. Your Intent Engine tells you what you are allowed to do.</h2>
+        <p>
+          The point is not to add another indicator to stare at. It is to turn market
+          conditions, setup, and risk into a clear yes-or-no decision before emotion takes over.
+        </p>
+      </div>
+      <div className="myt-intent-panel" aria-label="MYT Intent Engine checklist">
+        {intentChecklist.map((item) => (
+          <div className="myt-intent-row" key={item}>
+            <span>{item}</span>
+            <Check size={18} aria-hidden />
+          </div>
+        ))}
+        <div className="myt-intent-status">
+          <strong>Trade allowed</strong>
+          <span>Conditions before entries.</span>
+        </div>
+      </div>
+    </Reveal>
+  );
+}
+
+function OperatingSystem() {
+  return (
+    <Reveal className="myt-section myt-operating-system" as="section">
+      <div className="myt-section-heading">
+        <p className="myt-kicker">Build your Trading Operating System</p>
+        <h2>Your rules. Your process. Your edge.</h2>
+        <p>
+          MYT gives visitors a practical mental model: the trader needs a system for market
+          selection, conditions, setup, risk, execution, and review.
+        </p>
+      </div>
+      <div className="myt-os-grid">
+        {operatingSystem.map((item) => (
+          <article className="myt-os-card" key={item.label}>
+            <h3>{item.label}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </Reveal>
+  );
+}
+
+function LearningTracks() {
+  return (
+    <div className="myt-learning-tracks">
+      {learningTracks.map((track) => (
+        <article key={track.title}>
+          <h3>{track.title}</h3>
+          <p>{track.text}</p>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+function ToolSignalList() {
+  return (
+    <div className="myt-tool-signals">
+      {toolSignals.map((tool) => (
+        <div key={tool.title}>
+          <strong>{tool.title}</strong>
+          <span>{tool.text}</span>
+        </div>
+      ))}
+    </div>
   );
 }
 
@@ -517,13 +653,14 @@ function LearningOverview() {
   return (
     <Reveal className="myt-section myt-method" as="section">
       <div className="myt-section-heading">
-        <p className="myt-kicker">What MYT offers now</p>
-        <h2>A clear brand home for coaching, tools, and future education.</h2>
+        <p className="myt-kicker">MYT Learning</p>
+        <h2>Learn to read the market. Not someone else&apos;s signals.</h2>
         <p>
-          The homepage should not over-explain a product that is still growing. It should make the
-          current offer obvious and give visitors enough trust to continue to Whop.
+          MYT does not teach visitors what to trade. It teaches them how to think about
+          trading through foundations, price action, trading system design, and mindset.
         </p>
       </div>
+      <LearningTracks />
       <div className="myt-pillar-grid">
         {pillars.map((pillar) => {
           const Icon = pillar.icon;
@@ -563,14 +700,15 @@ function ProductStory() {
         <div className="myt-light-border" aria-hidden />
       </div>
       <div className="myt-showcase-copy">
-        <p className="myt-kicker">The commercial core</p>
-        <h2>Sell the transformation, not a long list of features.</h2>
+        <p className="myt-kicker">MYT Tools</p>
+        <h2>Tools should reduce decisions. Not create more of them.</h2>
         <p>
-          The real promise is not another chart setup. It is helping traders stop breaking their
-          own rules, follow conditions, and build a calmer relationship with execution.
+          Purpose-built TradingView tools help identify market conditions, structure,
+          volume pressure, and key levels without turning the chart into noise.
         </p>
+        <ToolSignalList />
         <div className="myt-checklist">
-          {["1:1 coaching as the anchor", "Tools that support intent", "Courses introduced as a future layer"].map((item) => (
+          {["Designed around conditions and intent", "Supports decision-making before entry", "Available through the MYT Whop hub"].map((item) => (
             <span key={item}>
               <ShieldCheck size={18} aria-hidden />
               {item}
@@ -590,14 +728,16 @@ function BrandProof() {
         <Image src="/webflow/trading-image-02.webp" alt="" width={566} height={622} />
       </div>
       <article>
-        <p className="myt-kicker">Professional brand posture</p>
-        <h2>A credible front door for a founder-led trading brand.</h2>
+        <p className="myt-kicker">MYT Coaching</p>
+        <h2>Your strategy is not always the problem. Your execution might be.</h2>
         <p>
-          For a young offer, the website should do less pretending and more positioning: who it is for,
-          what can be bought now, where to buy it, and why the mindset angle matters.
+          Personal coaching focuses on trading behavior, discipline, rules, risk, and execution.
+          MYT does not tell traders what to buy or sell. It helps them become traders who know
+          when to trade and when not to.
         </p>
+        <p className="myt-no-shortcuts">No signals. No copy trading. No shortcuts.</p>
         <Link className="myt-button myt-button-secondary" href={whopUrl} rel="noreferrer" target="_blank">
-          View Whop offers
+          Explore coaching
           <ArrowRight size={18} aria-hidden />
         </Link>
       </article>
@@ -668,10 +808,10 @@ function FinalCta() {
       <div>
         <Image src="/brand/myt-logo.png" alt="MYT" width={280} height={118} />
         <p className="myt-kicker">Mindset. Conditions. Discipline.</p>
-        <h2>For futures traders ready to stop reacting and start following rules.</h2>
+        <h2>Learn the market. Build your edge. Master your execution.</h2>
       </div>
       <Link className="myt-button myt-button-primary" href={whopUrl} rel="noreferrer" target="_blank">
-        View Whop
+        Start learning
         <UsersRound size={18} aria-hidden />
       </Link>
     </section>
@@ -690,8 +830,8 @@ function SiteFooter() {
                   <Image src="/brand/myt-logo.png" alt="MYT" width={360} height={151} />
                 </Link>
                 <p className="footer_p">
-                  Mindset-first coaching and trading tools for futures traders who want to follow
-                  rules instead of impulses.
+                  Learning, TradingView tools, and coaching for futures traders who want a
+                  repeatable process instead of another impulse-driven trade.
                 </p>
                 <ul className="footer_highlights" aria-label="Mind Your Trades footer highlights">
                   {footerHighlights.map((item) => (
@@ -729,9 +869,9 @@ function SiteFooter() {
               <aside className="footer_panel" aria-label="Request MYT access">
                 <span>Next step</span>
                 <h2>Ready to train the mindset behind your trades?</h2>
-                <p>Open the Whop hub to view current coaching, tools, and MYT access.</p>
+                <p>Open the Whop hub to view MYT learning, tools, coaching, and access.</p>
                 <Link className="myt-button myt-button-primary" href={whopUrl} rel="noreferrer" target="_blank">
-                  View Whop
+                  Start learning
                   <ArrowRight size={18} aria-hidden />
                 </Link>
               </aside>
