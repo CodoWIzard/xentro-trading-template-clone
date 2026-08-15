@@ -2077,6 +2077,7 @@ select {
   font-weight: 800;
   line-height: 0.92;
   letter-spacing: 0;
+  text-align: center;
   text-wrap: balance;
 }
 
@@ -2086,6 +2087,7 @@ select {
   color: rgba(248, 244, 235, 0.68);
   font-size: clamp(17px, 1.35vw, 21px);
   line-height: 1.55;
+  text-align: center;
   text-wrap: balance;
 }
 
