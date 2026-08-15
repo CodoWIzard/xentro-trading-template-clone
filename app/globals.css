@@ -2498,6 +2498,9 @@ select {
 .myt-framework-section {
   position: relative;
   overflow: hidden;
+  background: #050706;
+  box-shadow: 0 0 0 100vmax #050706;
+  clip-path: inset(0 -100vmax);
 }
 
 .myt-framework-section::before {
