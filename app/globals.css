@@ -2486,32 +2486,38 @@ select {
 }
 
 .myt-framework-card {
-  min-height: clamp(260px, 25vw, 340px);
   display: grid;
-  align-content: end;
+  align-content: space-between;
+  min-height: clamp(300px, 27vw, 380px);
+  padding: clamp(22px, 2.3vw, 34px);
+  border-color: rgba(248, 244, 235, 0.18);
+  border-top-width: 2px;
+  background: #050706;
+  box-shadow: none;
 }
 
 .myt-framework-card:nth-child(odd) {
-  transform: translateY(28px);
+  transform: none;
 }
 
 .myt-framework-card:first-child {
-  border-radius: 8px 0 0 8px;
+  border-radius: 0;
 }
 
 .myt-framework-card:last-child {
-  border-radius: 0 8px 8px 0;
+  border-radius: 0;
 }
 
 .myt-framework-card::after {
   content: "";
   position: absolute;
-  top: 30%;
-  right: -18px;
+  top: 0;
+  right: -1px;
+  bottom: 0;
   z-index: 2;
-  width: 36px;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(22, 223, 241, 0.9), rgba(255, 216, 77, 0.7));
+  width: 1px;
+  height: auto;
+  background: rgba(248, 244, 235, 0.2);
 }
 
 .myt-framework-card:last-child::after {
@@ -2519,10 +2525,11 @@ select {
 }
 
 .myt-framework-card span {
-  color: var(--blue);
+  color: rgba(248, 244, 235, 0.34);
   font-family: "Fira Code", monospace;
-  font-size: 13px;
+  font-size: clamp(34px, 4vw, 70px);
   font-weight: 900;
+  line-height: 0.85;
   text-transform: uppercase;
 }
 
@@ -2542,6 +2549,20 @@ select {
   color: rgba(227, 239, 255, 0.68);
   font-size: 14px;
   line-height: 1.58;
+}
+
+.myt-framework-card h3 {
+  max-width: 9ch;
+  margin-top: auto;
+  font-size: clamp(28px, 3vw, 48px);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.myt-framework-card p {
+  max-width: 20ch;
+  color: rgba(248, 244, 235, 0.56);
+  font-size: 15px;
 }
 
 .myt-learning-tracks,
@@ -3949,7 +3970,7 @@ select {
     left: 24px;
     width: 1px;
     height: 36px;
-    background: linear-gradient(180deg, rgba(22, 223, 241, 0.9), rgba(255, 216, 77, 0.7));
+    background: rgba(248, 244, 235, 0.2);
   }
 
   .myt-framework-card:first-child,
