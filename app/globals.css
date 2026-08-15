@@ -1950,12 +1950,12 @@ select {
   position: relative;
   min-height: 100svh;
   overflow: hidden;
-  padding: clamp(132px, 15vh, 178px) 24px clamp(80px, 11vh, 132px);
+  padding: clamp(122px, 13vh, 158px) 24px clamp(70px, 10vh, 112px);
   background:
-    radial-gradient(circle at 50% -12%, rgba(141, 223, 255, 0.22), transparent 34rem),
-    radial-gradient(circle at 82% 24%, rgba(22, 223, 241, 0.12), transparent 27rem),
-    radial-gradient(circle at 13% 76%, rgba(247, 240, 206, 0.1), transparent 23rem),
-    linear-gradient(180deg, #050706 0%, #08100d 62%, #050706 100%);
+    linear-gradient(115deg, rgba(255, 96, 118, 0.12), transparent 24rem),
+    radial-gradient(circle at 74% 18%, rgba(255, 216, 77, 0.16), transparent 24rem),
+    radial-gradient(circle at 16% 76%, rgba(22, 223, 241, 0.14), transparent 24rem),
+    linear-gradient(180deg, #040605 0%, #07110e 54%, #050706 100%);
   isolation: isolate;
   --hero-x: 0;
   --hero-y: 0;
@@ -1993,11 +1993,18 @@ select {
 
 .myt-bipsync-layout {
   display: grid;
-  justify-items: center;
-  gap: 24px;
-  max-width: 1080px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(390px, 0.72fr);
+  gap: clamp(34px, 5vw, 82px);
+  align-items: center;
+  max-width: 1240px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
+}
+
+.myt-hero-copy {
+  display: grid;
+  justify-items: start;
+  gap: 24px;
 }
 
 .myt-glow-button {
@@ -2062,12 +2069,12 @@ select {
 }
 
 .myt-bipsync-title {
-  max-width: 1020px;
+  max-width: 790px;
   margin: 0;
   color: #f8f4eb;
-  font-size: clamp(58px, 8.8vw, 128px);
+  font-size: clamp(58px, 7.4vw, 112px);
   font-weight: 800;
-  line-height: 0.88;
+  line-height: 0.9;
   letter-spacing: 0;
   text-wrap: balance;
 }
@@ -2084,7 +2091,7 @@ select {
 .myt-bipsync-actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 12px;
   align-items: center;
   padding-top: 2px;
@@ -2093,7 +2100,7 @@ select {
 .myt-bipsync-proof {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px 22px;
   max-width: 760px;
   padding-top: 6px;
@@ -2102,6 +2109,161 @@ select {
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.myt-trade-desk {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  padding: clamp(18px, 2.3vw, 28px);
+  border: 1px solid rgba(248, 244, 235, 0.16);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(248, 244, 235, 0.09), rgba(248, 244, 235, 0.02)),
+    rgba(3, 8, 7, 0.76);
+  box-shadow:
+    0 46px 120px rgba(0, 0, 0, 0.48),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  isolation: isolate;
+  transform: translateY(calc(var(--hero-y) * -18px)) translateX(calc(var(--hero-x) * -14px));
+}
+
+.myt-trade-desk::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  z-index: -1;
+  border: 1px dashed rgba(22, 223, 241, 0.12);
+  border-radius: 6px;
+}
+
+.myt-desk-header,
+.myt-desk-footer,
+.myt-desk-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+}
+
+.myt-desk-header span,
+.myt-desk-footer span,
+.myt-desk-row span {
+  color: rgba(248, 244, 235, 0.48);
+  font-family: "Fira Code", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.myt-desk-header strong {
+  padding: 7px 9px;
+  border: 1px solid rgba(22, 223, 241, 0.34);
+  border-radius: 6px;
+  color: #001015;
+  background: #16dff1;
+  font-family: "Fira Code", monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.myt-desk-chart {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  align-items: end;
+  min-height: clamp(220px, 25vw, 330px);
+  padding: 28px 20px;
+  overflow: hidden;
+  border: 1px solid rgba(248, 244, 235, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(rgba(248, 244, 235, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(248, 244, 235, 0.045) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(2, 5, 10, 0.28), rgba(2, 5, 10, 0.72));
+  background-size: 100% 44px, 44px 100%, auto;
+}
+
+.myt-desk-chart span {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 0;
+  max-width: 15px;
+  height: var(--height);
+  border-radius: 2px;
+  background: #16dff1;
+  box-shadow: 0 0 20px rgba(22, 223, 241, 0.24);
+}
+
+.myt-desk-chart span::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  bottom: -16px;
+  left: 50%;
+  width: 1px;
+  background: currentColor;
+  opacity: 0.45;
+  transform: translateX(-50%);
+}
+
+.myt-desk-chart span.is-red {
+  color: #ff6076;
+  background: #ff6076;
+  box-shadow: 0 0 20px rgba(255, 96, 118, 0.22);
+}
+
+.myt-desk-chart i,
+.myt-desk-chart b {
+  position: absolute;
+  right: 16px;
+  left: 16px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 216, 77, 0.7), transparent);
+}
+
+.myt-desk-chart i {
+  top: 34%;
+}
+
+.myt-desk-chart b {
+  bottom: 29%;
+}
+
+.myt-desk-rows {
+  display: grid;
+  gap: 8px;
+}
+
+.myt-desk-row {
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid rgba(248, 244, 235, 0.1);
+  border-radius: 7px;
+  background: rgba(248, 244, 235, 0.04);
+}
+
+.myt-desk-row strong {
+  color: #f8f4eb;
+  font-family: "Fira Code", monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.myt-desk-row.is-pending strong {
+  color: #ffd84d;
+}
+
+.myt-desk-footer {
+  padding-top: 2px;
+}
+
+.myt-desk-footer strong {
+  color: rgba(248, 244, 235, 0.78);
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -2271,8 +2433,10 @@ select {
 .text-block.myt-text-block {
   position: relative;
   overflow: hidden;
-  padding: clamp(28px, 4vw, 54px) 24px clamp(48px, 6vw, 86px);
-  background: #050706;
+  padding: clamp(66px, 8vw, 118px) 24px clamp(58px, 7vw, 96px);
+  background:
+    linear-gradient(90deg, rgba(255, 216, 77, 0.08), transparent 28%),
+    #050706;
   isolation: isolate;
 }
 
@@ -2297,9 +2461,9 @@ select {
 
 .myt-explainer {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(520px, 1.1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(460px, 0.72fr);
   gap: clamp(26px, 4.5vw, 68px);
-  align-items: center;
+  align-items: start;
 }
 
 .myt-explainer-copy {
@@ -2345,26 +2509,57 @@ select {
 }
 
 .myt-problem-stack {
+  position: relative;
   display: grid;
   gap: 12px;
   padding: clamp(22px, 3vw, 34px);
-  border: 1px solid rgba(248, 244, 235, 0.16);
+  border: 1px solid rgba(255, 216, 77, 0.2);
   border-radius: 8px;
   background:
-    linear-gradient(180deg, rgba(248, 244, 235, 0.075), rgba(248, 244, 235, 0.028)),
+    linear-gradient(135deg, rgba(255, 216, 77, 0.12), rgba(255, 96, 118, 0.055) 42%, rgba(248, 244, 235, 0.025)),
     rgba(10, 22, 37, 0.72);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
+.myt-problem-stack::before {
+  content: "BROKEN TRADE LOG";
+  position: absolute;
+  top: -12px;
+  left: 18px;
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 216, 77, 0.26);
+  border-radius: 4px;
+  color: #ffd84d;
+  background: #050706;
+  font-family: "Fira Code", monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
 .myt-problem-stack span,
 .myt-problem-stack strong {
+  position: relative;
   min-height: 58px;
-  padding: 16px;
+  padding: 16px 16px 16px 46px;
   border: 1px solid rgba(248, 244, 235, 0.1);
   border-radius: 7px;
   color: rgba(248, 244, 235, 0.76);
   background: rgba(2, 5, 10, 0.36);
   font-weight: 800;
+}
+
+.myt-problem-stack span::before,
+.myt-problem-stack strong::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(255, 96, 118, 0.62);
+  border-radius: 50%;
+  transform: translateY(-50%);
 }
 
 .myt-problem-stack strong {
@@ -2375,26 +2570,80 @@ select {
 .myt-framework-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
+  gap: 0;
+  counter-reset: method;
+}
+
+.myt-framework-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.myt-framework-section::before {
+  content: "CONTEXT / CONDITION / SETUP / EXECUTION / REVIEW";
+  position: absolute;
+  top: 34px;
+  right: -2vw;
+  color: rgba(248, 244, 235, 0.035);
+  font-family: "Fira Code", monospace;
+  font-size: clamp(48px, 8vw, 116px);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .myt-framework-card,
 .myt-learning-tracks article,
 .myt-os-card {
+  position: relative;
   min-height: 188px;
   padding: 22px;
-  border: 1px solid rgba(22, 223, 241, 0.16);
-  border-radius: 8px;
+  border: 1px solid rgba(248, 244, 235, 0.12);
+  border-radius: 0;
   background:
-    linear-gradient(180deg, rgba(247, 251, 255, 0.07), rgba(247, 251, 255, 0.025)),
-    rgba(10, 22, 37, 0.72);
+    linear-gradient(180deg, rgba(247, 251, 255, 0.055), rgba(247, 251, 255, 0.018)),
+    rgba(5, 12, 13, 0.72);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.myt-framework-card {
+  min-height: clamp(260px, 25vw, 340px);
+  display: grid;
+  align-content: end;
+}
+
+.myt-framework-card:nth-child(odd) {
+  transform: translateY(28px);
+}
+
+.myt-framework-card:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.myt-framework-card:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.myt-framework-card::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: -18px;
+  z-index: 2;
+  width: 36px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(22, 223, 241, 0.9), rgba(255, 216, 77, 0.7));
+}
+
+.myt-framework-card:last-child::after {
+  display: none;
 }
 
 .myt-framework-card span {
   color: var(--blue);
   font-family: "Fira Code", monospace;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -2422,12 +2671,47 @@ select {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 28px;
 }
 
 .myt-os-grid {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   margin-bottom: 0;
+  padding: 18px;
+  border: 1px solid rgba(248, 244, 235, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(22, 223, 241, 0.08), transparent 44%, rgba(255, 216, 77, 0.07)),
+    rgba(2, 5, 10, 0.34);
+}
+
+.myt-operating-system .myt-section-heading {
+  max-width: 960px;
+}
+
+.myt-os-card {
+  min-height: 220px;
+  display: grid;
+  align-content: space-between;
+  background: rgba(5, 7, 6, 0.72);
+}
+
+.myt-os-card::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #16dff1, #ffd84d);
+  opacity: 0.72;
+}
+
+.myt-os-card h3 {
+  margin-top: auto;
+  text-transform: uppercase;
+}
+
+.myt-os-card p {
+  color: rgba(248, 244, 235, 0.62);
 }
 
 .myt-tool-signals {
@@ -2800,10 +3084,23 @@ select {
   position: relative;
   overflow: hidden;
   padding: clamp(64px, 8vw, 120px) 24px clamp(72px, 9vw, 132px);
-  background: #050706;
+  background:
+    linear-gradient(180deg, #050706 0%, #09110f 48%, #050706 100%);
   box-shadow: 0 0 0 100vmax #050706;
   clip-path: inset(0 -100vmax);
   --theme-color: #16dff1;
+}
+
+.features.myt-features::before {
+  content: "LEARNING / TOOLS / COACHING";
+  position: absolute;
+  top: 38px;
+  left: 24px;
+  color: rgba(248, 244, 235, 0.045);
+  font-family: "Fira Code", monospace;
+  font-size: clamp(42px, 7vw, 102px);
+  font-weight: 900;
+  white-space: nowrap;
 }
 
 .features__container {
@@ -2821,26 +3118,59 @@ select {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: clamp(520px, 38vw, 600px);
+  min-height: clamp(500px, 36vw, 580px);
   overflow: hidden;
   padding: clamp(26px, 3vw, 42px);
-  border: 1px solid rgba(22, 223, 241, 0.18);
+  border: 1px solid rgba(248, 244, 235, 0.13);
   border-radius: 8px;
-  background: linear-gradient(145deg, rgba(6, 15, 24, 0.98), rgba(2, 5, 10, 0.98));
+  background:
+    linear-gradient(180deg, rgba(248, 244, 235, 0.06), rgba(248, 244, 235, 0.018)),
+    rgba(4, 9, 10, 0.96);
   box-shadow:
     0 30px 90px rgba(0, 0, 0, 0.32),
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
   isolation: isolate;
 }
 
+.myt-access-card::before {
+  content: attr(data-index);
+  position: absolute;
+  right: -0.1em;
+  bottom: -0.22em;
+  z-index: -1;
+  color: rgba(248, 244, 235, 0.04);
+  font-size: clamp(124px, 13vw, 220px);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.myt-access-card:nth-child(2) {
+  transform: translateY(44px);
+}
+
+.myt-access-card:nth-child(3) {
+  transform: translateY(-18px);
+}
+
 .myt-access-card-community {
-  border-color: rgba(22, 223, 241, 0.28);
-  background: linear-gradient(145deg, rgba(5, 16, 25, 0.98), rgba(2, 5, 10, 0.98));
+  border-color: rgba(255, 216, 77, 0.22);
+  background:
+    linear-gradient(145deg, rgba(255, 216, 77, 0.095), transparent 42%),
+    rgba(4, 9, 10, 0.96);
 }
 
 .myt-access-card-indicators {
   border-color: rgba(22, 223, 241, 0.28);
-  background: linear-gradient(145deg, rgba(5, 16, 25, 0.98), rgba(2, 5, 10, 0.98));
+  background:
+    linear-gradient(145deg, rgba(22, 223, 241, 0.12), transparent 48%),
+    rgba(4, 9, 10, 0.96);
+}
+
+.myt-access-card-coaching {
+  border-color: rgba(255, 96, 118, 0.22);
+  background:
+    linear-gradient(145deg, rgba(255, 96, 118, 0.09), transparent 42%),
+    rgba(4, 9, 10, 0.96);
 }
 
 .myt-access-glow {
@@ -2868,6 +3198,18 @@ select {
   line-height: 1;
 }
 
+.myt-access-card-community .myt-access-topline > span {
+  border-color: rgba(255, 216, 77, 0.26);
+  color: #ffd84d;
+  background: rgba(255, 216, 77, 0.08);
+}
+
+.myt-access-card-coaching .myt-access-topline > span {
+  border-color: rgba(255, 96, 118, 0.26);
+  color: #ff6076;
+  background: rgba(255, 96, 118, 0.08);
+}
+
 .myt-access-card-indicators .myt-access-topline > span {
   border-color: rgba(22, 223, 241, 0.22);
   color: #16dff1;
@@ -2890,6 +3232,18 @@ select {
   border-color: rgba(22, 223, 241, 0.2);
   color: #16dff1;
   background: rgba(22, 223, 241, 0.09);
+}
+
+.myt-access-card-community .myt-access-icon {
+  border-color: rgba(255, 216, 77, 0.22);
+  color: #ffd84d;
+  background: rgba(255, 216, 77, 0.08);
+}
+
+.myt-access-card-coaching .myt-access-icon {
+  border-color: rgba(255, 96, 118, 0.22);
+  color: #ff6076;
+  background: rgba(255, 96, 118, 0.08);
 }
 
 .myt-access-copy {
@@ -2941,6 +3295,14 @@ select {
 
 .myt-access-card-indicators .myt-access-points svg {
   color: #16dff1;
+}
+
+.myt-access-card-community .myt-access-points svg {
+  color: #ffd84d;
+}
+
+.myt-access-card-coaching .myt-access-points svg {
+  color: #ff6076;
 }
 
 .myt-access-cta {
@@ -3638,6 +4000,15 @@ select {
     padding-top: 122px;
   }
 
+  .myt-bipsync-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .myt-trade-desk {
+    width: min(100%, 720px);
+    transform: none;
+  }
+
   .myt-bipsync-canvas {
     width: 110vw;
     transform: translate(-50%, -40%);
@@ -3673,6 +4044,12 @@ select {
   .myt-os-grid,
   .myt-access-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .myt-framework-card:nth-child(odd),
+  .myt-access-card:nth-child(2),
+  .myt-access-card:nth-child(3) {
+    transform: none;
   }
 
   .myt-intent-engine {
@@ -3719,6 +4096,10 @@ select {
     text-align: left;
   }
 
+  .myt-hero-copy {
+    gap: 18px;
+  }
+
   .myt-bipsync-title {
     font-size: clamp(46px, 14vw, 68px);
     line-height: 0.92;
@@ -3749,6 +4130,27 @@ select {
     filter: blur(12px) saturate(0.86) contrast(1.08);
   }
 
+  .myt-trade-desk {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .myt-desk-chart {
+    min-height: 190px;
+    padding: 22px 14px;
+  }
+
+  .myt-desk-row,
+  .myt-desk-header,
+  .myt-desk-footer {
+    align-items: flex-start;
+  }
+
+  .myt-desk-row,
+  .myt-desk-footer {
+    display: grid;
+  }
+
   .text-block.myt-text-block {
     padding: 34px 16px 56px;
   }
@@ -3759,8 +4161,24 @@ select {
 
   .myt-framework-grid,
   .myt-learning-tracks,
-  .myt-os-grid {
+  .myt-os-grid,
+  .myt-access-grid {
     grid-template-columns: 1fr;
+  }
+
+  .myt-framework-card::after {
+    top: auto;
+    right: auto;
+    bottom: -18px;
+    left: 24px;
+    width: 1px;
+    height: 36px;
+    background: linear-gradient(180deg, rgba(22, 223, 241, 0.9), rgba(255, 216, 77, 0.7));
+  }
+
+  .myt-framework-card:first-child,
+  .myt-framework-card:last-child {
+    border-radius: 8px;
   }
 
   .myt-framework-card,
@@ -3768,6 +4186,10 @@ select {
   .myt-os-card {
     min-height: auto;
     padding: 18px;
+  }
+
+  .myt-os-grid {
+    padding: 10px;
   }
 
   .myt-intent-engine {

@@ -330,11 +330,15 @@ function TradingFeatures() {
     >
       <div className="features__container">
         <div className="myt-access-grid">
-          {offerCards.map((feature) => {
+          {offerCards.map((feature, index) => {
               const Icon = feature.icon;
 
               return (
-                <article className={"myt-access-card myt-access-card-" + feature.variant} key={feature.heading}>
+                <article
+                  className={"myt-access-card myt-access-card-" + feature.variant}
+                  data-index={"0" + (index + 1)}
+                  key={feature.heading}
+                >
                   <div className="myt-access-glow" aria-hidden />
                   <div className="myt-access-topline">
                     <div className="myt-access-icon">
