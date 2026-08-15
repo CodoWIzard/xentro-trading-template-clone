@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import type { CSSProperties } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import gsap from "gsap";
@@ -12,13 +11,6 @@ const proofItems = [
   "Repeatable process",
   "Intent engines",
   "Execution discipline"
-];
-
-const conditionRows = [
-  { label: "Market bias", value: "Trend", status: "active" },
-  { label: "Volatility", value: "ATR ok", status: "active" },
-  { label: "Key level", value: "Waiting", status: "pending" },
-  { label: "Risk", value: "0.5R", status: "active" }
 ];
 
 const whopUrl = "https://whop.com/joined/mind-your-trades/";
@@ -118,35 +110,6 @@ export function HeroCommand() {
             </div>
           </div>
 
-          <aside className="myt-trade-desk" aria-label="MYT trading operating system preview">
-            <div className="myt-desk-header">
-              <span>MYT / INTENT ENGINE</span>
-              <strong>Trade allowed</strong>
-            </div>
-            <div className="myt-desk-chart" aria-hidden>
-              {Array.from({ length: 18 }).map((_, index) => (
-                <span
-                  className={index % 4 === 0 || index % 7 === 0 ? "is-red" : "is-blue"}
-                  key={index}
-                  style={{ "--height": 24 + ((index * 13) % 58) + "px" } as CSSProperties}
-                />
-              ))}
-              <i />
-              <b />
-            </div>
-            <div className="myt-desk-rows">
-              {conditionRows.map((row) => (
-                <div className={"myt-desk-row is-" + row.status} key={row.label}>
-                  <span>{row.label}</span>
-                  <strong>{row.value}</strong>
-                </div>
-              ))}
-            </div>
-            <div className="myt-desk-footer">
-              <span>Conditions before entries</span>
-              <strong>05-step review loop</strong>
-            </div>
-          </aside>
         </div>
       </div>
 

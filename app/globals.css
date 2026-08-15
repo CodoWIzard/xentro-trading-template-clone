@@ -2112,161 +2112,6 @@ select {
   text-transform: uppercase;
 }
 
-.myt-trade-desk {
-  position: relative;
-  display: grid;
-  gap: 14px;
-  padding: clamp(18px, 2.3vw, 28px);
-  border: 1px solid rgba(248, 244, 235, 0.16);
-  border-radius: 8px;
-  background:
-    linear-gradient(135deg, rgba(248, 244, 235, 0.09), rgba(248, 244, 235, 0.02)),
-    rgba(3, 8, 7, 0.76);
-  box-shadow:
-    0 46px 120px rgba(0, 0, 0, 0.48),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(18px);
-  isolation: isolate;
-  transform: translateY(calc(var(--hero-y) * -18px)) translateX(calc(var(--hero-x) * -14px));
-}
-
-.myt-trade-desk::before {
-  content: "";
-  position: absolute;
-  inset: 10px;
-  z-index: -1;
-  border: 1px dashed rgba(22, 223, 241, 0.12);
-  border-radius: 6px;
-}
-
-.myt-desk-header,
-.myt-desk-footer,
-.myt-desk-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  align-items: center;
-}
-
-.myt-desk-header span,
-.myt-desk-footer span,
-.myt-desk-row span {
-  color: rgba(248, 244, 235, 0.48);
-  font-family: "Fira Code", monospace;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.myt-desk-header strong {
-  padding: 7px 9px;
-  border: 1px solid rgba(22, 223, 241, 0.34);
-  border-radius: 6px;
-  color: #001015;
-  background: #16dff1;
-  font-family: "Fira Code", monospace;
-  font-size: 11px;
-  text-transform: uppercase;
-}
-
-.myt-desk-chart {
-  position: relative;
-  display: flex;
-  gap: 8px;
-  align-items: end;
-  min-height: clamp(220px, 25vw, 330px);
-  padding: 28px 20px;
-  overflow: hidden;
-  border: 1px solid rgba(248, 244, 235, 0.1);
-  border-radius: 8px;
-  background:
-    linear-gradient(rgba(248, 244, 235, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(248, 244, 235, 0.045) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(2, 5, 10, 0.28), rgba(2, 5, 10, 0.72));
-  background-size: 100% 44px, 44px 100%, auto;
-}
-
-.myt-desk-chart span {
-  position: relative;
-  z-index: 2;
-  flex: 1 1 0;
-  max-width: 15px;
-  height: var(--height);
-  border-radius: 2px;
-  background: #16dff1;
-  box-shadow: 0 0 20px rgba(22, 223, 241, 0.24);
-}
-
-.myt-desk-chart span::before {
-  content: "";
-  position: absolute;
-  top: -16px;
-  bottom: -16px;
-  left: 50%;
-  width: 1px;
-  background: currentColor;
-  opacity: 0.45;
-  transform: translateX(-50%);
-}
-
-.myt-desk-chart span.is-red {
-  color: #ff6076;
-  background: #ff6076;
-  box-shadow: 0 0 20px rgba(255, 96, 118, 0.22);
-}
-
-.myt-desk-chart i,
-.myt-desk-chart b {
-  position: absolute;
-  right: 16px;
-  left: 16px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 216, 77, 0.7), transparent);
-}
-
-.myt-desk-chart i {
-  top: 34%;
-}
-
-.myt-desk-chart b {
-  bottom: 29%;
-}
-
-.myt-desk-rows {
-  display: grid;
-  gap: 8px;
-}
-
-.myt-desk-row {
-  min-height: 48px;
-  padding: 12px 14px;
-  border: 1px solid rgba(248, 244, 235, 0.1);
-  border-radius: 7px;
-  background: rgba(248, 244, 235, 0.04);
-}
-
-.myt-desk-row strong {
-  color: #f8f4eb;
-  font-family: "Fira Code", monospace;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.myt-desk-row.is-pending strong {
-  color: #ffd84d;
-}
-
-.myt-desk-footer {
-  padding-top: 2px;
-}
-
-.myt-desk-footer strong {
-  color: rgba(248, 244, 235, 0.78);
-  font-size: 13px;
-  text-transform: uppercase;
-}
-
 .myt-bipsync-proof span {
   position: relative;
 }
@@ -4011,11 +3856,6 @@ select {
     grid-template-columns: 1fr;
   }
 
-  .myt-trade-desk {
-    width: min(100%, 720px);
-    transform: none;
-  }
-
   .myt-bipsync-canvas {
     width: 110vw;
     transform: translate(-50%, -40%);
@@ -4131,27 +3971,6 @@ select {
   .myt-bipsync-video {
     opacity: 0.42;
     filter: blur(12px) saturate(0.86) contrast(1.08);
-  }
-
-  .myt-trade-desk {
-    gap: 10px;
-    padding: 14px;
-  }
-
-  .myt-desk-chart {
-    min-height: 190px;
-    padding: 22px 14px;
-  }
-
-  .myt-desk-row,
-  .myt-desk-header,
-  .myt-desk-footer {
-    align-items: flex-start;
-  }
-
-  .myt-desk-row,
-  .myt-desk-footer {
-    display: grid;
   }
 
   .text-block.myt-text-block {
