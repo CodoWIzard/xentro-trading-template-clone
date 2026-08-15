@@ -83,11 +83,46 @@ const offerCards = [
 ];
 
 const methodFramework = [
-  { number: "01", title: "Context", text: "What is the market doing?" },
-  { number: "02", title: "Condition", text: "Is this market tradable?" },
-  { number: "03", title: "Setup", text: "What am I waiting for?" },
-  { number: "04", title: "Execution", text: "Entry. Risk. Exit." },
-  { number: "05", title: "Review", text: "Did I follow my rules?" }
+  {
+    number: "01",
+    code: "CTX",
+    title: "Context",
+    text: "What is the market doing?",
+    gate: "Bias",
+    action: "Map structure, session behavior, and key reaction zones."
+  },
+  {
+    number: "02",
+    code: "CDN",
+    title: "Condition",
+    text: "Is this market tradable?",
+    gate: "Filter",
+    action: "Confirm volatility, liquidity, pace, and whether the environment deserves risk."
+  },
+  {
+    number: "03",
+    code: "STP",
+    title: "Setup",
+    text: "What am I waiting for?",
+    gate: "Trigger",
+    action: "Define the exact pattern, invalidation point, and location before price arrives."
+  },
+  {
+    number: "04",
+    code: "EXE",
+    title: "Execution",
+    text: "Entry. Risk. Exit.",
+    gate: "Order",
+    action: "Place the trade only when the plan, size, stop, and target are already decided."
+  },
+  {
+    number: "05",
+    code: "REV",
+    title: "Review",
+    text: "Did I follow my rules?",
+    gate: "Journal",
+    action: "Separate outcome from process and record what must change before the next session."
+  }
 ];
 
 const learningTracks = [
@@ -430,22 +465,43 @@ function TradingTextBlock() {
 function MethodFramework() {
   return (
     <Reveal className="myt-section myt-framework-section" as="section">
-      <div className="myt-section-heading myt-centered">
-        <p className="myt-kicker">The MYT Framework</p>
-        <h2>Trade the process. Not the impulse.</h2>
+      <div className="myt-framework-header">
+        <div>
+          <p className="myt-kicker">The MYT Framework</p>
+          <h2>Trade the process. Not the impulse.</h2>
+        </div>
         <p>
           Every trade starts before the entry. MYT turns the trading day into a sequence
           of decisions that can be followed, reviewed, and improved.
         </p>
       </div>
-      <div className="myt-framework-grid">
-        {methodFramework.map((step) => (
-          <article className="myt-framework-card" key={step.title}>
-            <span>{step.number}</span>
-            <h3>{step.title}</h3>
-            <p>{step.text}</p>
-          </article>
-        ))}
+      <div className="myt-framework-ledger" aria-label="MYT trading process ledger">
+        <div className="myt-framework-ledger-top" aria-hidden="true">
+          <span>Session logic</span>
+          <span>Entry permission</span>
+          <span>Post-trade audit</span>
+        </div>
+        <div className="myt-framework-flow" aria-hidden="true">
+          {methodFramework.map((step) => (
+            <span key={step.code}>{step.code}</span>
+          ))}
+        </div>
+        <div className="myt-framework-rows">
+          {methodFramework.map((step) => (
+            <article className="myt-framework-row" key={step.title}>
+              <span className="myt-framework-number">{step.number}</span>
+              <div className="myt-framework-name">
+                <span>{step.code}</span>
+                <h3>{step.title}</h3>
+              </div>
+              <p className="myt-framework-question">{step.text}</p>
+              <div className="myt-framework-rule">
+                <span>{step.gate}</span>
+                <p>{step.action}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </Reveal>
   );
