@@ -430,24 +430,31 @@ function TradingTextBlock() {
 
           <div className="myt-problem-stack" aria-label="Trading mistakes MYT helps review">
             <div className="myt-problem-shell-head">
-              <span>Session Review</span>
-              <strong>Process missing</strong>
+              <div>
+                <span>Session Review</span>
+                <strong>Process missing</strong>
+              </div>
+              <p>Rule audit</p>
             </div>
             <div className="myt-problem-command">
-              <span>Filter: rule breaks</span>
-              <strong>4 patterns found</strong>
+              <span>Filter</span>
+              <strong>Rule breaks</strong>
+              <p>4 patterns found</p>
             </div>
             <div className="myt-problem-rows">
               {[
-                ["01", "Breakout chase", "You chase a breakout."],
-                ["02", "Early trigger", "You enter too early."],
-                ["03", "Stop override", "You move your stop."],
-                ["04", "Wrong condition", "You trade the wrong conditions."]
-              ].map(([number, label, text]) => (
+                ["01", "Breakout chase", "You chase a breakout.", "Impulse"],
+                ["02", "Early trigger", "You enter too early.", "Timing"],
+                ["03", "Stop override", "You move your stop.", "Risk"],
+                ["04", "Wrong condition", "You trade the wrong conditions.", "Context"]
+              ].map(([number, label, text, type]) => (
                 <div className="myt-problem-row" key={label}>
                   <span>{number}</span>
-                  <strong>{label}</strong>
-                  <p>{text}</p>
+                  <div>
+                    <strong>{label}</strong>
+                    <p>{text}</p>
+                  </div>
+                  <em>{type}</em>
                 </div>
               ))}
             </div>

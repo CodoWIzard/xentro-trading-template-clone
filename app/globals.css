@@ -2317,22 +2317,36 @@ select {
 .myt-problem-stack {
   position: relative;
   display: grid;
-  gap: 10px;
-  padding: 14px;
-  border: 1px solid rgba(248, 244, 235, 0.14);
-  border-radius: 12px;
-  background: rgba(4, 9, 10, 0.9);
-  box-shadow:
-    0 28px 80px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 0;
+  overflow: hidden;
+  min-height: clamp(440px, 40vw, 560px);
+  border-top: 1px solid rgba(248, 244, 235, 0.26);
+  border-bottom: 1px solid rgba(248, 244, 235, 0.26);
+  background:
+    linear-gradient(90deg, rgba(248, 244, 235, 0.055) 1px, transparent 1px),
+    #050706;
+  background-size: 25% 100%;
 }
 
 .myt-problem-stack::before {
+  content: "04 / RULE BREAKS";
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  color: rgba(248, 244, 235, 0.06);
+  font-family: "Fira Code", monospace;
+  font-size: clamp(42px, 5.8vw, 86px);
+  font-weight: 900;
+  line-height: 0.85;
+  pointer-events: none;
+}
+
+.myt-problem-stack::after {
   content: "";
   position: absolute;
-  inset: 10px;
-  border: 1px dashed rgba(248, 244, 235, 0.08);
-  border-radius: 9px;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(5, 7, 6, 0.96), rgba(5, 7, 6, 0.42) 52%, rgba(5, 7, 6, 0.84));
   pointer-events: none;
 }
 
@@ -2344,104 +2358,135 @@ select {
   z-index: 1;
 }
 
-.myt-problem-shell-head,
-.myt-problem-command {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: center;
-}
-
 .myt-problem-shell-head {
-  min-height: 46px;
-  padding: 0 10px;
+  display: flex;
+  grid-row: 1 / 4;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 26px 18px;
+  border-right: 1px solid rgba(248, 244, 235, 0.16);
+  background: rgba(248, 244, 235, 0.035);
 }
 
 .myt-problem-shell-head span,
 .myt-problem-command span,
 .myt-problem-insight span,
 .myt-problem-row span {
-  color: rgba(248, 244, 235, 0.48);
+  color: rgba(248, 244, 235, 0.44);
   font-family: "Fira Code", monospace;
   font-size: 11px;
   font-weight: 900;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .myt-problem-shell-head strong {
-  padding: 6px 9px;
-  border: 1px solid rgba(255, 216, 77, 0.28);
-  border-radius: 999px;
-  color: #ffd84d;
-  background: rgba(255, 216, 77, 0.08);
-  font-size: 12px;
+  display: block;
+  margin-top: 14px;
+  color: rgba(248, 244, 235, 0.9);
+  font-size: clamp(19px, 2.1vw, 30px);
+  line-height: 0.96;
+  text-transform: uppercase;
+}
+
+.myt-problem-shell-head p {
+  margin: 0;
+  writing-mode: vertical-rl;
+  color: rgba(255, 216, 77, 0.72);
+  font-family: "Fira Code", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .myt-problem-command {
-  min-height: 42px;
-  padding: 0 12px;
-  border: 1px solid rgba(248, 244, 235, 0.09);
-  border-radius: 8px;
-  background: rgba(248, 244, 235, 0.045);
+  display: grid;
+  grid-template-columns: minmax(70px, 0.22fr) minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  min-height: 72px;
+  padding: 0 clamp(18px, 3vw, 34px);
+  border-bottom: 1px solid rgba(248, 244, 235, 0.16);
 }
 
 .myt-problem-command strong {
-  color: rgba(248, 244, 235, 0.68);
-  font-size: 12px;
+  color: #f8f4eb;
+  font-size: clamp(20px, 2vw, 30px);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.myt-problem-command p {
+  margin: 0;
+  color: rgba(255, 216, 77, 0.78);
+  font-family: "Fira Code", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .myt-problem-rows {
   position: relative;
   z-index: 1;
   display: grid;
-  gap: 1px;
-  overflow: hidden;
-  border: 1px solid rgba(248, 244, 235, 0.09);
-  border-radius: 9px;
 }
 
 .myt-problem-row {
   display: grid;
-  grid-template-columns: 48px minmax(120px, 0.55fr) minmax(0, 1fr);
-  gap: 14px;
-  align-items: center;
-  min-height: 64px;
-  padding: 0 16px;
-  background: rgba(2, 5, 10, 0.36);
+  grid-template-columns: 54px minmax(0, 1fr) minmax(82px, 0.24fr);
+  gap: clamp(14px, 2vw, 28px);
+  align-items: start;
+  min-height: 82px;
+  padding: 20px clamp(18px, 3vw, 34px);
+  border-bottom: 1px solid rgba(248, 244, 235, 0.12);
+  background: transparent;
 }
 
 .myt-problem-row:nth-child(even) {
-  background: rgba(248, 244, 235, 0.035);
+  background: rgba(248, 244, 235, 0.028);
 }
 
 .myt-problem-row strong {
   color: #f8f4eb;
-  font-size: 15px;
+  font-size: clamp(18px, 1.55vw, 24px);
+  line-height: 1;
 }
 
 .myt-problem-row p {
-  margin: 0;
-  color: rgba(248, 244, 235, 0.66);
+  margin: 8px 0 0;
+  color: rgba(248, 244, 235, 0.58);
   font-size: 15px;
-  line-height: 1.4;
+  line-height: 1.45;
+}
+
+.myt-problem-row em {
+  justify-self: end;
+  color: rgba(248, 244, 235, 0.46);
+  font-family: "Fira Code", monospace;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .myt-problem-insight {
   display: grid;
-  gap: 8px;
-  padding: 18px;
-  border: 1px solid rgba(22, 223, 241, 0.2);
-  border-radius: 9px;
-  background: rgba(2, 5, 10, 0.44);
+  grid-template-columns: minmax(78px, 0.18fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding: clamp(22px, 3vw, 34px);
+  background: rgba(255, 216, 77, 0.055);
 }
 
 .myt-problem-insight strong {
   max-width: 620px;
   color: #f8f4eb;
-  font-size: clamp(20px, 2.1vw, 30px);
-  line-height: 1.08;
+  font-size: clamp(24px, 3vw, 44px);
+  line-height: 0.96;
 }
 
 .myt-framework-section {
@@ -4082,20 +4127,56 @@ select {
     gap: 24px;
   }
 
+  .myt-problem-stack {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    background-size: 50% 100%;
+  }
+
+  .myt-problem-stack::before {
+    top: 18px;
+    right: 16px;
+    font-size: clamp(34px, 13vw, 58px);
+  }
+
+  .myt-problem-shell-head {
+    grid-row: auto;
+    display: grid;
+    gap: 14px;
+    padding: 20px 16px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(248, 244, 235, 0.16);
+  }
+
+  .myt-problem-shell-head p {
+    writing-mode: initial;
+  }
+
+  .myt-problem-command {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 18px 16px;
+  }
+
   .myt-problem-row {
     grid-template-columns: 42px minmax(0, 1fr);
     gap: 6px 12px;
-    padding: 14px;
+    min-height: 0;
+    padding: 18px 16px;
   }
 
-  .myt-problem-row p {
+  .myt-problem-row p,
+  .myt-problem-row em {
     grid-column: 2;
   }
 
-  .myt-problem-command,
-  .myt-problem-shell-head {
-    display: grid;
-    justify-content: stretch;
+  .myt-problem-row em {
+    justify-self: start;
+  }
+
+  .myt-problem-insight {
+    grid-template-columns: 1fr;
+    padding: 22px 16px;
   }
 
   .myt-learning-tracks,
