@@ -474,27 +474,14 @@ function MethodFramework() {
         </p>
       </div>
       <div className="myt-framework-ledger" aria-label="MYT trading process ledger">
-        <div className="myt-framework-ledger-top" aria-hidden="true">
-          <span>Session logic</span>
-          <span>Entry permission</span>
-          <span>Post-trade audit</span>
-        </div>
-        <div className="myt-framework-flow" aria-hidden="true">
-          {methodFramework.map((step) => (
-            <span key={step.code}>{step.code}</span>
-          ))}
-        </div>
         <div className="myt-framework-rows">
           {methodFramework.map((step) => (
             <article className="myt-framework-row" key={step.title}>
-              <span className="myt-framework-number">{step.number}</span>
               <div className="myt-framework-name">
-                <span>{step.code}</span>
                 <h3>{step.title}</h3>
               </div>
               <p className="myt-framework-question">{step.text}</p>
               <div className="myt-framework-rule">
-                <span>{step.gate}</span>
                 <p>{step.action}</p>
               </div>
             </article>

@@ -2534,12 +2534,12 @@ select {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  border-top: 1px solid rgba(248, 244, 235, 0.28);
-  border-bottom: 1px solid rgba(248, 244, 235, 0.28);
+  border-top: 1px solid rgba(248, 244, 235, 0.2);
+  border-bottom: 1px solid rgba(248, 244, 235, 0.2);
   background:
     linear-gradient(90deg, rgba(248, 244, 235, 0.045) 1px, transparent 1px),
     linear-gradient(180deg, rgba(248, 244, 235, 0.035) 1px, transparent 1px);
-  background-size: 25% 100%, 100% 72px;
+  background-size: 33.333% 100%, 100% 72px;
 }
 
 .myt-framework-ledger::before {
@@ -2552,72 +2552,9 @@ select {
   pointer-events: none;
 }
 
-.myt-framework-ledger-top,
-.myt-framework-flow,
 .myt-framework-row {
   position: relative;
   z-index: 1;
-}
-
-.myt-framework-ledger-top {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  border-bottom: 1px solid rgba(248, 244, 235, 0.16);
-}
-
-.myt-framework-ledger-top span {
-  padding: 13px clamp(16px, 2vw, 28px);
-  color: rgba(248, 244, 235, 0.42);
-  font-family: "Fira Code", monospace;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.myt-framework-ledger-top span + span {
-  border-left: 1px solid rgba(248, 244, 235, 0.12);
-}
-
-.myt-framework-flow {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  align-items: center;
-  min-height: clamp(74px, 8vw, 112px);
-  border-bottom: 1px solid rgba(248, 244, 235, 0.18);
-}
-
-.myt-framework-flow::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: clamp(18px, 2vw, 30px);
-  left: clamp(18px, 2vw, 30px);
-  height: 1px;
-  background: linear-gradient(90deg, rgba(248, 244, 235, 0.28), rgba(22, 223, 241, 0.74), rgba(255, 216, 77, 0.58));
-}
-
-.myt-framework-flow span {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: clamp(42px, 5vw, 58px);
-  height: clamp(42px, 5vw, 58px);
-  margin: 0 auto;
-  border: 1px solid rgba(248, 244, 235, 0.28);
-  border-radius: 50%;
-  color: rgba(248, 244, 235, 0.82);
-  font-family: "Fira Code", monospace;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  background: #050706;
-}
-
-.myt-framework-flow span:nth-child(4) {
-  border-color: rgba(255, 216, 77, 0.55);
-  color: #ffd84d;
-  box-shadow: 0 0 28px rgba(255, 216, 77, 0.12);
 }
 
 .myt-framework-rows {
@@ -2626,11 +2563,11 @@ select {
 
 .myt-framework-row {
   display: grid;
-  grid-template-columns: 76px minmax(160px, 0.58fr) minmax(210px, 0.72fr) minmax(280px, 1fr);
-  gap: clamp(16px, 2.5vw, 34px);
+  grid-template-columns: minmax(180px, 0.55fr) minmax(230px, 0.7fr) minmax(320px, 1fr);
+  gap: clamp(20px, 3vw, 48px);
   align-items: start;
-  min-height: 132px;
-  padding: clamp(20px, 2.6vw, 34px) clamp(18px, 3vw, 42px);
+  min-height: 118px;
+  padding: clamp(24px, 3vw, 38px) clamp(18px, 3vw, 42px);
   border-bottom: 1px solid rgba(248, 244, 235, 0.16);
 }
 
@@ -2642,32 +2579,12 @@ select {
   background: rgba(248, 244, 235, 0.035);
 }
 
-.myt-framework-number {
-  color: rgba(248, 244, 235, 0.34);
-  font-family: "Fira Code", monospace;
-  font-size: clamp(24px, 2.6vw, 42px);
-  font-weight: 900;
-  line-height: 0.9;
-}
-
-.myt-framework-name span,
-.myt-framework-rule span {
-  display: block;
-  margin-bottom: 11px;
-  color: rgba(22, 223, 241, 0.78);
-  font-family: "Fira Code", monospace;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
 .myt-framework-name h3 {
   margin: 0;
   color: #f8f4eb;
-  font-size: clamp(28px, 3.1vw, 50px);
+  font-size: clamp(28px, 2.9vw, 46px);
   font-weight: 900;
-  line-height: 0.92;
+  line-height: 0.96;
 }
 
 .myt-framework-question {
@@ -2679,14 +2596,7 @@ select {
 }
 
 .myt-framework-rule {
-  display: grid;
-  grid-template-columns: minmax(68px, 0.25fr) minmax(0, 1fr);
-  gap: 18px;
-}
-
-.myt-framework-rule span {
-  margin-bottom: 0;
-  color: rgba(255, 216, 77, 0.78);
+  display: block;
 }
 
 .myt-framework-rule p {
@@ -4173,45 +4083,11 @@ select {
     font-size: clamp(40px, 12vw, 58px);
   }
 
-  .myt-framework-ledger-top {
-    display: none;
-  }
-
-  .myt-framework-flow {
-    grid-template-columns: repeat(5, 68px);
-    justify-content: start;
-    overflow-x: auto;
-    min-height: 82px;
-    padding: 0 12px;
-    scrollbar-width: none;
-  }
-
-  .myt-framework-flow::-webkit-scrollbar {
-    display: none;
-  }
-
-  .myt-framework-flow::before {
-    right: 34px;
-    left: 34px;
-    min-width: 292px;
-  }
-
-  .myt-framework-flow span {
-    width: 44px;
-    height: 44px;
-    font-size: 10px;
-  }
-
   .myt-framework-row {
-    grid-template-columns: 44px minmax(0, 1fr);
-    gap: 12px 16px;
+    grid-template-columns: 1fr;
+    gap: 12px;
     min-height: 0;
     padding: 20px 16px;
-  }
-
-  .myt-framework-question,
-  .myt-framework-rule {
-    grid-column: 2;
   }
 
   .myt-framework-name h3 {
@@ -4223,8 +4099,7 @@ select {
   }
 
   .myt-framework-rule {
-    grid-template-columns: 1fr;
-    gap: 8px;
+    display: block;
   }
 
   .myt-learning-tracks article,
