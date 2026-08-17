@@ -2633,10 +2633,14 @@ select {
 .myt-os-grid {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   margin-bottom: 0;
-  padding: 18px;
-  border: 1px solid rgba(248, 244, 235, 0.1);
+  padding: clamp(18px, 2.2vw, 28px);
+  border: 1px solid rgba(248, 244, 235, 0.12);
   border-radius: 8px;
-  background: rgba(2, 5, 10, 0.34);
+  background:
+    radial-gradient(circle at 18% 10%, rgba(22, 223, 241, 0.18), transparent 30%),
+    radial-gradient(circle at 86% 18%, rgba(255, 216, 77, 0.14), transparent 32%),
+    linear-gradient(135deg, rgba(248, 244, 235, 0.06), rgba(248, 244, 235, 0.018) 42%, rgba(22, 223, 241, 0.055)),
+    #050706;
 }
 
 .myt-operating-system .myt-section-heading {
@@ -2646,26 +2650,27 @@ select {
 .myt-os-card {
   min-height: 220px;
   display: grid;
-  align-content: space-between;
-  background: rgba(5, 7, 6, 0.72);
+  place-items: center;
+  align-content: center;
+  gap: 18px;
+  padding: clamp(18px, 2vw, 28px);
+  text-align: center;
+  background: #050706;
 }
 
 .myt-os-card::before {
-  content: "";
-  width: 100%;
-  height: 3px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #16dff1, #ffd84d);
-  opacity: 0.72;
+  content: none;
 }
 
 .myt-os-card h3 {
-  margin-top: auto;
+  margin: 0;
   text-transform: uppercase;
 }
 
 .myt-os-card p {
+  max-width: 18ch;
   color: rgba(248, 244, 235, 0.62);
+  margin: 0;
 }
 
 .myt-tool-signals {
