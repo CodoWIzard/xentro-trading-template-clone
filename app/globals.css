@@ -2657,6 +2657,7 @@ select {
   padding: clamp(18px, 2vw, 28px);
   text-align: center;
   background: #050706;
+  overflow: hidden;
 }
 
 .myt-os-card::before {
@@ -2665,16 +2666,18 @@ select {
 
 .myt-os-card h3 {
   width: 100%;
+  max-width: 100%;
   margin: 0;
-  font-size: clamp(24px, 1.75vw, 34px);
+  font-size: clamp(18px, 1.35vw, 26px);
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 .myt-os-card p {
   width: 100%;
-  max-width: 18ch;
+  max-width: 16ch;
   color: rgba(248, 244, 235, 0.62);
   margin: 0;
   text-align: center;
