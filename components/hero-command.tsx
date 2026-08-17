@@ -94,10 +94,6 @@ export function HeroCommand() {
             </p>
 
             <div className="hero__buttons myt-bipsync-actions">
-              <Link className="myt-button myt-button-primary" href={whopUrl} rel="noreferrer" target="_blank">
-                Start learning
-                <ArrowRight size={18} aria-hidden />
-              </Link>
               <Link className="myt-button myt-button-secondary" href="/learning/indicators">
                 Explore MYT tools
               </Link>
