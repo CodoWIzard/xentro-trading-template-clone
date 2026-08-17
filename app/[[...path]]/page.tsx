@@ -750,8 +750,20 @@ function BrandProof() {
   return (
     <Reveal className="myt-split-proof" as="section">
       <div>
-        <Image src="/webflow/trading-image-01.webp" alt="" width={566} height={622} />
-        <Image src="/webflow/trading-image-02.webp" alt="" width={566} height={622} />
+        <Image
+          src="/webflow/usecase-dashboard.webp"
+          alt="Trading terminal with chart, setup panel, and order history for execution review."
+          width={1764}
+          height={1454}
+          sizes="(max-width: 900px) 86vw, 24vw"
+        />
+        <Image
+          src="/webflow/usecase-dashboard-three.webp"
+          alt="Market preparation dashboard with calendar, watchlist, and condition review panels."
+          width={1764}
+          height={1454}
+          sizes="(max-width: 900px) 86vw, 24vw"
+        />
       </div>
       <article>
         <p className="myt-kicker">MYT Coaching</p>
