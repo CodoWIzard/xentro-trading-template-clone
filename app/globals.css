@@ -2649,9 +2649,10 @@ select {
 
 .myt-os-card {
   min-height: 220px;
-  display: grid;
-  place-items: center;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 18px;
   padding: clamp(18px, 2vw, 28px);
   text-align: center;
@@ -2663,14 +2664,20 @@ select {
 }
 
 .myt-os-card h3 {
+  width: 100%;
   margin: 0;
+  font-size: clamp(24px, 1.75vw, 34px);
+  line-height: 1;
+  text-align: center;
   text-transform: uppercase;
 }
 
 .myt-os-card p {
+  width: 100%;
   max-width: 18ch;
   color: rgba(248, 244, 235, 0.62);
   margin: 0;
+  text-align: center;
 }
 
 .myt-tool-signals {
