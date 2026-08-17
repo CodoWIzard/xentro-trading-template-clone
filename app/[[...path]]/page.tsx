@@ -412,20 +412,12 @@ function TradingTextBlock() {
       <div className="text-block__container">
         <div className="myt-explainer">
           <div className="myt-explainer-copy">
-            <p className="myt-kicker">Mind Your Trades in plain English</p>
             <h2>Most traders do not need another strategy. They need a better process.</h2>
             <p>
               You follow your plan until you do not. You chase a breakout, enter too early,
               move your stop, or trade conditions that do not fit your setup. MYT was built
               to replace that loop with a repeatable trading process.
             </p>
-            <div className="myt-explainer-tags" aria-label="Mind Your Trades offer">
-              <span>Context</span>
-              <span>Conditions</span>
-              <span>Setup</span>
-              <span>Execution</span>
-              <span>Review</span>
-            </div>
           </div>
 
           <div className="myt-problem-stack" aria-label="Trading mistakes MYT helps review">
@@ -434,7 +426,6 @@ function TradingTextBlock() {
                 <span>Session review</span>
                 <strong>Where the plan breaks</strong>
               </div>
-              <p>Pattern audit</p>
             </div>
             <div className="myt-problem-command">
               <span>Common leaks</span>
