@@ -39,8 +39,6 @@ const proofStats = [
 
 const offerCards = [
   {
-    icon: BookOpenCheck,
-    badge: "MYT Learning",
     heading: "Learn to read the market",
     text: "Education built around Renko, ATR, volume, structure, pivots, trend, pullbacks, ranges, liquidity, risk, and review.",
     points: [
@@ -53,8 +51,6 @@ const offerCards = [
     variant: "community"
   },
   {
-    icon: CandlestickChart,
-    badge: "MYT Tools",
     heading: "Reduce decisions, not add noise",
     text: "Purpose-built TradingView tools that help identify market conditions, structure, volume pressure, and key levels.",
     points: [
@@ -67,8 +63,6 @@ const offerCards = [
     variant: "indicators"
   },
   {
-    icon: UsersRound,
-    badge: "MYT Coaching",
     heading: "Train the trader behind the trade",
     text: "Personal coaching focused on trading behavior, discipline, rules, risk, and execution.",
     points: [
@@ -356,8 +350,6 @@ function TradingFeatures() {
       <div className="features__container">
         <div className="myt-access-grid">
           {offerCards.map((feature, index) => {
-              const Icon = feature.icon;
-
               return (
                 <article
                   className={"myt-access-card myt-access-card-" + feature.variant}
@@ -365,12 +357,6 @@ function TradingFeatures() {
                   key={feature.heading}
                 >
                   <div className="myt-access-glow" aria-hidden />
-                  <div className="myt-access-topline">
-                    <div className="myt-access-icon">
-                      <Icon size={30} aria-hidden />
-                    </div>
-                    <span>{feature.badge}</span>
-                  </div>
 
                   <div className="myt-access-copy">
                     <h2>{feature.heading}</h2>

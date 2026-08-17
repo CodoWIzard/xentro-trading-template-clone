@@ -3010,8 +3010,11 @@ select {
 
 .myt-access-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
   gap: clamp(18px, 2.8vw, 34px);
+  max-width: 1160px;
+  margin: 0 auto;
+  align-items: stretch;
 }
 
 .myt-access-card {
@@ -3021,12 +3024,12 @@ select {
   min-height: clamp(500px, 36vw, 580px);
   overflow: hidden;
   padding: clamp(26px, 3vw, 42px);
-  border: 1px solid rgba(248, 244, 235, 0.13);
+  border: 1px solid rgba(248, 244, 235, 0.42);
   border-radius: 8px;
-  background: rgba(4, 9, 10, 0.96);
+  background: #d9dde2;
   box-shadow:
-    0 30px 90px rgba(0, 0, 0, 0.32),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    0 30px 90px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.62);
   isolation: isolate;
 }
 
@@ -3036,117 +3039,25 @@ select {
   right: -0.1em;
   bottom: -0.22em;
   z-index: -1;
-  color: rgba(248, 244, 235, 0.04);
+  color: rgba(5, 13, 18, 0.05);
   font-size: clamp(124px, 13vw, 220px);
   font-weight: 900;
   line-height: 1;
-}
-
-.myt-access-card:nth-child(2) {
-  transform: translateY(44px);
-}
-
-.myt-access-card:nth-child(3) {
-  transform: translateY(-18px);
-}
-
-.myt-access-card-community {
-  border-color: rgba(255, 216, 77, 0.22);
-  background: rgba(4, 9, 10, 0.96);
-}
-
-.myt-access-card-indicators {
-  border-color: rgba(22, 223, 241, 0.28);
-  background: rgba(4, 9, 10, 0.96);
-}
-
-.myt-access-card-coaching {
-  border-color: rgba(255, 96, 118, 0.22);
-  background: rgba(4, 9, 10, 0.96);
 }
 
 .myt-access-glow {
   display: none;
 }
 
-.myt-access-topline {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.myt-access-topline > span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 26px;
-  padding: 4px 10px;
-  border: 1px solid rgba(22, 223, 241, 0.2);
-  border-radius: 6px;
-  color: #16dff1;
-  background: rgba(22, 223, 241, 0.08);
-  font-size: 12px;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.myt-access-card-community .myt-access-topline > span {
-  border-color: rgba(255, 216, 77, 0.26);
-  color: #ffd84d;
-  background: rgba(255, 216, 77, 0.08);
-}
-
-.myt-access-card-coaching .myt-access-topline > span {
-  border-color: rgba(255, 96, 118, 0.26);
-  color: #ff6076;
-  background: rgba(255, 96, 118, 0.08);
-}
-
-.myt-access-card-indicators .myt-access-topline > span {
-  border-color: rgba(22, 223, 241, 0.22);
-  color: #16dff1;
-  background: rgba(22, 223, 241, 0.08);
-}
-
-.myt-access-icon {
-  display: grid;
-  place-items: center;
-  width: clamp(64px, 6vw, 82px);
-  height: clamp(64px, 6vw, 82px);
-  border: 1px solid rgba(22, 223, 241, 0.2);
-  border-radius: 8px;
-  color: #16dff1;
-  background: rgba(22, 223, 241, 0.1);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
-}
-
-.myt-access-card-indicators .myt-access-icon {
-  border-color: rgba(22, 223, 241, 0.2);
-  color: #16dff1;
-  background: rgba(22, 223, 241, 0.09);
-}
-
-.myt-access-card-community .myt-access-icon {
-  border-color: rgba(255, 216, 77, 0.22);
-  color: #ffd84d;
-  background: rgba(255, 216, 77, 0.08);
-}
-
-.myt-access-card-coaching .myt-access-icon {
-  border-color: rgba(255, 96, 118, 0.22);
-  color: #ff6076;
-  background: rgba(255, 96, 118, 0.08);
-}
-
 .myt-access-copy {
   max-width: 780px;
-  padding-top: clamp(52px, 6vw, 88px);
+  padding-top: 0;
 }
 
 .myt-access-copy h2 {
   max-width: 620px;
   margin: 0;
-  color: #f7fbff;
+  color: #071017;
   font-size: clamp(32px, 3.05vw, 48px);
   font-weight: 900;
   line-height: 1;
@@ -3156,7 +3067,7 @@ select {
 .myt-access-copy p {
   max-width: 600px;
   margin: 16px 0 0;
-  color: rgba(227, 239, 255, 0.66);
+  color: rgba(7, 16, 23, 0.66);
   font-size: clamp(16px, 1.28vw, 19px);
   line-height: 1.52;
 }
@@ -3173,7 +3084,7 @@ select {
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  color: rgba(227, 239, 255, 0.78);
+  color: rgba(7, 16, 23, 0.74);
   font-size: clamp(15px, 1.08vw, 17px);
   font-weight: 700;
   line-height: 1.45;
@@ -3182,19 +3093,7 @@ select {
 .myt-access-points svg {
   flex: 0 0 auto;
   margin-top: 2px;
-  color: #16dff1;
-}
-
-.myt-access-card-indicators .myt-access-points svg {
-  color: #16dff1;
-}
-
-.myt-access-card-community .myt-access-points svg {
-  color: #ffd84d;
-}
-
-.myt-access-card-coaching .myt-access-points svg {
-  color: #ff6076;
+  color: #5d6872;
 }
 
 .myt-access-cta {
@@ -3206,28 +3105,21 @@ select {
   min-height: 62px;
   width: 100%;
   padding: 16px 18px;
-  border: 1px solid rgba(22, 223, 241, 0.18);
+  border: 1px solid rgba(7, 16, 23, 0.16);
   border-radius: 8px;
-  color: #001015;
-  background: #16dff1;
-  box-shadow: 0 0 30px rgba(22, 223, 241, 0.2);
+  color: #071017;
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
   font-weight: 900;
   text-decoration: none;
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.myt-access-card-community .myt-access-cta {
-  background: #16dff1;
-  box-shadow: 0 0 30px rgba(22, 223, 241, 0.17);
-}
-
 .myt-access-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 42px rgba(22, 223, 241, 0.26);
-}
-
-.myt-access-card-community .myt-access-cta:hover {
-  box-shadow: 0 0 42px rgba(22, 223, 241, 0.24);
+  box-shadow:
+    0 16px 30px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
 }
 
 .features__layout {
@@ -4182,23 +4074,8 @@ select {
     padding: 22px;
   }
 
-  .myt-access-topline {
-    gap: 12px;
-  }
-
-  .myt-access-topline > span {
-    max-width: 136px;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .myt-access-icon {
-    width: 58px;
-    height: 58px;
-  }
-
   .myt-access-copy {
-    padding-top: 42px;
+    padding-top: 0;
   }
 
   .myt-access-copy h2 {
