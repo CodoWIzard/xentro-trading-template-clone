@@ -431,22 +431,22 @@ function TradingTextBlock() {
           <div className="myt-problem-stack" aria-label="Trading mistakes MYT helps review">
             <div className="myt-problem-shell-head">
               <div>
-                <span>Session Review</span>
-                <strong>Process missing</strong>
+                <span>Session review</span>
+                <strong>Where the plan breaks</strong>
               </div>
-              <p>Rule audit</p>
+              <p>Pattern audit</p>
             </div>
             <div className="myt-problem-command">
-              <span>Filter</span>
-              <strong>Rule breaks</strong>
-              <p>4 patterns found</p>
+              <span>Common leaks</span>
+              <strong>Small moments that change the trade</strong>
+              <p>4 patterns</p>
             </div>
             <div className="myt-problem-rows">
               {[
-                ["01", "Breakout chase", "You chase a breakout.", "Impulse"],
-                ["02", "Early trigger", "You enter too early.", "Timing"],
-                ["03", "Stop override", "You move your stop.", "Risk"],
-                ["04", "Wrong condition", "You trade the wrong conditions.", "Context"]
+                ["01", "Breakout chase", "You enter after price has already moved.", "Impulse"],
+                ["02", "Early trigger", "You take the trade before your setup confirms.", "Timing"],
+                ["03", "Stop override", "You adjust risk because the candle feels uncomfortable.", "Risk"],
+                ["04", "Wrong condition", "You force a setup in a market that does not fit it.", "Context"]
               ].map(([number, label, text, type]) => (
                 <div className="myt-problem-row" key={label}>
                   <span>{number}</span>
@@ -460,7 +460,7 @@ function TradingTextBlock() {
             </div>
             <div className="myt-problem-insight">
               <span>Root cause</span>
-              <strong>The problem is not always your strategy. It is the lack of a process.</strong>
+              <strong>The strategy is rarely the full problem. The process around it is.</strong>
             </div>
           </div>
         </div>
