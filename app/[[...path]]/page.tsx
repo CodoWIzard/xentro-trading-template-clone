@@ -904,15 +904,6 @@ function SiteFooter() {
                 </div>
               </div>
 
-              <aside className="footer_panel" aria-label="Request MYT access">
-                <span>Next step</span>
-                <h2>Ready to train the mindset behind your trades?</h2>
-                <p>Open the Whop hub to view MYT learning, tools, coaching, and access.</p>
-                <Link className="myt-button myt-button-primary" href={whopUrl} rel="noreferrer" target="_blank">
-                  Start learning
-                  <ArrowRight size={18} aria-hidden />
-                </Link>
-              </aside>
             </div>
 
             <div className="footer_bottom">

@@ -3712,7 +3712,7 @@ select {
 
 .footer_grid {
   display: grid;
-  grid-template-columns: minmax(300px, 1.2fr) minmax(150px, 0.45fr) minmax(170px, 0.5fr) minmax(300px, 0.9fr);
+  grid-template-columns: minmax(300px, 1.2fr) minmax(150px, 0.45fr) minmax(170px, 0.5fr);
   gap: clamp(24px, 4vw, 64px);
   align-items: stretch;
 }
