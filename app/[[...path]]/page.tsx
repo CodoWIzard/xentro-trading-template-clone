@@ -339,7 +339,6 @@ function HomePage() {
       <ProductStory />
       <BrandProof />
       <Stats />
-      <FinalCta />
     </>
   );
 }
