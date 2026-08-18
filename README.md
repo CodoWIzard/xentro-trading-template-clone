@@ -24,6 +24,15 @@ Next.js rebuild of the trading/futures website concept for Mind Your Trades, evo
 
 ## Resume Notes
 
-- The repo currently has no commits yet and the project tree is untracked. Stabilize git history before broad iteration or deployment.
+- Current git history is established. Latest checked commit on 2026-08-18: `780cf79` (`Simplify MYT offer cards`).
 - Keep iterating on the existing MYT direction unless Jayden explicitly switches projects.
-- Good next steps: componentize repeated page sections, replace remaining template-era copy/assets where needed, normalize routes and metadata, then deploy to the existing Vercel URL.
+- Good next steps: replace remaining template-era assets/copy where needed, normalize missing legal pages or remove footer legal links, keep mobile polish tight, then deploy to the existing Vercel URL.
+
+## Current Direction Snapshot
+
+- Brand: Mind Your Trades (MYT).
+- Positioning: futures trading learning, TradingView tools/intent engines, and 1:1 coaching for traders building a repeatable process.
+- Messaging rules: no signals, no copy trading, no shortcuts, no unrealistic performance claims.
+- Core process: Context, Condition, Setup, Execution, Review.
+- Visual style: dark finance/editorial interface, MYT cyan-blue accents, compact premium panels, Inter + Fira Code, restrained motion.
+- Primary conversion target: `https://whop.com/joined/mind-your-trades/`.
