@@ -191,6 +191,23 @@ select {
   box-shadow: 0 0 26px rgba(22, 223, 241, 0.22);
 }
 
+.myt-header-promotion {
+  position: fixed;
+  top: 96px;
+  right: 22px;
+  left: 22px;
+  z-index: 45;
+  display: flex;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+.myt-header-promotion .myt-glow-button {
+  pointer-events: auto;
+}
+
 .myt-hero {
   position: relative;
   min-height: 100svh;
@@ -312,7 +329,7 @@ select {
   align-items: center;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 158px 24px 74px;
+  padding: 214px 24px 74px;
   min-height: 680px;
 }
 
@@ -1916,7 +1933,7 @@ select {
   position: relative;
   min-height: 100svh;
   overflow: hidden;
-  padding: clamp(122px, 13vh, 158px) 24px clamp(70px, 10vh, 112px);
+  padding: clamp(176px, 17vh, 206px) 24px clamp(70px, 10vh, 112px);
   background: #050706;
   isolation: isolate;
   --hero-x: 0;
@@ -3771,7 +3788,7 @@ select {
 
 @media (max-width: 1100px) {
   .myt-bipsync-hero {
-    padding-top: 122px;
+    padding-top: 176px;
   }
 
   .myt-bipsync-layout {
@@ -3865,9 +3882,29 @@ select {
 }
 
 @media (max-width: 720px) {
+  .myt-header-promotion {
+    top: 74px;
+    right: 10px;
+    left: 10px;
+  }
+
+  .myt-header-promotion .myt-glow-button {
+    width: 100%;
+  }
+
+  .myt-header-promotion .myt-glow-button-inner {
+    justify-content: center;
+    width: 100%;
+    min-height: 46px;
+    padding: 7px 12px;
+    font-size: 11px;
+    line-height: 1.25;
+    text-align: center;
+  }
+
   .myt-bipsync-hero {
     min-height: 92svh;
-    padding: 112px 16px 74px;
+    padding: 160px 16px 74px;
   }
 
   .myt-bipsync-layout {

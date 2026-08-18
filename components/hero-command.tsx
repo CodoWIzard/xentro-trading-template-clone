@@ -2,9 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "framer-motion";
 import gsap from "gsap";
-import { ArrowRight } from "lucide-react";
 
 const proofItems = [
   "Market conditions",
@@ -12,8 +11,6 @@ const proofItems = [
   "Intent engines",
   "Execution discipline"
 ];
-
-const whopUrl = "https://whop.com/joined/mind-your-trades/";
 
 export function HeroCommand() {
   const heroRef = useRef<HTMLElement | null>(null);
@@ -25,7 +22,7 @@ export function HeroCommand() {
     const hero = heroRef.current;
     const ctx = gsap.context(() => {
       gsap.fromTo(
-        [".myt-bipsync-pill", ".myt-bipsync-title", ".myt-bipsync-copy", ".myt-bipsync-actions", ".myt-bipsync-proof"],
+        [".myt-bipsync-title", ".myt-bipsync-copy", ".myt-bipsync-actions", ".myt-bipsync-proof"],
         { y: 28, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: "power3.out", delay: 0.08 }
       );
@@ -63,27 +60,6 @@ export function HeroCommand() {
       <div className="hero__container myt-bipsync-container">
         <div className="hero__layout myt-bipsync-layout">
           <div className="myt-hero-copy">
-            <motion.div
-              className="hero__featured-content myt-bipsync-pill"
-              initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-              animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <Link className="button myt-glow-button" href={whopUrl} rel="noreferrer" target="_blank">
-                <span className="myt-glow-button-inner">
-                  <span>
-                    Learning, tools and coaching <strong>available through MYT</strong>
-                  </span>
-                  <ArrowRight size={14} aria-hidden />
-                </span>
-                <span className="myt-glow-button-border" aria-hidden />
-                <span className="myt-glow-button-glows" aria-hidden>
-                  <span />
-                  <span />
-                </span>
-              </Link>
-            </motion.div>
-
             <h1 className="hero__title myt-bipsync-title" id="hero-title">
               Stop chasing trades. Start building a trading system.
             </h1>

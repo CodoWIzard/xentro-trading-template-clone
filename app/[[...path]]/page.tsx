@@ -269,6 +269,7 @@ export default async function MYTSitePage({ params }: PageProps) {
   return (
     <main className="myt-site">
       <Header />
+      <HeaderPromotion />
       {route === "home" ? <HomePage /> : null}
       {route === "learning/indicators" ? <LearningDetailPage detail="indicators" /> : null}
       {route === "learning/coaching" ? <LearningDetailPage detail="coaching" /> : null}
@@ -317,6 +318,26 @@ function Header() {
         View Whop
       </Link>
     </header>
+  );
+}
+
+function HeaderPromotion() {
+  return (
+    <aside className="myt-header-promotion" aria-label="MYT offer promotion">
+      <Link className="button myt-glow-button" href={whopUrl} rel="noreferrer" target="_blank">
+        <span className="myt-glow-button-inner">
+          <span>
+            Learning, tools and coaching <strong>available through MYT</strong>
+          </span>
+          <ArrowRight size={14} aria-hidden />
+        </span>
+        <span className="myt-glow-button-border" aria-hidden />
+        <span className="myt-glow-button-glows" aria-hidden>
+          <span />
+          <span />
+        </span>
+      </Link>
+    </aside>
   );
 }
 
